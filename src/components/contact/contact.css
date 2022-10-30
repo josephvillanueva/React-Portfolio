@@ -30,13 +30,7 @@
   margin-bottom: 0.5rem;
 }
 
-.contact_option a {
-  margin-top: 0.7rem;
-  display: inline-block;
-  font-size: 0.8rem;
-}
-
-.contact_option p {
+.contact_option a,p {
   margin-top: 0.7rem;
   display: inline-block;
   font-size: 0.8rem;
@@ -60,14 +54,14 @@ textarea {
 }
 
 @media screen and (max-width: 1024px) {
-  .contact.contact_container {
+  .container.contact_container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .contact.contact_container {
+  .container.contact_container {
     width: var(--container-width-sm);
   }
 }
