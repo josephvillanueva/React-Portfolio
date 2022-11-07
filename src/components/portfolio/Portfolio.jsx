@@ -12,13 +12,13 @@ const data = [
     title: "Playible: Next-Gen Fantasy Sports on NEAR",
     github: "https://playible.club/playible-next-gen-nft-fantasy-sports/",
     demo: "https://app.playible.io/MintPage",
-  }
+  },
 ];
 
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
+      <h5>My Recent Work/Involvements</h5>
       <h2>Portfolio</h2>
 
       <div className="container portfolio_container">
