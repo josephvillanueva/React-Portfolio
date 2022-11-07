@@ -1,0 +1,20 @@
+[33m0eae4b8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: commit: chore: changed branch deployment
+[33m6c8569a[m HEAD@{1}: commit: chore: reverted
+[33m757713a[m HEAD@{2}: commit: chore: moved index.html
+[33ma761819[m HEAD@{3}: commit: chore: deployed
+[33maa968ae[m HEAD@{4}: commit: chore: github pages deployment
+[33m0b5c940[m HEAD@{5}: commit: chore: Fixed assets
+[33mc38fbb8[m HEAD@{6}: commit: chore: margins
+[33m73a0708[m HEAD@{7}: commit: fix: class name on contact css
+[33m3f9880c[m HEAD@{8}: commit: feat: footer
+[33mc7d1eec[m HEAD@{9}: commit: feat: contact
+[33mfe9826f[m HEAD@{10}: commit: feat: testimonials
+[33m2a346f8[m HEAD@{11}: commit: chore: changed to map function for portfolio
+[33m722a373[m HEAD@{12}: commit: feat: services
+[33m819d54c[m HEAD@{13}: commit: fix: photos
+[33m03c1da5[m HEAD@{14}: commit: feat: about
+[33mdc0b450[m HEAD@{15}: commit: feat: navigation
+[33m59f5e97[m HEAD@{16}: commit: feat: Finished Header
+[33m2e753a7[m HEAD@{17}: commit: feat: initial styles setup
+[33m659c848[m HEAD@{18}: Branch: renamed refs/heads/master to refs/heads/main
+[33m659c848[m HEAD@{20}: commit (initial): Initialize project using Create React App
