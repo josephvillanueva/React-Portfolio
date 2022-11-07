@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/React-Portfolio/static/css/main.65b552d8.css",
+    "main.js": "/React-Portfolio/static/js/main.d87c7448.js",
+    "static/media/me-about (2).png": "/React-Portfolio/static/media/me-about (2).de8e3d8e3ea3a299d7c1.png",
+    "static/media/me (2).png": "/React-Portfolio/static/media/me (2).88bcd5d679f42f0c25b1.png",
+    "static/media/portfolio2.jpg": "/React-Portfolio/static/media/portfolio2.ae187bc4e43ae6dbc263.jpg",
+    "static/media/portfolio1.jpg": "/React-Portfolio/static/media/portfolio1.1516a84337f29b5d2bb1.jpg",
+    "static/media/portfolio3.jpg": "/React-Portfolio/static/media/portfolio3.cbab42559fe73e73906f.jpg",
+    "static/media/Villanueva_Joseph.pdf": "/React-Portfolio/static/media/Villanueva_Joseph.5af29fe7708b3b459c85.pdf",
+    "static/media/portfolio4.jpg": "/React-Portfolio/static/media/portfolio4.6bf60cbb8fe5f7d7af5d.jpg",
+    "index.html": "/React-Portfolio/index.html",
+    "main.65b552d8.css.map": "/React-Portfolio/static/css/main.65b552d8.css.map",
+    "main.d87c7448.js.map": "/React-Portfolio/static/js/main.d87c7448.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65b552d8.css",
+    "static/js/main.d87c7448.js"
+  ]
+}
