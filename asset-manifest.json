@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/React-Porfoltio/static/css/main.65b552d8.css",
+    "main.js": "/React-Porfoltio/static/js/main.f26c404b.js",
+    "static/media/me-about (2).png": "/React-Porfoltio/static/media/me-about (2).de8e3d8e3ea3a299d7c1.png",
+    "static/media/me (2).png": "/React-Porfoltio/static/media/me (2).88bcd5d679f42f0c25b1.png",
+    "static/media/portfolio2.jpg": "/React-Porfoltio/static/media/portfolio2.ae187bc4e43ae6dbc263.jpg",
+    "static/media/portfolio1.jpg": "/React-Porfoltio/static/media/portfolio1.1516a84337f29b5d2bb1.jpg",
+    "static/media/portfolio3.jpg": "/React-Porfoltio/static/media/portfolio3.cbab42559fe73e73906f.jpg",
+    "static/media/Villanueva_Joseph.pdf": "/React-Porfoltio/static/media/Villanueva_Joseph.5af29fe7708b3b459c85.pdf",
+    "static/media/portfolio4.jpg": "/React-Porfoltio/static/media/portfolio4.6bf60cbb8fe5f7d7af5d.jpg",
+    "index.html": "/React-Porfoltio/index.html",
+    "main.65b552d8.css.map": "/React-Porfoltio/static/css/main.65b552d8.css.map",
+    "main.f26c404b.js.map": "/React-Porfoltio/static/js/main.f26c404b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65b552d8.css",
+    "static/js/main.f26c404b.js"
+  ]
+}
