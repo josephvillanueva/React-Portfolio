@@ -9,31 +9,10 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
-    demo: "https://github.com",
-  },
-  {
-    id: 2,
-    image: IMG2,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
-    demo: "https://github.com",
-  },
-  {
-    id: 3,
-    image: IMG3,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
-    demo: "https://github.com",
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
-    demo: "https://github.com",
-  },
+    title: "Playible: Next-Gen Fantasy Sports on NEAR",
+    github: "https://playible.club/playible-next-gen-nft-fantasy-sports/",
+    demo: "https://app.playible.io/MintPage",
+  }
 ];
 
 const Portfolio = () => {
@@ -52,7 +31,7 @@ const Portfolio = () => {
               <h3>{title}</h3>
               <div className="portfolio_item-cta">
                 <a href={github} className="btn" target="_blank">
-                  Github
+                  Website
                 </a>
                 <a href={demo} className="btn btn-primary" target="_blank">
                   Live Demo

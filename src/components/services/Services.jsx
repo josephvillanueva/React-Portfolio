@@ -15,23 +15,15 @@ const Services = () => {
           <ul className="service_list">
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+              <p>Cross-platform experience design</p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+              <p>UI and UX consulting </p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-            </li>
-            <li>
-              <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-            </li>
-            <li>
-              <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+              <p>Web Design Layout</p>
             </li>
           </ul>
         </article>
@@ -42,50 +34,34 @@ const Services = () => {
           <ul className="service_list">
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+              <p>React.js Web Development</p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+              <p>CSS Web Styling or UI Styled Frameworks. Tailwind, Bootstrap, etc.</p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-            </li>
-            <li>
-              <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-            </li>
-            <li>
-              <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+              <p>UI Styled Frameworks. Tailwind, Bootstrap, etc.</p>
             </li>
           </ul>
         </article>
         <article className="service">
           <div className="service_head">
-            <h3>Content Creation</h3>
+            <h3>Others</h3>
           </div>
           <ul className="service_list">
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+              <p>Business planning consultation </p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+              <p>Project management </p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-            </li>
-            <li>
-              <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-            </li>
-            <li>
-              <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+              <p>3D Printing </p>
             </li>
           </ul>
         </article>

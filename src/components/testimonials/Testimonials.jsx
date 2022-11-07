@@ -14,36 +14,30 @@ import "swiper/css/pagination";
 
 const data = [
   {
-    avatar: AVTR1,
-    name: "Tina Snow",
+    name: "Angelo Amadora",
+    github: "https://www.linkedin.com/in/angelo-amadora-056b62201/",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti porro repellendus explicabo aliquid repudiandae laudantium neque voluptates. Non possimus numquam temporibus! Veniam, odio quod quo exercitationem odit sunt molestiae non.",
+      "Previous Team Lead in Anteriore Solutions",
   },
   {
-    avatar: AVTR2,
-    name: "Shatta Wale",
+    name: "Kim Fajardo",
+    github: "https://www.linkedin.com/in/kimpfajardo/",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti porro repellendus explicabo aliquid repudiandae laudantium neque voluptates. Non possimus numquam temporibus! Veniam, odio quod quo exercitationem odit sunt molestiae non.",
+      "Previous Co-worker and Mentor in Anteriore Solutions",
   },
   {
-    avatar: AVTR3,
-    name: "Kwame Despite",
+    name: "Gio Velez",
+    github: "https://www.linkedin.com/in/gio-anton-velez-ab0aa1a7/",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti porro repellendus explicabo aliquid repudiandae laudantium neque voluptates. Non possimus numquam temporibus! Veniam, odio quod quo exercitationem odit sunt molestiae non.",
-  },
-  {
-    avatar: AVTR4,
-    name: "Nana Ama McBrown",
-    review:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti porro repellendus explicabo aliquid repudiandae laudantium neque voluptates. Non possimus numquam temporibus! Veniam, odio quod quo exercitationem odit sunt molestiae non.",
+      "Previous Co-worker in Metatech Labs and colleague in Senti.ai",
   },
 ];
 
 const Testimonials = () => {
   return (
     <section id="testimonials">
-      <h5>Review from Clients</h5>
-      <h2>Testimonials</h2>
+      <h5>Previous Co-workers</h5>
+      <h2>Character Reference</h2>
       <Swiper
         className="container testimonials_container"
         modules={[Pagination]}
@@ -55,13 +49,14 @@ const Testimonials = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
-        {data.map(({ avatar, name, review, key }) => {
+        {data.map(({ avatar, name, review, key, github }) => {
           return (
             <SwiperSlide key={key} className="testimonial">
-              <div className="client_avatar">
-                <img src={avatar} alt="Avatar One" />
-              </div>
-              <h5 className="client_name">{name}</h5>
+              <h5 className="client_name">
+                <a href={github} target="_blank">
+                  {name}
+                </a>
+              </h5>
               <small className="client_review">{review}</small>
             </SwiperSlide>
           );

@@ -43,11 +43,12 @@
 
 .service_list-icon {
   color: var(--color-primary);
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .service_list p {
   font-size: 0.9rem;
+  width: 80%;
 }
 
 @media screen and (max-width: 1024px) {

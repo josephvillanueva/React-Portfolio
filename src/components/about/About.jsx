@@ -37,10 +37,7 @@ const About = () => {
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut in
-            tenetur maiores quo ducimus animi reprehenderit est et, quibusdam
-            delectus aperiam minima a magni laudantium ea ullam impedit atque
-            consequatur!
+            An aspiring tech career-shifter that learned coding from the basics of HTML and CSS. He later transitioned to React.js while gaining experience in blockchain and cloud engineering development through work experience in Anteriore Solutions and Senti.ai respectively.
           </p>
 
           <a href="#contact" className="btn btn-primary">

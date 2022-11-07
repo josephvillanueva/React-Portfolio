@@ -19,6 +19,8 @@
 
 .portfolio_item-image {
   border-radius: 1.5rem;
+  object-fit: contain;
+  width: 400px;
   overflow: hidden;
 }
 
