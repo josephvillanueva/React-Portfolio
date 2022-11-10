@@ -24,6 +24,24 @@
   overflow: hidden;
 }
 
+.portfolio_tech {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.portfolio_tech_item {
+  background-color: var(--color-bg);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 80%;
+  border-color: var(--color-primary-variant);
+  border-style: solid;
+  border-width: 2px;
+}
+
 .portfolio_item h3 {
   margin: 1.2rem 0 2rem;
 }
@@ -42,8 +60,8 @@
 }
 
 @media screen and (max-width: 600px) {
-    .portfolio_container{
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+  .portfolio_container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
