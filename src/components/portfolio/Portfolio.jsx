@@ -8,7 +8,7 @@ const data = [
     image: IMG1,
     title: "Playible: Next-Gen Fantasy Sports on NEAR",
     github: "https://playible.club/playible-next-gen-nft-fantasy-sports/",
-    demo: "https://app.playible.io/MintPage",
+    demo: "https://app.playible.io/",
     tech: ["React.js", "Node.js", "Tailwind", "Blockchain - NEAR Protocol"],
   },
 ];
