@@ -22,12 +22,12 @@ const About = () => {
             <article className="about_card">
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>1 year working experience</small>
+              <small>3 years working experience</small>
             </article>
             <article className="about_card">
               <FiUsers className="about_icon" />
               <h5>Previous experience</h5>
-              <small>Fontend Web Developer and Junior Cluod Engineer</small>
+              <small>Fontend Web Developer and Junior Cloud Engineer</small>
             </article>
             <article className="about_card">
               <VscFolderLibrary className="about_icon" />
@@ -37,7 +37,13 @@ const About = () => {
           </div>
 
           <p>
-            An aspiring tech career-shifter that learned coding from the basics of HTML and CSS. He later transitioned to React.js while gaining experience in blockchain and cloud engineering development through work experience in Anteriore Solutions and Senti.ai respectively.
+            An aspiring tech career-shifter that learned coding from the basics
+            of HTML and CSS. He later transitioned to React.js while gaining
+            experience in blockchain and cloud engineering development through
+            work experience in Anteriore Solutions and Senti.ai respectively. He
+            is now a Frontend Developer for Mashup Garage Inc. and is currently
+            maintaining a banking website that is used by thousands of people on
+            a daily basis.
           </p>
 
           <a href="#contact" className="btn btn-primary">
