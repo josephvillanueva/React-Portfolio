@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./footer.css";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -33,12 +34,20 @@ const Footer = () => {
       </ul>
 
       <div className="footer_socials">
-        <a href="https://facebook.com"><FaFacebook className="footer_socials_icon"/></a>
-        <a href="https://github.com"><FaGithub className="footer_socials_icon"/></a>
-        <a href="https://linkedin.com"><FaLinkedin className="footer_socials_icon"/></a>
+        <a href="https://facebook.com">
+          <FaFacebook className="footer_socials_icon" />
+        </a>
+        <a href="https://github.com">
+          <FaGithub className="footer_socials_icon" />
+        </a>
+        <a href="https://linkedin.com">
+          <FaLinkedin className="footer_socials_icon" />
+        </a>
       </div>
 
-      <div className="footer_copyright"><small>&copy; Joseph Villanueva. All rights reserved</small></div>
+      <div className="footer_copyright">
+        <small>&copy; Joseph Villanueva. All rights reserved</small>
+      </div>
     </footer>
   );
 };

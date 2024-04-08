@@ -45,7 +45,7 @@ function Contact() {
             <RiMessengerLine className="contact_option_icon" />
             <h4>Messenger</h4>
             <h5>Joseph G. Villanueva</h5>
-            <a href="https://m.me/bracezz/" target="_blank">
+            <a href="https://m.me/bracezz/" target="_blank" rel="noreferrer">
               Send a message
             </a>
           </article>

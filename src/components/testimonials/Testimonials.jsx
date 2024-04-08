@@ -1,10 +1,5 @@
 import React from "react";
 import "./testimonials.css";
-import AVTR1 from "../../assets/avatar1.jpg";
-import AVTR2 from "../../assets/avatar2.jpg";
-import AVTR3 from "../../assets/avatar3.jpg";
-import AVTR4 from "../../assets/avatar4.jpg";
-
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,20 +11,17 @@ const data = [
   {
     name: "Angelo Amadora",
     github: "https://www.linkedin.com/in/angelo-amadora-056b62201/",
-    review:
-      "Previous Team Lead in Anteriore Solutions",
+    review: "Previous Team Lead in Anteriore Solutions",
   },
   {
     name: "Kim Fajardo",
     github: "https://www.linkedin.com/in/kimpfajardo/",
-    review:
-      "Previous Co-worker and Mentor in Anteriore Solutions",
+    review: "Previous Co-worker and Mentor in Anteriore Solutions",
   },
   {
     name: "Gio Velez",
     github: "https://www.linkedin.com/in/gio-anton-velez-ab0aa1a7/",
-    review:
-      "Previous Co-worker in Metatech Labs and colleague in Senti.ai",
+    review: "Previous Co-worker in Metatech Labs and colleague in Senti.ai",
   },
 ];
 
@@ -53,7 +45,7 @@ const Testimonials = () => {
           return (
             <SwiperSlide key={key} className="testimonial">
               <h5 className="client_name">
-                <a href={github} target="_blank">
+                <a href={github} target="_blank" rel="noreferrer">
                   {name}
                 </a>
               </h5>
