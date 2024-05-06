@@ -1,6 +1,7 @@
 import React from "react";
 import "./portfolio.css";
 import IMG1 from "../../assets/portfolio1.jpg";
+import IMG2 from "../../assets/portfolio2.jpg";
 
 const data = [
   {
@@ -10,6 +11,14 @@ const data = [
     github: "https://playible.club/playible-next-gen-nft-fantasy-sports/",
     demo: "https://app.playible.io/",
     tech: ["React.js", "Node.js", "Tailwind", "Blockchain - NEAR Protocol"],
+  },
+  {
+    id: 2,
+    image: IMG2,
+    title: "AI Object Detector",
+    github: "https://github.com/josephvillanueva/ai-object-detector",
+    demo: "https://ai-object-detector-three.vercel.app/",
+    tech: ["React.js", "Next.js", "Node.js", "Tailwind", "Tensorflow"],
   },
 ];
 
