@@ -22,17 +22,24 @@ const About = () => {
             <article className="about_card">
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>3 years working experience</small>
+              <small>3 years working experience in Web Development</small>
+              <small>
+                2 years working experience in Business Management, Sales, and
+                Strategic Marketing
+              </small>
             </article>
             <article className="about_card">
               <FiUsers className="about_icon" />
               <h5>Previous experience</h5>
-              <small>Fontend Web Developer and Junior Cloud Engineer</small>
+              <small>Fontend Web Developer and Cloud Engineer</small>
             </article>
             <article className="about_card">
               <VscFolderLibrary className="about_icon" />
               <h5>Projects</h5>
-              <small>Blockchain and Optical Character Recognition</small>
+              <small>
+                Blockchain, Optical Character Recognition, AI Object
+                Recognition, and more
+              </small>
             </article>
           </div>
 
@@ -41,9 +48,9 @@ const About = () => {
             of HTML and CSS. He later transitioned to React.js while gaining
             experience in blockchain and cloud engineering development through
             work experience in Anteriore Solutions and Senti.ai respectively. He
-            is now a Frontend Developer for Mashup Garage Inc. and is currently
-            maintaining a banking website that is used by thousands of people on
-            a daily basis.
+            is now a Software Engineer - Frontend Developer for Mashup Garage
+            Inc. and is currently maintaining a banking website that is used by
+            thousands of people on a daily basis.
           </p>
 
           <a href="#contact" className="btn btn-primary">

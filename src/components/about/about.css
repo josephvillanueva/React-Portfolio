@@ -19,7 +19,7 @@
 }
 
 .about_me-image {
-  width:100%;
+  width: 100%;
   aspect-ratio: 1/1;
   border-radius: 2rem;
   overflow: hidden;
@@ -54,7 +54,7 @@
 
 .about_icon {
   color: var(--color-primary);
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
