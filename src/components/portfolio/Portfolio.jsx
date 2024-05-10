@@ -2,6 +2,7 @@ import React from "react";
 import "./portfolio.css";
 import IMG1 from "../../assets/portfolio1.jpg";
 import IMG2 from "../../assets/portfolio2.jpg";
+import IMG3 from "../../assets/portfolio3.jpg";
 
 const data = [
   {
@@ -19,6 +20,21 @@ const data = [
     github: "https://github.com/josephvillanueva/ai-object-detector",
     demo: "https://ai-object-detector-three.vercel.app/",
     tech: ["React.js", "Next.js", "Node.js", "Tailwind", "Tensorflow"],
+  },
+  {
+    id: 3,
+    image: IMG3,
+    title: "GHIPY Clone",
+    github: "https://github.com/josephvillanueva/ai-object-detector",
+    demo: "https://giphy-clone.vercel.app/",
+    tech: [
+      "React.js",
+      "React Icons",
+      "Vite",
+      "Node.js",
+      "Tailwind",
+      "GIPHY API",
+    ],
   },
 ];
 
