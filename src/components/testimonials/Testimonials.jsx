@@ -9,6 +9,21 @@ import "swiper/css/pagination";
 
 const data = [
   {
+    name: "Leonell Cruz",
+    github: "https://www.linkedin.com/in/leonellcruz/",
+    review: "Current team member in Mashup Garage",
+  },
+  {
+    name: "Alyssa Marcos",
+    github: "https://www.linkedin.com/in/alyssamarcos/",
+    review: "Co-founder of A&J 3D Printing Services",
+  },
+  {
+    name: "Gio Velez",
+    github: "https://www.linkedin.com/in/gio-anton-velez-ab0aa1a7/",
+    review: "Previous Co-worker in Metatech Labs and colleague in Senti.ai",
+  },
+  {
     name: "Angelo Amadora",
     github: "https://www.linkedin.com/in/angelo-amadora-056b62201/",
     review: "Previous Team Lead in Anteriore Solutions",
@@ -17,11 +32,6 @@ const data = [
     name: "Kim Fajardo",
     github: "https://www.linkedin.com/in/kimpfajardo/",
     review: "Previous Co-worker and Mentor in Anteriore Solutions",
-  },
-  {
-    name: "Gio Velez",
-    github: "https://www.linkedin.com/in/gio-anton-velez-ab0aa1a7/",
-    review: "Previous Co-worker in Metatech Labs and colleague in Senti.ai",
   },
 ];
 
