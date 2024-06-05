@@ -22,11 +22,17 @@ const About = () => {
             <article className="about_card">
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>3 years working experience in Web Development</small>
-              <small>
-                2 years working experience in Business Management, Sales, and
-                Strategic Marketing
-              </small>
+              <div className="flex flex-col">
+                <div>
+                  <small>3 years working experience in Web Development</small>
+                </div>
+                <div>
+                  <small>
+                    2 years working experience in Business Management, Sales,
+                    and Strategic Marketing
+                  </small>
+                </div>
+              </div>
             </article>
             <article className="about_card">
               <FiUsers className="about_icon" />
@@ -42,16 +48,21 @@ const About = () => {
               </small>
             </article>
           </div>
-
-          <p>
-            An aspiring tech career-shifter that learned coding from the basics
-            of HTML and CSS. He later transitioned to React.js while gaining
-            experience in blockchain and cloud engineering development through
-            work experience in Anteriore Solutions and Senti.ai respectively. He
-            is now a Software Engineer - Frontend Developer for Mashup Garage
-            Inc. and is currently maintaining a banking website that is used by
-            thousands of people on a daily basis.
-          </p>
+          <div className="about_content_p_content">
+            <p className="about_content_p_first">
+              An aspiring tech career-shifter that learned coding from the
+              basics of HTML and CSS. He later transitioned to React.js while
+              gaining experience in blockchain and cloud engineering development
+              through work experience in Anteriore Solutions and Senti.ai
+              respectively. He is now a Software Engineer - Frontend Developer
+              for Mashup Garage Inc. and is currently maintaining a banking
+              website that is used by thousands of people on a daily basis.
+            </p>
+            <p>
+              He also manages A&J 3D printing service, a business that
+              specializes in 3d printing and 3d modeling.
+            </p>
+          </div>
 
           <a href="#contact" className="btn btn-primary">
             Let's Talk

@@ -11,7 +11,14 @@ const data = [
     title: "Playible: Next-Gen Fantasy Sports on NEAR",
     github: "https://playible.club/playible-next-gen-nft-fantasy-sports/",
     demo: "https://app.playible.io/",
-    tech: ["React.js", "Node.js", "Tailwind", "Blockchain - NEAR Protocol"],
+    tech: [
+      "React.js",
+      "Node.js",
+      "GraphQL",
+      "Tailwind",
+      "Blockchain - NEAR Protocol",
+      "Postman",
+    ],
   },
   {
     id: 2,
@@ -48,36 +55,40 @@ const Portfolio = () => {
         {data.map(({ id, image, title, github, demo, tech }) => {
           return (
             <article key={id} className="portfolio_item">
-              <div className="portfolio_item-image">
-                <img src={image} alt="" />
+              <div className="porfolio_item_content">
+                <div className="portfolio_item-image">
+                  <img src={image} alt="" />
+                </div>
               </div>
-              <h3>{title}</h3>
-              <div className="portfolio_tech">
-                {tech.map((yes) => {
-                  return (
-                    <div className="portfolio_tech_background">
-                      <div className="portfolio_tech_item">{yes}</div>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="portfolio_item-cta">
-                <a
-                  href={github}
-                  className="btn"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Website
-                </a>
-                <a
-                  href={demo}
-                  className="btn btn-primary"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo
-                </a>
+              <div className="portfolio_item_container">
+                <h3>{title}</h3>
+                <div className="portfolio_tech">
+                  {tech.map((yes) => {
+                    return (
+                      <div className="portfolio_tech_background">
+                        <div className="portfolio_tech_item">{yes}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="portfolio_item-cta">
+                  <a
+                    href={github}
+                    className="btn"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Website
+                  </a>
+                  <a
+                    href={demo}
+                    className="btn btn-primary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </article>
           );

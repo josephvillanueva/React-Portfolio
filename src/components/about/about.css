@@ -68,8 +68,15 @@
 }
 
 .about_content p {
-  margin: 2rem 0 2.6rem;
   color: var(--color-light);
+}
+
+.about_content_p_content {
+  margin: 2rem 0 2.6rem;
+}
+
+.about_content_p_first {
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
