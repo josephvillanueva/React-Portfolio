@@ -1,7 +1,7 @@
 .portfolio_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .porfolio_item_content {
@@ -13,7 +13,7 @@
 .portfolio_item {
   background: var(--color-bg-variant);
   border-radius: 2rem;
-  padding: 1.3rem;
+  padding: 1rem;
   transition: var(--transition);
   border: 1px solid transparent;
   display: flex;
