@@ -26,7 +26,7 @@ const data = [
     image: IMG2,
     title: "AI Object Detector",
     github: "https://github.com/josephvillanueva/ai-object-detector",
-    demo: "https://ai-object-detector-three.vercel.app/",
+    demo: "https://ai-object-detector-josephvillanueva.vercel.app/",
     tech: ["React.js", "Next.js", "Node.js", "Tailwind", "Tensorflow"],
   },
   {
