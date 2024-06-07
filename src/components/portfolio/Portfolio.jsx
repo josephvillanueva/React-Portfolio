@@ -3,6 +3,7 @@ import "./portfolio.css";
 import IMG1 from "../../assets/portfolio1.jpg";
 import IMG2 from "../../assets/portfolio2.jpg";
 import IMG3 from "../../assets/portfolio3.jpg";
+import WIP from "../../assets/WIP.png";
 
 const data = [
   {
@@ -42,6 +43,14 @@ const data = [
       "Tailwind",
       "GIPHY API",
     ],
+  },
+  {
+    id: 4,
+    image: WIP,
+    title: "React Query Project",
+    github: "https://github.com/josephvillanueva/react-query",
+    demo: "https://react-query-josephvillanueva.vercel.app/",
+    tech: ["React.js", "Vite", "React Query"],
   },
 ];
 
