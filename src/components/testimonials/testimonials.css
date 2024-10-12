@@ -14,10 +14,11 @@
 .testimonial {
   background: var(--color-bg-variant);
   text-align: center;
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 2rem;
   user-select: none;
 }
+
 .client_name {
   font-size: 1.5rem;
 }
@@ -32,7 +33,7 @@
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
-  background: var(--color-primary)
+  background: var(--color-primary);
 }
 
 @media screen and (max-width: 1024px) {
@@ -48,4 +49,23 @@
   .client_review {
     width: var(--container-width-sm);
   }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-primary);
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  opacity: 0.8; /* Slightly reduce opacity on hover */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.5rem; /* Adjust the size of the arrow icon */
 }

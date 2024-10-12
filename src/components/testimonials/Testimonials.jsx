@@ -1,11 +1,10 @@
 import React from "react";
 import "./testimonials.css";
-import { Pagination } from "swiper";
+import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const data = [
   {
@@ -42,18 +41,18 @@ const Testimonials = () => {
       <h2>Character Reference</h2>
       <Swiper
         className="container testimonials_container"
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
         spaceBetween={40}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        speed={600}
+        effect="slide"
       >
-        {data.map(({ avatar, name, review, key, github }) => {
+        {data.map(({ name, review, github }, index) => {
           return (
-            <SwiperSlide key={key} className="testimonial">
+            <SwiperSlide key={index} className="testimonial">
               <h5 className="client_name">
                 <a href={github} target="_blank" rel="noreferrer">
                   {name}
