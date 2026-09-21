@@ -7,13 +7,18 @@ import {
   useInView,
   useReducedMotion,
 } from "framer-motion";
+import { BsMicrosoft } from "react-icons/bs";
 import {
+  SiAnthropic,
+  SiClaude,
   SiCss,
   SiFastify,
   SiFigma,
   SiFramer,
   SiGit,
   SiGithub,
+  SiGithubcopilot,
+  SiGooglegemini,
   SiGooglecloud,
   SiGraphql,
   SiHtml5,
@@ -23,10 +28,12 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiPostman,
+  SiQwen,
   SiReact,
   SiReactquery,
   SiSolidity,
   SiTailwindcss,
+  SiTensorflow,
   SiTerraform,
   SiTypescript,
   SiVercel,
@@ -35,20 +42,27 @@ import {
 import {
   TbApi,
   TbArrowsSplit,
+  TbBrandOpenai,
   TbClipboardList,
   TbFileCheck,
   TbLayoutKanban,
   TbListCheck,
+  TbMask,
   TbPresentation,
+  TbPrompt,
   TbRoute,
+  TbShieldLock,
   TbSortDescending,
+  TbSparkles,
   TbTargetArrow,
+  TbTerminal2,
   TbUsersGroup,
 } from "react-icons/tb";
 
 const CATEGORIES = [
   "All",
   "Product & Delivery",
+  "AI",
   "Languages",
   "Frontend",
   "Backend & Cloud",
@@ -68,6 +82,20 @@ const skills = [
   { name: "Stakeholder Management", category: "Product & Delivery", Icon: TbUsersGroup },
   { name: "Client Workshops", category: "Product & Delivery", Icon: TbPresentation },
   { name: "Requirements Traceability", category: "Product & Delivery", Icon: TbArrowsSplit },
+
+  { name: "Claude", category: "AI", Icon: SiClaude, color: "#d97757" },
+  { name: "Claude Code", category: "AI", Icon: TbTerminal2, color: "#d97757" },
+  { name: "Claude API", category: "AI", Icon: SiAnthropic, color: "#f0eee6" },
+  { name: "ChatGPT", category: "AI", Icon: TbBrandOpenai, color: "#ffffff" },
+  { name: "Gemini", category: "AI", Icon: SiGooglegemini, color: "#8e75ff" },
+  { name: "Qwen", category: "AI", Icon: SiQwen, color: "#7c6cff" },
+  { name: "GitHub Copilot", category: "AI", Icon: SiGithubcopilot, color: "#ffffff" },
+  { name: "Microsoft Copilot", category: "AI", Icon: BsMicrosoft, color: "#00a4ef" },
+  { name: "TensorFlow.js", category: "AI", Icon: SiTensorflow, color: "#ff8f00" },
+  { name: "Prompt Engineering", category: "AI", Icon: TbPrompt },
+  { name: "LLM App Prototyping", category: "AI", Icon: TbSparkles },
+  { name: "Data Masking for LLMs", category: "AI", Icon: TbMask },
+  { name: "Responsible AI Use", category: "AI", Icon: TbShieldLock },
 
   { name: "JavaScript", category: "Languages", Icon: SiJavascript, color: "#f7df1e" },
   { name: "TypeScript", category: "Languages", Icon: SiTypescript, color: "#3178c6" },
@@ -115,9 +143,10 @@ const Skills = () => {
     <section id="skills">
       <h2>Skills &amp; Tools</h2>
       <p className="skills_intro">
-        The product practices I use day to day, and the technical stack I have
-        shipped with. The engineering side is what lets me size work honestly
-        and write requirements that hold up in implementation.
+        The product practices I use day to day, the AI tools I work with, and
+        the technical stack I have shipped with. I use AI to turn an idea into
+        a working prototype that stakeholders can react to, and I build in the
+        guardrails that make it safe to use on real work.
       </p>
 
       <div className="container skills">
