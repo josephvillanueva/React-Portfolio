@@ -3,7 +3,7 @@ import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { FaSms } from "react-icons/fa";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const form = useRef();
@@ -12,20 +12,12 @@ function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_gala3gf",
-        "template_26339xl",
-        form.current,
-        "Ks9sFr6A4mNkGbrP_"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .sendForm("service_gala3gf", "template_26339xl", form.current, {
+        publicKey: "Ks9sFr6A4mNkGbrP_",
+      })
+      .catch((error) => {
+        console.error("Failed to send message:", error);
+      });
 
     e.target.reset();
   };

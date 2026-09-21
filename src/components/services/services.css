@@ -24,6 +24,14 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+}
+
+.service_head:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: -4px;
 }
 
 .arrow-icon {

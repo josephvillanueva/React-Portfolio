@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import ME from "../../assets/me-about (2).png";
+import ME from "../../assets/me-about-portrait.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
@@ -85,7 +85,7 @@ const About = () => {
           </div>
 
           <a href="#contact" className="btn btn-primary">
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </div>
       </div>
