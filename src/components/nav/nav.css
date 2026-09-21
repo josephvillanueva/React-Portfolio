@@ -1,5 +1,5 @@
 nav{
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--color-nav);
     width: max-content;
     display: block;
     padding: 0.7rem 1.7rem;
@@ -24,12 +24,12 @@ nav a {
 }
 
 nav a:hover{
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--color-nav-hover);
 }
 
 nav a.active{
     background: var(--color-primary);
-    color: black;
+    color: var(--color-bg);
 }
 
 /* Seven items do not fit a phone at the desktop spacing, and the bar is

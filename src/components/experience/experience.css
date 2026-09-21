@@ -14,7 +14,7 @@
   bottom: calc(var(--marker-size) / 2);
   left: calc(var(--marker-size) / 2 - 1px);
   width: 2px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--color-hairline);
   border-radius: 2px;
   overflow: hidden;
 }
