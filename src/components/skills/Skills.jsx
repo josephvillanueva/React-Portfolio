@@ -70,8 +70,8 @@ const CATEGORIES = [
   "Tools",
 ];
 
-// Brand colours are kept where they read well on the dark panel; the rest
-// fall back to the site's primary colour.
+// Brand colours are kept where they read well; white logos use the text
+// colour so they flip with the theme, and the rest fall back to the primary.
 const skills = [
   { name: "Requirements Analysis", category: "Product & Delivery", Icon: TbClipboardList },
   { name: "User Stories", category: "Product & Delivery", Icon: TbFileCheck },
@@ -86,11 +86,11 @@ const skills = [
 
   { name: "Claude", category: "AI", Icon: SiClaude, color: "#d97757" },
   { name: "Claude Code", category: "AI", Icon: TbTerminal2, color: "#d97757" },
-  { name: "Claude API", category: "AI", Icon: SiAnthropic, color: "#f0eee6" },
-  { name: "ChatGPT", category: "AI", Icon: TbBrandOpenai, color: "#ffffff" },
+  { name: "Claude API", category: "AI", Icon: SiAnthropic, color: "var(--color-white)" },
+  { name: "ChatGPT", category: "AI", Icon: TbBrandOpenai, color: "var(--color-white)" },
   { name: "Gemini", category: "AI", Icon: SiGooglegemini, color: "#8e75ff" },
   { name: "Qwen", category: "AI", Icon: SiQwen, color: "#7c6cff" },
-  { name: "GitHub Copilot", category: "AI", Icon: SiGithubcopilot, color: "#ffffff" },
+  { name: "GitHub Copilot", category: "AI", Icon: SiGithubcopilot, color: "var(--color-white)" },
   { name: "Microsoft Copilot", category: "AI", Icon: BsMicrosoft, color: "#00a4ef" },
   { name: "TensorFlow.js", category: "AI", Icon: SiTensorflow, color: "#ff8f00" },
   { name: "Prompt Engineering", category: "AI", Icon: TbPrompt },
@@ -105,26 +105,26 @@ const skills = [
   { name: "Solidity", category: "Languages", Icon: SiSolidity, color: "#a8b1ff" },
 
   { name: "React", category: "Frontend", Icon: SiReact, color: "#61dafb" },
-  { name: "Next.js", category: "Frontend", Icon: SiNextdotjs, color: "#ffffff" },
+  { name: "Next.js", category: "Frontend", Icon: SiNextdotjs, color: "var(--color-white)" },
   { name: "TanStack Query", category: "Frontend", Icon: SiReactquery, color: "#ff4154" },
   { name: "Tailwind CSS", category: "Frontend", Icon: SiTailwindcss, color: "#38bdf8" },
-  { name: "Framer Motion", category: "Frontend", Icon: SiFramer, color: "#ffffff" },
+  { name: "Framer Motion", category: "Frontend", Icon: SiFramer, color: "var(--color-white)" },
   { name: "Lit", category: "Frontend", Icon: SiLit, color: "#6c9bff" },
 
   { name: "Node.js", category: "Backend & Cloud", Icon: SiNodedotjs, color: "#5fa04e" },
   { name: "REST APIs", category: "Backend & Cloud", Icon: TbApi },
   { name: "GraphQL", category: "Backend & Cloud", Icon: SiGraphql, color: "#e10098" },
-  { name: "Fastify", category: "Backend & Cloud", Icon: SiFastify, color: "#ffffff" },
+  { name: "Fastify", category: "Backend & Cloud", Icon: SiFastify, color: "var(--color-white)" },
   { name: "Terraform", category: "Backend & Cloud", Icon: SiTerraform, color: "#844fba" },
   { name: "Google Cloud", category: "Backend & Cloud", Icon: SiGooglecloud, color: "#4285f4" },
-  { name: "NEAR Protocol", category: "Backend & Cloud", Icon: SiNear, color: "#ffffff" },
+  { name: "NEAR Protocol", category: "Backend & Cloud", Icon: SiNear, color: "var(--color-white)" },
 
   { name: "Git", category: "Tools", Icon: SiGit, color: "#f05032" },
-  { name: "GitHub", category: "Tools", Icon: SiGithub, color: "#ffffff" },
+  { name: "GitHub", category: "Tools", Icon: SiGithub, color: "var(--color-white)" },
   { name: "Figma", category: "Tools", Icon: SiFigma, color: "#f24e1e" },
   { name: "Postman", category: "Tools", Icon: SiPostman, color: "#ff6c37" },
   { name: "Vite", category: "Tools", Icon: SiVite, color: "#9d7cff" },
-  { name: "Vercel", category: "Tools", Icon: SiVercel, color: "#ffffff" },
+  { name: "Vercel", category: "Tools", Icon: SiVercel, color: "var(--color-white)" },
 ];
 
 // Official pages for the tools, languages, and platforms, so a visitor can

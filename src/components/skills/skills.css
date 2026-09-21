@@ -20,8 +20,8 @@
   gap: 0.35rem;
   padding: 0.45rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--color-tint);
+  border: 1px solid var(--color-hairline);
 }
 
 .skills_filter {
@@ -74,7 +74,7 @@
   min-height: 15rem;
   border-radius: 1.25rem;
   background: var(--color-bg-variant);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-hairline);
 }
 
 .skills_chip {
@@ -83,8 +83,8 @@
   gap: 0.55rem;
   padding: 0.5rem 0.85rem;
   border-radius: 0.6rem;
-  background: rgba(31, 31, 56, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-chip);
+  border: 1px solid var(--color-hairline);
   font-size: 0.85rem;
   font-weight: 500;
   white-space: nowrap;

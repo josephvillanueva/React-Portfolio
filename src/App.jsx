@@ -9,10 +9,12 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import ThemeToggle from "./components/theme/ThemeToggle";
 
 const App = () => {
   return (
     <>
+      <ThemeToggle />
       <Header />
       <Nav />
       <About />

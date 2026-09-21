@@ -21,14 +21,58 @@
   --color-bg-variant: #2c2c6c;
   --color-primary: #4db5ff;
   --color-primary-variant: rgba(77, 181, 255, 0.4);
+  /* --color-white is the main text colour; it turns dark in light mode. */
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
+  --color-tint: rgba(255, 255, 255, 0.04);
+  --color-hairline: rgba(255, 255, 255, 0.08);
+  --color-chip: rgba(31, 31, 56, 0.7);
+  --color-nav: rgba(0, 0, 0, 0.3);
+  --color-nav-hover: rgba(0, 0, 0, 0.3);
+  --texture: url(../src/assets/bg-texture.png);
+  color-scheme: dark;
 
   --transition: all 400ms ease;
 
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
+}
+
+/* Light theme: follows the system setting unless the visitor picked a theme
+   with the toggle, which sets data-theme on <html>. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-bg: #eef0f8;
+    --color-bg-variant: #ffffff;
+    --color-primary: #0a6fc2;
+    --color-primary-variant: rgba(10, 111, 194, 0.35);
+    --color-white: #16162e;
+    --color-light: rgba(22, 22, 46, 0.7);
+    --color-tint: rgba(22, 22, 46, 0.04);
+    --color-hairline: rgba(22, 22, 46, 0.1);
+    --color-chip: #f3f5fb;
+    --color-nav: rgba(255, 255, 255, 0.75);
+    --color-nav-hover: rgba(22, 22, 46, 0.08);
+    --texture: none;
+    color-scheme: light;
+  }
+}
+
+:root[data-theme="light"] {
+  --color-bg: #eef0f8;
+  --color-bg-variant: #ffffff;
+  --color-primary: #0a6fc2;
+  --color-primary-variant: rgba(10, 111, 194, 0.35);
+  --color-white: #16162e;
+  --color-light: rgba(22, 22, 46, 0.7);
+  --color-tint: rgba(22, 22, 46, 0.04);
+  --color-hairline: rgba(22, 22, 46, 0.1);
+  --color-chip: #f3f5fb;
+  --color-nav: rgba(255, 255, 255, 0.75);
+  --color-nav-hover: rgba(22, 22, 46, 0.08);
+  --texture: none;
+  color-scheme: light;
 }
 
 html {
@@ -53,7 +97,8 @@ body {
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
-  background-image: url(../src/assets/bg-texture.png);
+  background-image: var(--texture);
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 /* Styles */
