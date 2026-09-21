@@ -4,11 +4,25 @@ import IMG1 from "../../assets/portfolio1.jpg";
 import IMG2 from "../../assets/portfolio2.jpg";
 import IMG3 from "../../assets/portfolio3.jpg";
 import IMG4 from "../../assets/portfolio4.jpg";
-import WIP from "../../assets/WIP.png";
+import BACKLOG_BOARD from "../../assets/backlog-board.jpg";
 
 const projects = [
   {
     id: 1,
+    image: BACKLOG_BOARD,
+    title: "Backlog Board: TanStack Query Demo",
+    github: "https://github.com/josephvillanueva/react-query",
+    demo: "https://react-query-josephvillanueva.vercel.app/",
+    tech: [
+      "React 19",
+      "TypeScript",
+      "TanStack Query",
+      "Optimistic Updates",
+      "Vite",
+    ],
+  },
+  {
+    id: 2,
     image: IMG1,
     title: "Playible: Next-Gen Fantasy Sports on NEAR",
     github: "https://playible.club/playible-next-gen-nft-fantasy-sports/",
@@ -23,7 +37,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     image: IMG2,
     title: "AI Object Detector",
     github: "https://github.com/josephvillanueva/ai-object-detector",
@@ -31,7 +45,7 @@ const projects = [
     tech: ["React.js", "Next.js", "Node.js", "Tailwind CSS", "TensorFlow"],
   },
   {
-    id: 3,
+    id: 4,
     image: IMG3,
     title: "GIPHY Clone",
     github: "https://github.com/josephvillanueva/giphy-clone",
@@ -44,14 +58,6 @@ const projects = [
       "Tailwind CSS",
       "GIPHY API",
     ],
-  },
-  {
-    id: 4,
-    image: WIP,
-    title: "React Query Project",
-    github: "https://github.com/josephvillanueva/react-query",
-    demo: "https://react-query-josephvillanueva.vercel.app/",
-    tech: ["React.js", "Vite", "React Query"],
   },
   {
     id: 5,
