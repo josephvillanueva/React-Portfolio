@@ -31,3 +31,18 @@ nav a.active{
     background: var(--color-primary);
     color: black;
 }
+
+/* Seven items do not fit a phone at the desktop spacing, and the bar is
+   fixed-position so it hangs off the viewport rather than causing a scrollbar.
+   Targets stay above the 24px minimum. */
+@media screen and (max-width: 600px) {
+    nav {
+        gap: 0.35rem;
+        padding: 0.6rem 0.9rem;
+    }
+
+    nav a {
+        padding: 0.55rem;
+        font-size: 1rem;
+    }
+}
