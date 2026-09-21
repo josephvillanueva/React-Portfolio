@@ -4,21 +4,32 @@ import { BsPatchCheckFill } from "react-icons/bs";
 
 const Experience = () => {
   const skills = {
-    frontend: [
-      { name: "HTML", experience: "Experienced" },
-      { name: "CSS", experience: "Experienced" },
-      { name: "JavaScript", experience: "Experienced" },
+    product: [
+      { name: "Requirements Analysis", experience: "Current focus" },
+      { name: "User Stories", experience: "Current focus" },
+      { name: "Acceptance Criteria", experience: "Current focus" },
+      { name: "Backlog Refinement", experience: "Current focus" },
+      { name: "Feature Prioritization", experience: "Current focus" },
+      { name: "Product Discovery", experience: "Current focus" },
+      { name: "Process & User Flows", experience: "Experienced" },
+      { name: "Stakeholder Management", experience: "Experienced" },
+      { name: "Client Workshops", experience: "Experienced" },
+      { name: "Agile Delivery", experience: "Experienced" },
+      { name: "Requirements Traceability", experience: "Experienced" },
+      { name: "Design Systems", experience: "Experienced" },
+    ],
+    technical: [
       { name: "React.js", experience: "Experienced" },
-      { name: "Bootstrap", experience: "Experienced" },
+      { name: "Next.js", experience: "Experienced" },
+      { name: "TypeScript", experience: "Experienced" },
+      { name: "JavaScript", experience: "Experienced" },
+      { name: "HTML & CSS", experience: "Experienced" },
       { name: "Tailwind CSS", experience: "Experienced" },
       { name: "Framer Motion", experience: "Experienced" },
-    ],
-    backend: [
       { name: "Node.js", experience: "Experienced" },
-      { name: "Solidity", experience: "Experienced" },
-      { name: "Fastify", experience: "Experienced" },
       { name: "REST API", experience: "Experienced" },
       { name: "GraphQL", experience: "Experienced" },
+      { name: "Fastify", experience: "Experienced" },
       { name: "Terraform", experience: "Experienced" },
     ],
   };
@@ -42,15 +53,15 @@ const Experience = () => {
 
       <div className="container experience_container">
         <div className="experience_frontend">
-          <h3>Frontend Stack Experience</h3>
+          <h3>Product &amp; Business Analysis</h3>
           <div className="experience_content">
-            {renderSkills(skills.frontend)}
+            {renderSkills(skills.product)}
           </div>
         </div>
         <div className="experience_backend">
-          <h3>Backend Stack Experience</h3>
+          <h3>Technical Foundation</h3>
           <div className="experience_content">
-            {renderSkills(skills.backend)}
+            {renderSkills(skills.technical)}
           </div>
         </div>
       </div>

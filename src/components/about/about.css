@@ -31,19 +31,22 @@
   transform: rotate(0deg);
 }
 
+/* auto-fit lets the cards drop to a second row rather than squeezing to a
+   width that wraps the text one word per line. */
 .about_cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 1.2rem;
 }
 
 .about_card {
   background: var(--color-bg-variant);
   border: 1px solid transparent;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.4rem 1rem;
   text-align: center;
   transition: var(--transition);
+  min-width: 0;
 }
 
 .about_card:hover {

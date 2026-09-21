@@ -1,5 +1,15 @@
+/* Extra bottom padding gives the pagination bullets room below the card
+   instead of sitting against its lower edge. Swiper centres the arrows on the
+   whole container, so discount that padding to keep them level with the card. */
 .container.testimonials_container {
   width: 40%;
+  padding-bottom: 4.5rem;
+  --swiper-navigation-top-offset: calc((100% - 4.5rem) / 2);
+  --swiper-navigation-sides-offset: 1rem;
+}
+
+.testimonials_container .swiper-pagination {
+  bottom: 0;
 }
 
 .client_avatar {
@@ -11,12 +21,30 @@
   border: 0.4rem solid var(--color-primary-variant);
 }
 
+/* Text stays selectable so a reader can copy a reference's name. The wide
+   horizontal padding keeps content clear of the overlaid arrow buttons.
+   height: auto stretches every slide to the tallest one, so cards do not
+   change size between references and the arrows stay centred on the card. */
 .testimonial {
   background: var(--color-bg-variant);
   text-align: center;
-  padding: 3rem;
+  padding: 3rem 5rem;
   border-radius: 2rem;
-  user-select: none;
+}
+
+/* Two classes so this beats Swiper's own .swiper-slide rule, whose stylesheet
+   is injected after this one. */
+.swiper-slide.testimonial {
+  height: auto;
+}
+
+.client_name a:focus-visible,
+.swiper-button-next:focus-visible,
+.swiper-button-prev:focus-visible,
+.swiper-pagination-bullet:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .client_name {
@@ -49,20 +77,28 @@
   .client_review {
     width: var(--container-width-sm);
   }
+  /* Arrows sit closer in on narrow screens, so the card needs less inset. */
+  .testimonial {
+    padding: 2rem 3rem;
+  }
+  .swiper-button-prev {
+    left: 0.25rem;
+  }
+  .swiper-button-next {
+    right: 0.25rem;
+  }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--color-primary);
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  transform: scale(1.1); /* Slightly enlarge on hover */
-  opacity: 0.8; /* Slightly reduce opacity on hover */
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 .swiper-button-next:after,

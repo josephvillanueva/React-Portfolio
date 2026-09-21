@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  height: 375px;
-  overflow: hidden;
+  /* Cards size to their own content; align-items keeps a collapsed card from
+     stretching to match an expanded neighbour in the same grid row. */
+  align-items: start;
 }
 
 .service {
@@ -49,19 +50,16 @@
   text-align: center;
 }
 
+/* Height is animated by framer-motion; a CSS transition here would fight it. */
 .service_list {
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
   padding-left: 0;
   margin: 0;
 }
 
 .service_list.active {
-  max-height: 250px;
-  padding-left: 1rem;
-  margin: 1rem 0;
   padding: 1rem;
+  margin: 1rem 0;
   border-radius: 0 0 2rem 2rem;
   background: var(--color-bg-variant);
 }
@@ -71,11 +69,15 @@
   gap: 1rem;
   margin-bottom: 0.8rem;
   line-height: 1.5;
+  align-items: flex-start;
 }
 
+/* flex-shrink: 0 keeps the icon circular; without it the SVG is squeezed
+   narrower whenever the adjacent text wraps. */
 .service_list-icon {
   color: var(--color-primary);
-  margin-top: 15px;
+  margin-top: 4px;
+  flex-shrink: 0;
 }
 
 .service_list p {

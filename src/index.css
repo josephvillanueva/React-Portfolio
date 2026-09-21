@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/* Tailwind utilities only — Preflight is deliberately omitted. This stylesheet
-   relies on default browser heading sizes, which Preflight resets to inherit. */
+/* Tailwind utilities only. Preflight is deliberately omitted because this
+   stylesheet relies on default browser heading sizes, which Preflight resets
+   to inherit. */
 @layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
@@ -32,6 +33,15 @@
 
 html {
   scroll-behavior: smooth;
+  /* Keeps a section's heading clear of the viewport top when the quick nav
+     jumps to its anchor. */
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -123,7 +133,7 @@ img {
 
 @media screen and (max-width: 1024px) {
   .container {
-    width: var (--container-width-md);
+    width: var(--container-width-md);
   }
 
   section {
@@ -132,7 +142,7 @@ img {
 }
 @media screen and (max-width: 600px) {
   .container {
-    width: var (--container-width-sm);
+    width: var(--container-width-sm);
   }
 
   section > h2{
