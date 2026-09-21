@@ -2,7 +2,7 @@
 
 My personal site: Systems Analyst & UI/UX Lead, engineer-turned-product.
 
-**Live:** https://joseph-react-portfolio.vercel.app
+**Live:** https://joseph-villanueva-portfolio.vercel.app
 
 ## What's on it
 

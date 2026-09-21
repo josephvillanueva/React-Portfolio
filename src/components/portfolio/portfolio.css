@@ -88,8 +88,110 @@
   margin-bottom: 0.5rem;
 }
 
+.portfolio_item-cta {
+  flex-wrap: wrap;
+}
+
 .portfolio_item-cta .btn {
   white-space: nowrap;
+  font: inherit;
+}
+
+.portfolio_item-cta button.btn:not(:hover) {
+  background: transparent;
+}
+
+/* Architecture diagram */
+
+/* margin: auto restores the native centering that the global reset removes. */
+.architecture_dialog {
+  margin: auto;
+  width: min(1200px, calc(100vw - 2rem));
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  border: 1px solid var(--color-primary-variant);
+  border-radius: 1.25rem;
+  background: var(--color-bg);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.architecture_dialog::backdrop {
+  background: rgba(10, 10, 25, 0.75);
+}
+
+.architecture_dialog-body {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100dvh - 2rem);
+}
+
+.architecture_dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1rem 0.5rem 1.5rem;
+}
+
+.architecture_dialog-head h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.architecture_dialog-close {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-white);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.architecture_dialog-close:hover {
+  background: var(--color-bg-variant);
+}
+
+.architecture_dialog-close:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.architecture_dialog-scroll {
+  overflow: auto;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.architecture_dialog-scroll img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Below this width the labels get too small to read, so the diagram keeps a
+   readable size and scrolls sideways instead. */
+.architecture_dialog-hint {
+  display: none;
+  padding: 0 1.5rem;
+  font-size: 0.8rem;
+  color: var(--color-light);
+}
+
+@media screen and (max-width: 900px) {
+  .architecture_dialog-hint {
+    display: block;
+  }
+
+  .architecture_dialog-scroll img {
+    width: 900px;
+    max-width: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
