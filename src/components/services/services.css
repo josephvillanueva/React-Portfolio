@@ -30,6 +30,15 @@
   text-align: left;
 }
 
+/* Room for a two-line title in every header, so a shorter title such as
+   "Technical Delivery" does not start its list higher than its neighbours.
+   Only needed while cards sit side by side. */
+@media screen and (min-width: 601px) {
+  .service_head {
+    min-height: calc(4rem + 2 * 1.7em);
+  }
+}
+
 .service_head:focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: -4px;

@@ -4,12 +4,6 @@ import { BiCheck, BiChevronDown } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 const Services = () => {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-
-  const toggleService = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   const servicesData = [
     {
       title: "Product & Requirements",
@@ -40,43 +34,56 @@ const Services = () => {
     },
   ];
 
+  // Every card starts open; each one still collapses independently.
+  const [openServices, setOpenServices] = React.useState(
+    () => new Set(servicesData.map((_, index) => index)),
+  );
+
+  const toggleService = (index) => {
+    setOpenServices((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  };
+
   return (
     <section id="services">
       <h5>What I Offer</h5>
       <h2>Services</h2>
       <div className="container services_container">
-        {servicesData.map((service, index) => (
-          <article className="service" key={index}>
-            <button
-              type="button"
-              className="service_head"
-              onClick={() => toggleService(index)}
-              aria-expanded={activeIndex === index}
-            >
-              <h3>{service.title}</h3>
-              <BiChevronDown
-                className={`arrow-icon ${
-                  activeIndex === index ? "active" : ""
-                }`}
-              />
-            </button>
-            <motion.ul
-              className={`service_list ${
-                activeIndex === index ? "active" : ""
-              }`}
-              initial={false}
-              animate={{ height: activeIndex === index ? "auto" : 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {service.description.map((desc, i) => (
-                <li key={i}>
-                  <BiCheck className="service_list-icon" />
-                  <p>{desc}</p>
-                </li>
-              ))}
-            </motion.ul>
-          </article>
-        ))}
+        {servicesData.map((service, index) => {
+          const isOpen = openServices.has(index);
+          return (
+            <article className="service" key={service.title}>
+              <button
+                type="button"
+                className="service_head"
+                onClick={() => toggleService(index)}
+                aria-expanded={isOpen}
+              >
+                <h3>{service.title}</h3>
+                <BiChevronDown
+                  className={`arrow-icon ${isOpen ? "active" : ""}`}
+                />
+              </button>
+              <motion.ul
+                className={`service_list ${isOpen ? "active" : ""}`}
+                initial={false}
+                animate={{ height: isOpen ? "auto" : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {service.description.map((desc, i) => (
+                  <li key={i}>
+                    <BiCheck className="service_list-icon" />
+                    <p>{desc}</p>
+                  </li>
+                ))}
+              </motion.ul>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

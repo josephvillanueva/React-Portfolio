@@ -38,8 +38,10 @@ const About = () => {
               <small>Enterprise, banking, retail, and blockchain</small>
             </article>
           </div>
+        </div>
+        <div className="about_bio">
           <div className="about_content_p_content">
-            <p className="about_content_p_first">
+            <p>
               I am a <strong>Systems Analyst and UI/UX Lead</strong> at{" "}
               <strong>SMITS, Inc.</strong>, the IT company of San Miguel
               Corporation, where I translate business needs into functional
