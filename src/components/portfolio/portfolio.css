@@ -19,15 +19,30 @@
 
 .portfolio_item-image {
   border-radius: 1.5rem;
-  object-fit: contain;
-  width: 400px;
   overflow: hidden;
 }
 
+.portfolio_item-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio_item-role {
+  color: var(--color-primary);
+  margin-bottom: 0.8rem;
+}
+
+.portfolio_item-description {
+  font-size: 0.9rem;
+  color: var(--color-light);
+  margin-bottom: 1.2rem;
+}
+
 .portfolio_tech {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
   margin-bottom: 20px;
 }
 
@@ -43,7 +58,7 @@
 }
 
 .portfolio_item h3 {
-  margin: 1.2rem 0 2rem;
+  margin: 1.2rem 0 0.4rem;
 }
 
 .portfolio_item-cta {

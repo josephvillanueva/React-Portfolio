@@ -22,22 +22,35 @@ const About = () => {
             <article className="about_card">
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>1 year working experience</small>
+              <small>7+ years across engineering and product</small>
             </article>
             <article className="about_card">
               <FiUsers className="about_icon" />
-              <h5>Previous experience</h5>
-              <small>Frontend Web Developer and Junior Cloud Engineer</small>
+              <h5>Current Role</h5>
+              <small>Systems Analyst &amp; UI/UX Lead at SMITS (San Miguel Corporation)</small>
             </article>
             <article className="about_card">
               <VscFolderLibrary className="about_icon" />
-              <h5>Projects</h5>
-              <small>Blockchain and Optical Character Recognition</small>
+              <h5>Domains</h5>
+              <small>Enterprise, banking, retail, and blockchain</small>
             </article>
           </div>
 
           <p>
-            An aspiring tech career-shifter that learned coding from the basics of HTML and CSS. He later transitioned to React.js while gaining experience in blockchain and cloud engineering development through work experience in Anteriore Solutions and Senti.ai respectively.
+            I started as an engineer and moved toward product. Today I work as a
+            Systems Analyst and UI/UX Lead, translating business needs into
+            functional requirements, user flows, prioritized backlogs, and
+            acceptance criteria — and supporting Product Owner initiatives
+            through backlog refinement, feature prioritization, client
+            workshops, and solution reviews.
+          </p>
+          <p>
+            The technical background is the reason I am useful in that seat.
+            Having shipped React and Next.js applications, cloud tooling, and
+            design systems myself, I can size feasibility with engineers
+            honestly, write requirements that survive implementation, and keep
+            business value, usability, and technical reality aligned rather than
+            trading one off against the others.
           </p>
 
           <a href="#contact" className="btn btn-primary">
