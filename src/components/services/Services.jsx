@@ -1,7 +1,11 @@
 import React from "react";
 import "./services.css";
 import { BiCheck, BiChevronDown } from "react-icons/bi";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+
+// Slow start, long settle. Shared by the panel and the chevron so they move
+// as one.
+const EASE = [0.16, 1, 0.3, 1];
 
 const Services = () => {
   const servicesData = [
@@ -10,16 +14,16 @@ const Services = () => {
       description: [
         "Translating business needs into functional requirements and delivery-ready feature scopes.",
         "Writing user stories and acceptance criteria that hold up through implementation.",
-        "Backlog refinement, feature prioritization, and requirements traceability.",
-        "Product discovery, client workshops, and solution validation with stakeholders.",
+        "Refining and prioritizing the backlog, with each item traced back to the requirement it serves.",
+        "Running discovery workshops with clients and checking proposed solutions against what they asked for.",
       ],
     },
     {
       title: "UX & Design Systems",
       description: [
         "Mapping process and user flows, then turning them into wireframes and prototypes.",
-        "Conducting UI and UX audits to enhance usability and engagement.",
-        "Contributing design system standards, reusable patterns, and documentation.",
+        "Auditing existing screens for usability problems and turning the findings into fixes.",
+        "Writing design system standards and the component guidance that teams build from.",
         "Running internal UI/UX training so delivery teams apply consistent practices.",
       ],
     },
@@ -29,7 +33,7 @@ const Services = () => {
         "Building responsive web applications with React.js, Next.js, and Tailwind CSS.",
         "Sizing feasibility alongside engineers instead of guessing at it.",
         "Specifying API and integration requirements, including REST and GraphQL.",
-        "Evaluating AI-assisted workflows for analysis, design, and documentation.",
+        "Trying out AI-assisted workflows in analysis and design work, and keeping the ones that hold up.",
       ],
     },
   ];
@@ -48,9 +52,13 @@ const Services = () => {
     });
   };
 
+  const reduceMotion = useReducedMotion();
+  const transition = reduceMotion
+    ? { duration: 0 }
+    : { duration: 0.45, ease: EASE };
+
   return (
     <section id="services">
-      <h5>What I Offer</h5>
       <h2>Services</h2>
       <div className="container services_container">
         {servicesData.map((service, index) => {
@@ -62,25 +70,43 @@ const Services = () => {
                 className="service_head"
                 onClick={() => toggleService(index)}
                 aria-expanded={isOpen}
+                aria-controls={`service-panel-${index}`}
               >
                 <h3>{service.title}</h3>
                 <BiChevronDown
                   className={`arrow-icon ${isOpen ? "active" : ""}`}
                 />
               </button>
-              <motion.ul
-                className={`service_list ${isOpen ? "active" : ""}`}
+              {/* Only the outer wrapper animates height; the padding lives on
+                  the list inside it, so nothing snaps while it opens. */}
+              <motion.div
+                id={`service-panel-${index}`}
+                className="service_panel"
                 initial={false}
-                animate={{ height: isOpen ? "auto" : 0 }}
-                transition={{ duration: 0.3 }}
+                animate={isOpen ? "open" : "closed"}
+                variants={{
+                  open: { height: "auto" },
+                  closed: { height: 0 },
+                }}
+                transition={transition}
+                inert={!isOpen}
               >
-                {service.description.map((desc, i) => (
-                  <li key={i}>
-                    <BiCheck className="service_list-icon" />
-                    <p>{desc}</p>
-                  </li>
-                ))}
-              </motion.ul>
+                <motion.ul
+                  className="service_list"
+                  variants={{
+                    open: { opacity: 1, y: 0 },
+                    closed: { opacity: 0, y: -8 },
+                  }}
+                  transition={transition}
+                >
+                  {service.description.map((desc, i) => (
+                    <li key={i}>
+                      <BiCheck className="service_list-icon" />
+                      <p>{desc}</p>
+                    </li>
+                  ))}
+                </motion.ul>
+              </motion.div>
             </article>
           );
         })}

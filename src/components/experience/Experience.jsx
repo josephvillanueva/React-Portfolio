@@ -14,7 +14,7 @@ const roles = [
     title: "Systems Analyst, UI/UX Lead",
     company: "SMITS, Inc. (San Miguel Corporation)",
     summary:
-      "Translate business needs into functional requirements, user flows, and acceptance criteria, and support Product Owner initiatives through backlog refinement, prioritization, client workshops, and solution reviews. Lead internal UI/UX training and help govern the SMITS design system.",
+      "Turn business needs into requirements and acceptance criteria that developers can build from, and support Product Owner initiatives through backlog refinement, prioritization, client workshops, and solution reviews. Also lead internal UI/UX training and help govern the SMITS design system.",
     tags: ["Product Owner Support", "Requirements", "Design Systems", "AI Workflows"],
   },
   {
@@ -23,7 +23,7 @@ const roles = [
     company: "SMITS, Inc. (San Miguel Corporation)",
     summary:
       "Redesigned enterprise and legacy interfaces by turning business and system requirements into user flows, wireframes, prototypes, and implementation-ready specifications, and helped establish a more structured UI/UX practice.",
-    tags: ["UX Design", "Prototyping", "Specifications"],
+    tags: ["UX Design", "Prototyping", "Specifications", "Legacy Redesign"],
   },
   {
     period: "Mar 2023 - Jun 2025",
@@ -38,8 +38,8 @@ const roles = [
     title: "Junior Cloud Engineer",
     company: "Senti AI",
     summary:
-      "Improved company Fastify, Lit, and Terraform templates to cut project setup effort, and contributed OCR and Google Cloud requirements for SM Prime's finance portal, which digitizes more than 50,000 files a month.",
-    tags: ["Terraform", "Google Cloud", "OCR"],
+      "Reworked the company's starter templates (Fastify and Lit services on Terraform-managed infrastructure) so new projects took less setup, and contributed OCR and Google Cloud requirements for SM Prime's finance portal, which digitizes more than 50,000 files a month.",
+    tags: ["Terraform", "Google Cloud", "OCR", "Fastify"],
   },
   {
     period: "Nov 2021 - Jun 2022",
@@ -47,7 +47,7 @@ const roles = [
     company: "Anteriore Inc.",
     summary:
       "Built Playible.io with React and Tailwind CSS from product requirements and user stories, and led its technical transition to NEAR Protocol and GraphQL.",
-    tags: ["React.js", "GraphQL", "NEAR Protocol"],
+    tags: ["React.js", "Tailwind CSS", "GraphQL", "NEAR Protocol"],
   },
   {
     period: "Dec 2019 - Nov 2021",
@@ -88,7 +88,6 @@ const Experience = () => {
 
   return (
     <section id="experience">
-      <h5>Where I&apos;ve Worked</h5>
       <h2>My Experience</h2>
 
       <div className="container timeline" ref={timelineRef}>

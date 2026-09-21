@@ -113,7 +113,6 @@ const Skills = () => {
 
   return (
     <section id="skills">
-      <h5>What I Work With</h5>
       <h2>Skills &amp; Tools</h2>
       <p className="skills_intro">
         The product practices I use day to day, and the technical stack I have
