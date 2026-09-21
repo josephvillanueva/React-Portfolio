@@ -6,6 +6,8 @@ import OBJECT_DETECTOR from "../../assets/ai-object-detector.jpg";
 import GIPHY_CLONE from "../../assets/giphy-clone.jpg";
 import RECIPE_RANDOMIZER from "../../assets/recipe-randomizer.jpg";
 import BACKLOG_BOARD from "../../assets/backlog-board.jpg";
+import SPEND_MASTER from "../../assets/spend-master.jpg";
+import FRAUD_MASTER from "../../assets/fraud-master.jpg";
 import BACKLOG_BOARD_ARCH from "../../assets/architecture/backlog-board.svg";
 import OBJECT_DETECTOR_ARCH from "../../assets/architecture/ai-object-detector.svg";
 import GIPHY_CLONE_ARCH from "../../assets/architecture/giphy-clone.svg";
@@ -28,6 +30,32 @@ const projects = [
       "TanStack Query",
       "Optimistic Updates",
       "Vite",
+    ],
+  },
+  {
+    id: 6,
+    image: SPEND_MASTER,
+    title: "Spend Master: Procurement Spend Analytics",
+    demo: "https://spend-master-demo.netlify.app/",
+    tech: [
+      "Product Prototype",
+      "JavaScript",
+      "Chart.js",
+      "Role-based Access",
+      "AI Findings (optional)",
+    ],
+  },
+  {
+    id: 7,
+    image: FRAUD_MASTER,
+    title: "Fraud Master: Credit Memo Risk Review",
+    demo: "https://fraud-master-demo.netlify.app/",
+    tech: [
+      "Product Prototype",
+      "JavaScript",
+      "Risk Scoring Rules",
+      "Role-based Access",
+      "AI Explanations (optional)",
     ],
   },
   {
@@ -167,14 +195,16 @@ const Portfolio = () => {
                   ))}
                 </div>
                 <div className="portfolio_item-cta">
-                  <a
-                    href={github}
-                    className="btn"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Code
-                  </a>
+                  {github && (
+                    <a
+                      href={github}
+                      className="btn"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View Code
+                    </a>
+                  )}
                   {architecture && (
                     <button
                       type="button"
