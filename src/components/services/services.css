@@ -45,7 +45,8 @@
 }
 
 .arrow-icon {
-  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   font-size: 1.5rem;
 }
 
@@ -59,18 +60,15 @@
   text-align: center;
 }
 
-/* Height is animated by framer-motion; a CSS transition here would fight it. */
-.service_list {
+/* framer-motion animates this wrapper's height. It has no padding, margin,
+   or border of its own, so the height tween is the only thing that moves. */
+.service_panel {
   overflow: hidden;
-  padding-left: 0;
-  margin: 0;
 }
 
-.service_list.active {
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 0 0 2rem 2rem;
-  background: var(--color-bg-variant);
+.service_list {
+  padding: 2rem 1.5rem 1.2rem;
+  margin: 0;
 }
 
 .service_list li {
@@ -102,6 +100,12 @@
   }
   .service {
     height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow-icon {
+    transition: none;
   }
 }
 
