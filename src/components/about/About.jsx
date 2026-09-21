@@ -19,22 +19,25 @@ const About = () => {
         <div className="about_content">
           <div className="about_cards">
             <article className="about_card">
-              <FaAward className="about_icon" />
-              <h5>Experience</h5>
-              <div className="flex flex-col space-y-2">
-                <small>7+ years building and shaping software</small>
-                <small>2 years in business management and marketing</small>
+              <FaAward className="about_icon" aria-hidden="true" />
+              <div>
+                <h5>Experience</h5>
+                <small>7+ years in software, 2 in business and marketing</small>
               </div>
             </article>
             <article className="about_card">
-              <FiUsers className="about_icon" />
-              <h5>Current Role</h5>
-              <small>Systems Analyst &amp; UI/UX Lead at SMITS, Inc.</small>
+              <FiUsers className="about_icon" aria-hidden="true" />
+              <div>
+                <h5>Current Role</h5>
+                <small>Systems Analyst &amp; UI/UX Lead at SMITS, Inc.</small>
+              </div>
             </article>
             <article className="about_card">
-              <VscFolderLibrary className="about_icon" />
-              <h5>Domains</h5>
-              <small>Enterprise, banking, retail, and blockchain</small>
+              <VscFolderLibrary className="about_icon" aria-hidden="true" />
+              <div>
+                <h5>Domains</h5>
+                <small>Enterprise, banking, retail, and blockchain</small>
+              </div>
             </article>
           </div>
         </div>

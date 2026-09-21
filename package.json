@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://joseph-react-portfolio.vercel.app",
+  "homepage": "https://joseph-villanueva-portfolio.vercel.app",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
