@@ -6,10 +6,11 @@
 
 .experience_container > div {
   background: var(--color-bg-variant);
-  padding: 2.4rem 5rem;
+  padding: 2.4rem 2.5rem;
   border-radius: 2rem;
   border: 1px solid transparent;
   transition: background 0.3s ease, border-color 0.3s ease;
+  min-width: 0;
 }
 
 .experience_container > div:hover {
@@ -28,16 +29,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 2rem;
+  column-gap: 1.5rem;
 }
 
 .experience_details {
   display: flex;
   gap: 1rem;
+  align-items: flex-start;
+  min-width: 0;
 }
 
+/* flex-shrink: 0 keeps the icon circular; without it the SVG is squeezed
+   narrower whenever the adjacent label wraps. */
 .experience_details-icon {
   margin-top: 6px;
   color: var(--color-primary);
+  flex-shrink: 0;
 }
 
 @media screen and (max-width: 1024px) {

@@ -23,64 +23,65 @@ const About = () => {
               <FaAward className="about_icon" />
               <h5>Experience</h5>
               <div className="flex flex-col space-y-2">
-                <small>3+ years in Web Development</small>
-                <br />
-                <small>
-                  2 years in Business Management, Sales, and Strategic Marketing
-                </small>
+                <small>7+ years in engineering, UX, and product</small>
+                <small>2 years in business management and marketing</small>
               </div>
             </article>
             <article className="about_card">
               <FiUsers className="about_icon" />
-              <h5>Previous Roles</h5>
-              <small>Frontend Web Developer & Cloud Engineer</small>
+              <h5>Current Role</h5>
+              <small>Systems Analyst &amp; UI/UX Lead at SMITS, Inc.</small>
             </article>
             <article className="about_card">
               <VscFolderLibrary className="about_icon" />
-              <h5>Projects</h5>
-              <small>
-                Focused on Frontend Development with Blockchain, Optical
-                Character Recognition, and AI Object Recognition.
-              </small>
+              <h5>Domains</h5>
+              <small>Enterprise, banking, retail, and blockchain</small>
             </article>
           </div>
           <div className="about_content_p_content">
             <p className="about_content_p_first">
-              I am a results-driven Front-end Software Developer at{" "}
-              <strong>Mashup Garage</strong>, specializing in enhancing user
-              engagement on a high-traffic banking platform that serves
-              thousands daily. In my current role, I lead the redesign and
-              optimization of the platform, leveraging advanced UI/UX strategies
-              and performance improvements. I excel at engineering and launching
-              interactive features that enhance user satisfaction and developing
-              scalable, reusable UI components with <strong>React.js</strong>,{" "}
-              <strong>Next.js</strong>, and <strong>Tailwind CSS</strong>.
+              I am a <strong>Systems Analyst and UI/UX Lead</strong> at{" "}
+              <strong>SMITS, Inc.</strong>, the IT company of San Miguel
+              Corporation, where I translate business needs into functional
+              requirements, user flows, acceptance criteria, and delivery-ready
+              feature scopes. I support <strong>Product Owner</strong>{" "}
+              initiatives through backlog refinement, feature prioritization,
+              requirements validation, client workshops, and solution reviews,
+              keeping business value, usability, and technical feasibility
+              aligned rather than trading one against the others.
             </p>
             <p>
-              I have a strong foundation in collaborative environments, working
-              closely with cross-functional teams to standardize development
-              practices and ensure a seamless experience across all devices.
+              I came to product through engineering, and that is the part I lean
+              on most. Having shipped <strong>React.js</strong> and{" "}
+              <strong>Next.js</strong> applications, cloud tooling, and design
+              systems myself, I can size feasibility honestly with developers,
+              write requirements that survive implementation, and ask the
+              question that surfaces the edge case before it reaches a sprint.
             </p>
             <p>
-              Previously, as a <strong>Junior Cloud Engineer</strong> at{" "}
-              <strong>Senti.ai</strong>, I improved development efficiency by
-              implementing Fastify and Terraform, and I contributed to the
-              successful delivery of a finance processing portal that digitizes
-              over 50,000 files monthly. My role required a keen eye for detail,
-              focusing on bug fixes and participating in technical sprints.
+              Before this, as a <strong>Frontend Developer</strong> at{" "}
+              <strong>Mashup Garage</strong>, I led the redesign and performance
+              optimization of Metrobank&apos;s branding website, aligning
+              business requirements and success measures with user experience
+              and product goals. As a <strong>Junior Cloud Engineer</strong> at{" "}
+              <strong>Senti.ai</strong>, I contributed requirements for OCR and
+              Google Cloud services on a finance processing portal that
+              digitizes over 50,000 files monthly. At{" "}
+              <strong>Anteriore Solutions</strong> I developed{" "}
+              <strong>Playible.io</strong> and led its technical transition to
+              NEAR Protocol and GraphQL.
             </p>
             <p>
-              At <strong>Anteriore Solutions</strong>, I developed{" "}
-              <strong>Playible.io</strong>, a blockchain web application that
-              integrates decentralized finance with traditional gaming markets,
-              showcasing my ability to innovate and adapt in a rapidly evolving
-              tech landscape.
+              I also plan internal UI/UX training and help govern the SMITS
+              design system, contributing UX standards, reusable patterns, and
+              documentation. Those are the same habits that make a backlog
+              legible to everyone reading it.
             </p>
             <p>
-              With a robust skill set in web development, cloud engineering, and
-              a passion for creating user-centered solutions, I am committed to
-              delivering high-quality, impactful projects that drive user
-              engagement and satisfaction.
+              I am currently looking to move fully into a{" "}
+              <strong>Product Owner</strong> role, where the combination of
+              business analysis, user-centered design, and hands-on engineering
+              is the whole job rather than three separate ones.
             </p>
           </div>
 

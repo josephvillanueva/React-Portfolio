@@ -18,6 +18,10 @@
   text-align: center;
   border: 1px solid transparent;
   transition: var(--transition);
+  /* The email address is a single unbreakable token and overflows the card
+     without this. */
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 .contact_option:hover {

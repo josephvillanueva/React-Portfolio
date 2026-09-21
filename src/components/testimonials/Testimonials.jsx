@@ -1,6 +1,6 @@
 import React from "react";
 import "./testimonials.css";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Keyboard, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -41,24 +41,36 @@ const Testimonials = () => {
       <h2>Character Reference</h2>
       <Swiper
         className="container testimonials_container"
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, Keyboard, A11y]}
         spaceBetween={40}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
+        keyboard={{ enabled: true }}
         speed={600}
-        effect="slide"
+        a11y={{
+          enabled: true,
+          containerRoleDescriptionMessage: "carousel",
+          itemRoleDescriptionMessage: "character reference",
+          prevSlideMessage: "Previous character reference",
+          nextSlideMessage: "Next character reference",
+          paginationBulletMessage: "Go to character reference {{index}}",
+        }}
       >
-        {data.map(({ name, review, github }, index) => {
+        {data.map(({ name, review, github }) => {
           return (
-            <SwiperSlide key={index} className="testimonial">
-              <h5 className="client_name">
-                <a href={github} target="_blank" rel="noreferrer">
+            <SwiperSlide key={name} className="testimonial">
+              <h3 className="client_name">
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${name} on LinkedIn, opens in a new tab`}
+                >
                   {name}
                 </a>
-              </h5>
-              <small className="client_review">{review}</small>
+              </h3>
+              <p className="client_review">{review}</p>
             </SwiperSlide>
           );
         })}

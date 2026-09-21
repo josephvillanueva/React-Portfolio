@@ -12,27 +12,30 @@ const Services = () => {
 
   const servicesData = [
     {
-      title: "UI/UX Design",
+      title: "Product & Requirements",
       description: [
-        "Creating intuitive and user-centric designs for cross-platform applications.",
+        "Translating business needs into functional requirements and delivery-ready feature scopes.",
+        "Writing user stories and acceptance criteria that hold up through implementation.",
+        "Backlog refinement, feature prioritization, and requirements traceability.",
+        "Product discovery, client workshops, and solution validation with stakeholders.",
+      ],
+    },
+    {
+      title: "UX & Design Systems",
+      description: [
+        "Mapping process and user flows, then turning them into wireframes and prototypes.",
         "Conducting UI and UX audits to enhance usability and engagement.",
-        "Crafting visually appealing web layouts that align with brand identity.",
+        "Contributing design system standards, reusable patterns, and documentation.",
+        "Running internal UI/UX training so delivery teams apply consistent practices.",
       ],
     },
     {
-      title: "Web Development",
+      title: "Technical Delivery",
       description: [
-        "Building responsive and interactive web applications using React.js.",
-        "Implementing modern styling frameworks like Tailwind CSS and Bootstrap for optimal user experiences.",
-        "Developing efficient and maintainable code to ensure robust functionality.",
-      ],
-    },
-    {
-      title: "Consulting Services",
-      description: [
-        "Providing business planning consultations to streamline project execution.",
-        "Offering expertise in project management to facilitate timely delivery and team collaboration.",
-        "Advising on innovative technologies and strategies, including 3D printing applications.",
+        "Building responsive web applications with React.js, Next.js, and Tailwind CSS.",
+        "Sizing feasibility alongside engineers instead of guessing at it.",
+        "Specifying API and integration requirements, including REST and GraphQL.",
+        "Evaluating AI-assisted workflows for analysis, design, and documentation.",
       ],
     },
   ];
@@ -61,8 +64,8 @@ const Services = () => {
               className={`service_list ${
                 activeIndex === index ? "active" : ""
               }`}
-              initial={{ maxHeight: 250 }}
-              animate={{ maxHeight: activeIndex === index ? 250 : 0 }}
+              initial={false}
+              animate={{ height: activeIndex === index ? "auto" : 0 }}
               transition={{ duration: 0.3 }}
             >
               {service.description.map((desc, i) => (
