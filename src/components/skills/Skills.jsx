@@ -41,6 +41,7 @@ import {
 } from "react-icons/si";
 import {
   TbApi,
+  TbArrowUpRight,
   TbArrowsSplit,
   TbBrandOpenai,
   TbClipboardList,
@@ -126,6 +127,45 @@ const skills = [
   { name: "Vercel", category: "Tools", Icon: SiVercel, color: "#ffffff" },
 ];
 
+// Official pages for the tools, languages, and platforms, so a visitor can
+// look one up in a click. Practices (Product & Delivery, and the AI
+// practices) are skills rather than products, so they stay plain pills.
+const LINKS = {
+  Claude: "https://claude.com/product/overview",
+  "Claude Code": "https://claude.com/product/claude-code",
+  "Claude API": "https://platform.claude.com/docs/en/home",
+  ChatGPT: "https://chatgpt.com/",
+  Gemini: "https://gemini.google.com/",
+  Qwen: "https://qwen.ai/",
+  "GitHub Copilot": "https://github.com/features/copilot",
+  "Microsoft Copilot": "https://copilot.microsoft.com/",
+  "TensorFlow.js": "https://www.tensorflow.org/js",
+  JavaScript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  TypeScript: "https://www.typescriptlang.org/",
+  HTML: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  CSS: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  Solidity: "https://www.soliditylang.org/",
+  React: "https://react.dev/",
+  "Next.js": "https://nextjs.org/",
+  "TanStack Query": "https://tanstack.com/query/latest",
+  "Tailwind CSS": "https://tailwindcss.com/",
+  "Framer Motion": "https://motion.dev/",
+  Lit: "https://lit.dev/",
+  "Node.js": "https://nodejs.org/en",
+  "REST APIs": "https://developer.mozilla.org/en-US/docs/Glossary/REST",
+  GraphQL: "https://graphql.org/",
+  Fastify: "https://fastify.dev/",
+  Terraform: "https://developer.hashicorp.com/terraform/intro",
+  "Google Cloud": "https://cloud.google.com/",
+  "NEAR Protocol": "https://www.near.org/",
+  Git: "https://git-scm.com/",
+  GitHub: "https://github.com/",
+  Figma: "https://www.figma.com/",
+  Postman: "https://www.postman.com/",
+  Vite: "https://vite.dev/",
+  Vercel: "https://vercel.com/",
+};
+
 const Skills = () => {
   const [active, setActive] = useState("All");
   const reduceMotion = useReducedMotion();
@@ -144,8 +184,8 @@ const Skills = () => {
       <h2>Skills &amp; Tools</h2>
       <p className="skills_intro">
         The product practices I use day to day, the AI tools I work with, and
-        the technical stack I have shipped with. I use AI to turn an idea into
-        a working prototype that stakeholders can react to, and I build in the
+        the technical stack I have shipped with. I use AI to turn an idea into a
+        working prototype that stakeholders can react to, and I build in the
         guardrails that make it safe to use on real work.
       </p>
 
@@ -186,28 +226,54 @@ const Skills = () => {
             variants={{ shown: { transition: { staggerChildren: 0.025 } } }}
           >
             <AnimatePresence mode="popLayout" initial={false}>
-              {visible.map(({ name, Icon, color }) => (
-                <motion.li
-                  key={name}
-                  className="skills_chip"
-                  layout={!reduceMotion}
-                  variants={{
-                    hidden: { opacity: 0, y: 14, scale: 0.96 },
-                    shown: { opacity: 1, y: 0, scale: 1 },
-                  }}
-                  exit={
-                    reduceMotion ? undefined : { opacity: 0, scale: 0.9 }
-                  }
-                  transition={{ duration: 0.25, ease: "easeOut" }}
-                >
+              {visible.map(({ name, Icon, color }) => {
+                const href = LINKS[name];
+                const icon = (
                   <Icon
                     className="skills_chip-icon"
                     style={{ color: color ?? "var(--color-primary)" }}
                     aria-hidden="true"
                   />
-                  {name}
-                </motion.li>
-              ))}
+                );
+                return (
+                  <motion.li
+                    key={name}
+                    className={href ? "skills_item" : "skills_chip"}
+                    layout={!reduceMotion}
+                    variants={{
+                      hidden: { opacity: 0, y: 14, scale: 0.96 },
+                      shown: { opacity: 1, y: 0, scale: 1 },
+                    }}
+                    exit={reduceMotion ? undefined : { opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                  >
+                    {href ? (
+                      <a
+                        className="skills_chip is-link"
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {icon}
+                        {name}
+                        <TbArrowUpRight
+                          className="skills_chip-arrow"
+                          aria-hidden="true"
+                        />
+                        <span className="skills_sr-only">
+                          {" "}
+                          (opens in a new tab)
+                        </span>
+                      </a>
+                    ) : (
+                      <>
+                        {icon}
+                        {name}
+                      </>
+                    )}
+                  </motion.li>
+                );
+              })}
             </AnimatePresence>
           </motion.ul>
         </LayoutGroup>

@@ -88,11 +88,66 @@
   font-size: 0.85rem;
   font-weight: 500;
   white-space: nowrap;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease,
+    transform 0.2s ease;
 }
 
-.skills_chip:hover {
-  border-color: var(--color-primary-variant);
+/* Linked chips read as buttons: a pointer, an arrow, and a lift on hover.
+   Plain chips (practices) stay static so the difference is visible. */
+.skills_item {
+  display: flex;
+}
+
+.skills_chip.is-link {
+  position: relative;
+  color: inherit;
+  cursor: pointer;
+}
+
+.skills_chip.is-link:hover {
+  border-color: var(--color-primary);
+  background: rgba(77, 181, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.skills_chip.is-link:active {
+  transform: translateY(0);
+}
+
+.skills_chip.is-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.skills_chip-arrow {
+  flex-shrink: 0;
+  margin-left: -0.2rem;
+  font-size: 0.9rem;
+  opacity: 0.45;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.skills_chip.is-link:hover .skills_chip-arrow,
+.skills_chip.is-link:focus-visible .skills_chip-arrow {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
+.skills_sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills_chip.is-link:hover,
+  .skills_chip.is-link:hover .skills_chip-arrow {
+    transform: none;
+  }
 }
 
 .skills_chip-icon {
