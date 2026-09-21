@@ -44,14 +44,19 @@ const Services = () => {
       <div className="container services_container">
         {servicesData.map((service, index) => (
           <article className="service" key={index}>
-            <div className="service_head" onClick={() => toggleService(index)}>
+            <button
+              type="button"
+              className="service_head"
+              onClick={() => toggleService(index)}
+              aria-expanded={activeIndex === index}
+            >
               <h3>{service.title}</h3>
               <BiChevronDown
                 className={`arrow-icon ${
                   activeIndex === index ? "active" : ""
                 }`}
               />
-            </div>
+            </button>
             <motion.ul
               className={`service_list ${
                 activeIndex === index ? "active" : ""
