@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Personal Portfolio — Joseph Villanueva
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A single-page personal portfolio built with React and Vite.
 
-## Available Scripts
+**Live site:** https://josephvillanueva.github.io/React-Porfoltio
 
-In the project directory, you can run:
+## Tech stack
 
-### `npm start`
+| | |
+|---|---|
+| Framework | React 19 |
+| Build tool | Vite 8 |
+| Carousel | Swiper 14 |
+| Icons | react-icons |
+| Contact form | EmailJS |
+| Hosting | GitHub Pages |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Requires Node.js 20.19+ (or 22.12+).
 
-### `npm test`
+```bash
+npm install
+npm run dev
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The dev server runs at http://localhost:5173/React-Porfoltio/.
 
-### `npm run build`
+## Scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Script | Description |
+|---|---|
+| `npm run dev` | Start the dev server with hot reload |
+| `npm run build` | Build for production into `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run deploy` | Build and publish `dist/` to the `gh-pages` branch |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm run deploy` builds the site and pushes it to the `gh-pages` branch via the
+`gh-pages` package. The `base` option in `vite.config.js` must stay in sync with
+the repository name so asset paths resolve correctly on GitHub Pages.
 
-### `npm run eject`
+## Project structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+src/
+├── assets/              images and CV
+├── components/          one folder per section, each with its own CSS
+│   ├── header/          hero, CTA buttons, social links
+│   ├── nav/             floating bottom nav
+│   ├── about/           bio and highlight cards
+│   ├── experience/      skill lists
+│   ├── services/        service offerings
+│   ├── portfolio/       project cards
+│   ├── testimonials/    character references carousel
+│   ├── contact/         contact options and EmailJS form
+│   └── footer/
+├── App.jsx
+├── main.jsx             entry point
+└── index.css            global styles and CSS variables
+```
