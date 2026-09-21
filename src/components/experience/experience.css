@@ -1,73 +1,152 @@
-.experience_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+/* Timeline */
+
+.timeline {
+  --marker-size: 2.75rem;
+  position: relative;
+  max-width: 860px;
 }
 
-.experience_container > div {
-  background: var(--color-bg-variant);
-  padding: 2.4rem 2.5rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
-  transition: background 0.3s ease, border-color 0.3s ease;
-  min-width: 0;
+/* The track runs through the centre of the marker column; the progress bar
+   inside it scales from the top as the timeline scrolls into view. */
+.timeline_track {
+  position: absolute;
+  top: calc(var(--marker-size) / 2);
+  bottom: calc(var(--marker-size) / 2);
+  left: calc(var(--marker-size) / 2 - 1px);
+  width: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
 }
 
-.experience_container > div:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
-  cursor: default;
+.timeline_progress {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-primary-variant)
+  );
+  transform-origin: top;
 }
 
-.experience_container > div h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--color-primary);
-}
-
-.experience_content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 2rem;
-  column-gap: 1.5rem;
-}
-
-.experience_details {
+.timeline_list {
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  min-width: 0;
+  flex-direction: column;
+  gap: 3.5rem;
 }
 
-/* flex-shrink: 0 keeps the icon circular; without it the SVG is squeezed
-   narrower whenever the adjacent label wraps. */
-.experience_details-icon {
-  margin-top: 6px;
+.timeline_item {
+  display: grid;
+  grid-template-columns: var(--marker-size) 1fr;
+  column-gap: 1.75rem;
+  position: relative;
+}
+
+.timeline_marker {
+  width: var(--marker-size);
+  height: var(--marker-size);
+  display: grid;
+  place-items: center;
+  border-radius: 0.8rem;
+  border: 1px solid var(--color-primary-variant);
+  background: var(--color-bg);
   color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  z-index: 1;
+}
+
+/* Short connector from the marker to the date line. */
+.timeline_marker::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  width: 1.1rem;
+  height: 1px;
+  background: var(--color-primary-variant);
+}
+
+.timeline_content {
+  min-width: 0;
+  padding-top: 0.55rem;
+}
+
+.timeline_date,
+.timeline_company {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeline_date svg,
+.timeline_company svg {
   flex-shrink: 0;
 }
 
-@media screen and (max-width: 1024px) {
-  .experience_container {
-    grid-template-columns: 1fr;
-  }
-  .experience_container > div {
-    width: 80%;
-    padding: 2rem;
-    margin: 0 auto;
-  }
-  .experience_content {
-    padding: 1rem;
-  }
+.timeline_date {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline_title {
+  margin-top: 0.9rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-white);
+}
+
+.timeline_company {
+  margin-top: 0.35rem;
+  color: var(--color-light);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.timeline_summary {
+  margin-top: 0.9rem;
+  color: var(--color-light);
+  max-width: 68ch;
+}
+
+.timeline_tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline_tags li {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(77, 181, 255, 0.1);
+  border: 1px solid var(--color-primary-variant);
+  color: var(--color-primary);
 }
 
 @media screen and (max-width: 600px) {
-  .experience_container {
-    gap: 1rem;
+  .timeline {
+    --marker-size: 2.25rem;
   }
 
-  .experience_container > div {
-    width: 100%;
-    padding: 2rem 1rem;
+  .timeline_item {
+    column-gap: 1.1rem;
+  }
+
+  .timeline_marker::after {
+    width: 0.6rem;
+  }
+
+  .timeline_title {
+    font-size: 1.1rem;
   }
 }
