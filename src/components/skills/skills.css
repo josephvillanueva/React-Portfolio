@@ -1,0 +1,122 @@
+.skills_intro {
+  max-width: 62ch;
+  margin: -1.5rem auto 2.5rem;
+  text-align: center;
+  color: var(--color-light);
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Filter bar */
+
+.skills_filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.45rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skills_filter {
+  position: relative;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.7rem;
+  background: transparent;
+  color: var(--color-light);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.skills_filter:hover,
+.skills_filter.is-active {
+  color: var(--color-bg);
+}
+
+.skills_filter:not(.is-active):hover {
+  color: var(--color-white);
+}
+
+.skills_filter:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* The pill slides between buttons through a shared layoutId. */
+.skills_filter-pill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--color-primary);
+}
+
+.skills_filter-label {
+  position: relative;
+}
+
+/* Panel */
+
+.skills_panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 0.75rem;
+  padding: 2.25rem;
+  min-height: 15rem;
+  border-radius: 1.25rem;
+  background: var(--color-bg-variant);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skills_chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.6rem;
+  background: rgba(31, 31, 56, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.skills_chip:hover {
+  border-color: var(--color-primary-variant);
+}
+
+.skills_chip-icon {
+  flex-shrink: 0;
+  font-size: 1.05rem;
+}
+
+@media screen and (max-width: 600px) {
+  .skills_intro {
+    padding: 0 1rem;
+  }
+
+  .skills_filter {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .skills_panel {
+    padding: 1.25rem;
+    gap: 0.55rem;
+  }
+
+  .skills_chip {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.7rem;
+  }
+}

@@ -34,7 +34,8 @@
   margin-bottom: 0.5rem;
 }
 
-.contact_option a,p {
+.contact_option a,
+.contact_option p {
   margin-top: 0.7rem;
   display: inline-block;
   font-size: 0.8rem;
