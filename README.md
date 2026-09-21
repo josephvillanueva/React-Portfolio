@@ -1,59 +1,53 @@
+# Joseph Villanueva: Portfolio
 
-# React Portfolio
+My personal site: Systems Analyst & UI/UX Lead, engineer-turned-product.
 
-Welcome to my React Portfolio! This project showcases my skills as a frontend developer, demonstrating my expertise in building modern web applications using React and related technologies.
+**Live:** https://joseph-react-portfolio.vercel.app
 
-## 🌟 Features
+## What's on it
 
-- **Responsive Design:** My portfolio is fully responsive, ensuring a seamless experience across devices of all sizes.
-- **Dynamic Content:** Built with React, the portfolio dynamically renders content based on the projects I showcase.
-- **User-Friendly Interface:** The intuitive layout allows visitors to navigate through my work effortlessly.
+- **About:** background across engineering, UX, and product
+- **Experience:** product, analysis, design, and engineering skills
+- **Services:** what I help teams with
+- **Portfolio:** side projects with live demos and source
+- **Testimonials:** from people I've worked with
+- **Contact:** a form that sends email through EmailJS, with no backend to run
 
-## 💻 Technologies Used
+## Tech stack
 
-- **React:** For building interactive user interfaces.
-- **JavaScript:** To add dynamic functionality.
-- **CSS:** For styling and layout, ensuring a modern look.
-- **GitHub Pages:** Deployed for easy access and visibility.
+- **React 19** on **Vite 8**
+- **Tailwind CSS 4** alongside per-section CSS
+- **Swiper** for the testimonials carousel, **Framer Motion** for animation
+- **EmailJS** for the contact form
+- ESLint 9 with `jsx-a11y` for accessibility linting
 
-## 🚀 Getting Started
+## Running locally
 
-To view the portfolio, simply visit the live demo:
+Requires Node 22 (see `.nvmrc`).
 
-[Live Demo](https://joseph-react-portfolio.vercel.app/)
-
-### Prerequisites
-
-Make sure you have Node.js installed on your machine. 
-
-### Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/josephvillanueva/React-Portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd React-Portfolio
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-### Running the Project
-
-To run the project locally, use:
 ```bash
-npm start
+git clone https://github.com/josephvillanueva/React-Portfolio.git
+cd React-Portfolio
+npm install
+npm run dev
 ```
 
-## 🤝 Contributing
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Start the Vite dev server |
+| `npm run build` | Production build into `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
 
-Contributions are welcome! If you’d like to contribute, please fork the repository and submit a pull request.
+## Project structure
 
-## 📫 Contact
+```
+src/
+  components/
+    header/  nav/  about/  experience/  services/
+    portfolio/  testimonials/  contact/  footer/
+  assets/      images and resume
+  App.jsx      composes the sections in page order
+```
 
-Feel free to reach out for collaborations or inquiries:
-- [LinkedIn Profile](https://www.linkedin.com/in/josephvillanueva/)
-- [Email](mailto:josephgvillanueva24@gmail.com)
+Each section is a self-contained component with its own stylesheet.
