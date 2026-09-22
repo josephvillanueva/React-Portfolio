@@ -20,13 +20,16 @@ const Footer = () => {
           <a href="#experience">Experience</a>
         </li>
         <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
           <a href="#services">Services</a>
         </li>
         <li>
           <a href="#portfolio">Portfolio</a>
         </li>
         <li>
-          <a href="#testimonials">Testimonials</a>
+          <a href="#testimonials">References</a>
         </li>
         <li>
           <a href="#contact">Contact</a>
@@ -34,13 +37,13 @@ const Footer = () => {
       </ul>
 
       <div className="footer_socials">
-        <a href="https://facebook.com">
+        <a href="https://www.facebook.com/bracezz" target="_blank" rel="noreferrer" aria-label="Facebook">
           <FaFacebook className="footer_socials_icon" />
         </a>
-        <a href="https://github.com">
+        <a href="https://github.com/josephvillanueva" target="_blank" rel="noreferrer" aria-label="GitHub">
           <FaGithub className="footer_socials_icon" />
         </a>
-        <a href="https://linkedin.com">
+        <a href="https://www.linkedin.com/in/josephgabrielgvillanueva/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
           <FaLinkedin className="footer_socials_icon" />
         </a>
       </div>

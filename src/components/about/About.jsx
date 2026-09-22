@@ -63,7 +63,7 @@ const About = () => {
               before it reaches one.
             </p>
             <p>
-              Before this, as a <strong>Frontend Software Developer</strong> at{" "}
+              Before this, as a <strong>Software Developer (Frontend)</strong> at{" "}
               <strong>Mashup Garage</strong>, I led the redesign and performance
               optimization of Metrobank&apos;s branding website, aligning
               business requirements and success measures with user experience

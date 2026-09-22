@@ -10,7 +10,7 @@ const data = [
   {
     name: "Leonell Cruz",
     github: "https://www.linkedin.com/in/leonellcruz/",
-    review: "Current team member in Mashup Garage",
+    review: "Former teammate at Mashup Garage",
   },
   {
     name: "Alyssa Marcos",
@@ -20,17 +20,17 @@ const data = [
   {
     name: "Gio Velez",
     github: "https://www.linkedin.com/in/gio-anton-velez-ab0aa1a7/",
-    review: "Previous Co-worker in Metatech Labs and colleague in Senti.ai",
+    review: "Former colleague at MetaTech Lab and Senti AI",
   },
   {
     name: "Angelo Amadora",
     github: "https://www.linkedin.com/in/angelo-amadora-056b62201/",
-    review: "Previous Team Lead in Anteriore Solutions",
+    review: "Former team lead at Anteriore",
   },
   {
     name: "Kim Fajardo",
     github: "https://www.linkedin.com/in/kimpfajardo/",
-    review: "Previous Co-worker and Mentor in Anteriore Solutions",
+    review: "Former colleague and mentor at Anteriore",
   },
 ];
 
