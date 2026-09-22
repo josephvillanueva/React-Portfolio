@@ -14,7 +14,7 @@ const roles = [
     title: "Systems Analyst, UI/UX Lead",
     company: "SMITS, Inc. (San Miguel Corporation)",
     summary:
-      "Turn business needs into requirements and acceptance criteria that developers can build from, and support Product Owner initiatives through backlog refinement, prioritization, client workshops, and solution reviews. Also lead internal UI/UX training and help govern the SMITS design system.",
+      "Turn business needs into requirements and acceptance criteria that developers can build from, and support Product Owner initiatives through backlog refinement, prioritization, client workshops, and solution reviews. Also run internal UI/UX training, so far for 50 colleagues across business analysis, project management, systems analysis, development, and QA, and help govern the SMITS design system.",
     tags: ["Product Owner Support", "Requirements", "Design Systems", "AI Workflows"],
   },
   {
@@ -30,8 +30,8 @@ const roles = [
     title: "Software Developer, Frontend",
     company: "Mashup Garage",
     summary:
-      "Led the redesign and performance optimization of Metrobank's branding website, aligning business requirements and success measures with product goals, and built reusable React and Next.js component patterns.",
-    tags: ["React.js", "Next.js", "Performance", "Design Systems"],
+      "Led the redesign and performance optimization of Metrobank's branding website, aligning business requirements and success measures with product goals, and built reusable React and Next.js component patterns. Also served as the frontend team's informal lead, coordinating day-to-day work and giving technical direction, including to the official team lead.",
+    tags: ["React.js", "Next.js", "Informal Team Lead", "Design Systems"],
   },
   {
     period: "Jun 2022 - Mar 2023",
@@ -48,6 +48,14 @@ const roles = [
     summary:
       "Built Playible.io with React and Tailwind CSS from product requirements and user stories, and led its technical transition to NEAR Protocol and GraphQL.",
     tags: ["React.js", "Tailwind CSS", "GraphQL", "NEAR Protocol"],
+  },
+  {
+    period: "Jul 2020 - Present",
+    title: "Strategic Marketing and Operations Lead",
+    company: "A&J 3D Printing Services (e-commerce, Shopee)",
+    summary:
+      "Run operations and go-to-market for a 3D printing store alongside my main role. Grew revenue nearly 8x over three years, ran concept, A/B, and user testing for new product lines, and earned Shopee Preferred Seller status.",
+    tags: ["Go-to-market", "A/B Testing", "E-commerce", "Operations"],
   },
   {
     period: "Dec 2019 - Nov 2021",
