@@ -12,6 +12,8 @@ import BACKLOG_BOARD_ARCH from "../../assets/architecture/backlog-board.svg";
 import OBJECT_DETECTOR_ARCH from "../../assets/architecture/ai-object-detector.svg";
 import GIPHY_CLONE_ARCH from "../../assets/architecture/giphy-clone.svg";
 import RECIPE_RANDOMIZER_ARCH from "../../assets/architecture/recipe-randomizer.svg";
+import SPEND_MASTER_ARCH from "../../assets/architecture/spend-master.svg";
+import FRAUD_MASTER_ARCH from "../../assets/architecture/fraud-master.svg";
 
 const projects = [
   {
@@ -36,7 +38,12 @@ const projects = [
     id: 6,
     image: SPEND_MASTER,
     title: "Spend Master: Procurement Spend Analytics",
+    github: "https://github.com/josephvillanueva/spend-master",
     demo: "https://spend-master-demo.netlify.app/",
+    architecture: {
+      src: SPEND_MASTER_ARCH,
+      alt: "Generated transactions pass through role scoping into the dashboard, the analysis wizard, and the chat. Analysis falls back to local findings without AI, and an optional AI proxy only gets summaries and a small sample.",
+    },
     tech: [
       "Product Prototype",
       "JavaScript",
@@ -49,7 +56,12 @@ const projects = [
     id: 7,
     image: FRAUD_MASTER,
     title: "Fraud Master: Credit Memo Risk Review",
+    github: "https://github.com/josephvillanueva/fraud-master",
     demo: "https://fraud-master-demo.netlify.app/",
+    architecture: {
+      src: FRAUD_MASTER_ARCH,
+      alt: "Generated credit memos are scored by a rules engine and routed to Investigate, Review, or Straight-through for reviewers. Case explanations pass through local masking before an optional AI proxy.",
+    },
     tech: [
       "Product Prototype",
       "JavaScript",
