@@ -62,8 +62,9 @@ const projects = [
     id: 2,
     image: PLAYIBLE,
     title: "Playible: Next-Gen Fantasy Sports on NEAR",
-    github: "https://playible.club/playible-next-gen-nft-fantasy-sports/",
-    demo: "https://app.playible.io/",
+    // The product has shut down and its site and app no longer resolve, so
+    // the card says so instead of linking to dead pages.
+    status: "Product shut down. The app and site are no longer online.",
     tech: [
       "React.js",
       "Node.js",
@@ -176,7 +177,7 @@ const Portfolio = () => {
 
       <div className="container portfolio_container">
         {projects.map((project) => {
-          const { id, image, title, github, demo, tech, architecture } =
+          const { id, image, title, github, demo, tech, architecture, status } =
             project;
           return (
             <article key={id} className="portfolio_item">
@@ -214,14 +215,17 @@ const Portfolio = () => {
                       Architecture
                     </button>
                   )}
-                  <a
-                    href={demo}
-                    className="btn btn-primary"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Live Demo
-                  </a>
+                  {demo && (
+                    <a
+                      href={demo}
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                  {status && <p className="portfolio_status">{status}</p>}
                 </div>
               </div>
             </article>

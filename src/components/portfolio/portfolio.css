@@ -101,6 +101,17 @@
   background: transparent;
 }
 
+/* Shown instead of links for a project that is no longer online. */
+.portfolio_status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  border: 1px dashed var(--color-hairline);
+  color: var(--color-light);
+  font-size: 0.9rem;
+}
+
 /* Architecture diagram */
 
 /* margin: auto restores the native centering that the global reset removes. */
