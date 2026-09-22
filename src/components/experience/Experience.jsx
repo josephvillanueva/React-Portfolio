@@ -30,8 +30,8 @@ const roles = [
     title: "Software Developer, Frontend",
     company: "Mashup Garage",
     summary:
-      "Led the redesign and performance optimization of Metrobank's branding website, aligning business requirements and success measures with product goals, and built reusable React and Next.js component patterns. Also served as the frontend team's informal lead, coordinating day-to-day work and giving technical direction, including to the official team lead.",
-    tags: ["React.js", "Next.js", "Informal Team Lead", "Design Systems"],
+      "Led the redesign and performance optimization of Metrobank's branding website, aligning business requirements and success measures with product goals, and built reusable React and Next.js component patterns. Also served as the frontend team's informal technical lead, coordinating day-to-day delivery and providing implementation guidance across the team.",
+    tags: ["React.js", "Next.js", "Informal Tech Lead", "Design Systems"],
   },
   {
     period: "Jun 2022 - Mar 2023",
