@@ -22,7 +22,7 @@ const About = () => {
               <FaAward className="about_icon" aria-hidden="true" />
               <div>
                 <h5>Experience</h5>
-                <small>7+ years in software, 2 in business and marketing</small>
+                <small>7+ years in software, plus an e-commerce business since 2020</small>
               </div>
             </article>
             <article className="about_card">
@@ -36,7 +36,7 @@ const About = () => {
               <VscFolderLibrary className="about_icon" aria-hidden="true" />
               <div>
                 <h5>Domains</h5>
-                <small>Enterprise, banking, retail, and blockchain</small>
+                <small>Enterprise, banking, retail, e-commerce, and blockchain</small>
               </div>
             </article>
           </div>
@@ -63,22 +63,24 @@ const About = () => {
               before it reaches one.
             </p>
             <p>
-              Before this, as a <strong>Frontend Developer</strong> at{" "}
+              Before this, as a <strong>Frontend Software Developer</strong> at{" "}
               <strong>Mashup Garage</strong>, I led the redesign and performance
               optimization of Metrobank&apos;s branding website, aligning
               business requirements and success measures with user experience
               and product goals. As a <strong>Junior Cloud Engineer</strong> at{" "}
-              <strong>Senti.ai</strong>, I contributed requirements for OCR and
+              <strong>Senti AI</strong>, I contributed requirements for OCR and
               Google Cloud services on a finance processing portal that
               digitizes over 50,000 files monthly. At{" "}
-              <strong>Anteriore Solutions</strong> I developed{" "}
+              <strong>Anteriore</strong> I developed{" "}
               <strong>Playible.io</strong> and led its technical transition to
               NEAR Protocol and GraphQL.
             </p>
             <p>
-              I also run internal UI/UX training and help govern the SMITS
-              design system, writing the standards and component guidance that
-              project teams build from.
+              I also run internal UI/UX training, so far for 50 colleagues
+              across business analysis, project management, systems analysis,
+              development, and QA, and help govern the SMITS design system,
+              writing the standards and component guidance that project teams
+              build from.
             </p>
             <p>
               Next, I want a <strong>Product Owner</strong> role, where the
