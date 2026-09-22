@@ -28,6 +28,9 @@
   width: 100%;
   font: inherit;
   text-align: left;
+  /* Buttons default to the browser's black text; the chevron inherits this,
+     so it matches the heading on the primary colour in both themes. */
+  color: var(--color-bg);
 }
 
 /* Room for a two-line title in every header, so a shorter title such as
