@@ -8,14 +8,12 @@ import RECIPE_RANDOMIZER from "../../assets/recipe-randomizer.jpg";
 import BACKLOG_BOARD from "../../assets/backlog-board.jpg";
 import SPEND_MASTER from "../../assets/spend-master.jpg";
 import FRAUD_MASTER from "../../assets/fraud-master.jpg";
-import BLOG_BACKEND from "../../assets/blog-backend.jpg";
 import BACKLOG_BOARD_ARCH from "../../assets/architecture/backlog-board.svg";
 import OBJECT_DETECTOR_ARCH from "../../assets/architecture/ai-object-detector.svg";
 import GIPHY_CLONE_ARCH from "../../assets/architecture/giphy-clone.svg";
 import RECIPE_RANDOMIZER_ARCH from "../../assets/architecture/recipe-randomizer.svg";
 import SPEND_MASTER_ARCH from "../../assets/architecture/spend-master.svg";
 import FRAUD_MASTER_ARCH from "../../assets/architecture/fraud-master.svg";
-import BLOG_BACKEND_ARCH from "../../assets/architecture/blog-backend.svg";
 
 const projects = [
   {
@@ -71,18 +69,6 @@ const projects = [
       "Role-based Access",
       "AI Explanations (optional)",
     ],
-  },
-  {
-    id: 8,
-    image: BLOG_BACKEND,
-    imageAlt: "Architecture diagram of the Blog Backend API",
-    title: "Blog Backend: Rails JSON API",
-    github: "https://github.com/josephvillanueva/blog-backend",
-    architecture: {
-      src: BLOG_BACKEND_ARCH,
-      alt: "Clients send JSON requests to Rails routes and controllers, which verify JWTs and run scoped queries through the models against PostgreSQL. GitHub Actions migrates, checks the schema, and runs the tests on every pull request.",
-    },
-    tech: ["Ruby on Rails 7.2", "PostgreSQL", "JWT Auth", "Minitest", "GitHub Actions"],
   },
   {
     id: 2,
@@ -203,13 +189,13 @@ const Portfolio = () => {
 
       <div className="container portfolio_container">
         {projects.map((project) => {
-          const { id, image, imageAlt, title, github, demo, tech, architecture, status } =
+          const { id, image, title, github, demo, tech, architecture, status } =
             project;
           return (
             <article key={id} className="portfolio_item">
               <div className="portfolio_item_content">
                 <div className="portfolio_item-image">
-                  <img src={image} alt={imageAlt ?? title} />
+                  <img src={image} alt={title} />
                 </div>
               </div>
               <div className="portfolio_item_container">
