@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 668" width="1240" height="668" role="img" aria-labelledby="t"><title id="t">Bayad architecture</title><style>svg{--bg:#1f1f38;--zone:#262650;--zoneStroke:#3a3a78;--zoneLabel:#4db5ff;--node:#2c2c6c;--nodeStroke:#45458f;--title:#ffffff;--text:#c3c3e0;--edge:#9a9ad0;--edgeText:#e6e6f5;--accent:#4db5ff;--pill:#1f1f38;}
+text{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.bg{fill:var(--bg)}
+.zone{fill:var(--zone);stroke:var(--zoneStroke);stroke-width:1;stroke-dasharray:5 4}
+.zlabel{fill:var(--zoneLabel);font-size:12px;font-weight:700;letter-spacing:.08em}
+.zsub{fill:var(--text);font-size:12px}
+.node{fill:var(--node);stroke:var(--nodeStroke);stroke-width:1.2}
+.node.key{stroke:var(--accent);stroke-width:2}
+.ntitle{fill:var(--title);font-size:14px;font-weight:600}
+.ntext{fill:var(--text);font-size:12px}
+.edge{fill:none;stroke:var(--edge);stroke-width:1.5}
+.head{fill:var(--edge)}
+.pill{fill:var(--pill);stroke:var(--zoneStroke);stroke-width:1}
+.elabel{fill:var(--edgeText);font-size:11.5px}
+.legend{fill:var(--text);font-size:12px}
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" width="1240" height="668" rx="14"/>
+<rect class="zone" x="16" y="16" width="914" height="174" rx="12"/><text class="zlabel" x="36" y="46">PHONE</text><text class="zsub" x="36" y="66">An installable web app (PWA). Signed in with Google.</text>
+<rect class="zone" x="950" y="16" width="274" height="174" rx="12"/><text class="zlabel" x="970" y="46">GOOGLE CALENDAR</text><text class="zsub" x="970" y="66">Subscribes to a private feed.</text>
+<rect class="zone" x="16" y="226" width="1208" height="150" rx="12"/><text class="zlabel" x="36" y="256">VERCEL</text><text class="zsub" x="36" y="276">Next.js 16 App Router.</text>
+<rect class="zone" x="16" y="412" width="1208" height="212" rx="12"/><text class="zlabel" x="36" y="442">SUPABASE</text><text class="zsub" x="36" y="462">Postgres with row-level security. Splits, balances and settle ups go through database functions.</text>
+<path class="edge" d="M148,170 L148,290" marker-end="url(#arrow)"/>
+<path class="edge" d="M213,364 L213,490" marker-end="url(#arrow)"/>
+<path class="edge" d="M378,527 L404,527" marker-end="url(#arrow)"/>
+<path class="edge" d="M494,490 L494,208 Q494,198 484,198 L378,198 Q368,198 368,188 L368,170" marker-end="url(#arrow)"/>
+<path class="edge" d="M735,490 L735,364" marker-end="url(#arrow)"/>
+<path class="edge" d="M810,290 L810,170" marker-end="url(#arrow)"/>
+<path class="edge" d="M1054,170 L1054,290" marker-end="url(#arrow)"/>
+<rect class="node" x="48" y="96" width="200" height="74" rx="10"/><text class="ntitle" x="64" y="123">Groups and spends</text><text class="ntext" x="64" y="144">Add friends by nickname</text><text class="ntext" x="64" y="161">Split equal, some, custom</text>
+<rect class="node" x="268" y="96" width="200" height="74" rx="10"/><text class="ntitle" x="284" y="123">Settle up</text><text class="ntext" x="284" y="144">Pay by GCash, Maya, bank</text><text class="ntext" x="284" y="161">Upload proof, get confirmed</text>
+<rect class="node" x="488" y="96" width="200" height="74" rx="10"/><text class="ntitle" x="504" y="123">Plans and spending</text><text class="ntext" x="504" y="144">Recurring payment plans</text><text class="ntext" x="504" y="161">Own spending by category</text>
+<rect class="node" x="708" y="96" width="202" height="74" rx="10"/><text class="ntitle" x="724" y="123">Service worker</text><text class="ntext" x="724" y="144">Installable app shell</text><text class="ntext" x="724" y="161">Bayad mo na! push alerts</text>
+<rect class="node" x="970" y="96" width="234" height="74" rx="10"/><text class="ntitle" x="986" y="123">Google Calendar</text><text class="ntext" x="986" y="144">Shows payment plan</text><text class="ntext" x="986" y="161">due dates as events</text>
+<rect class="node key" x="48" y="290" width="330" height="74" rx="10"/><text class="ntitle" x="64" y="317">Server components and actions</text><text class="ntext" x="64" y="338">Check the session, call database</text><text class="ntext" x="64" y="355">functions, save uploads to Storage</text>
+<rect class="node" x="560" y="290" width="300" height="74" rx="10"/><text class="ntitle" x="576" y="317">Cron endpoint</text><text class="ntext" x="576" y="338">/api/cron, guarded by a secret</text><text class="ntext" x="576" y="355">Sends reminders by web push</text>
+<rect class="node" x="904" y="290" width="300" height="74" rx="10"/><text class="ntitle" x="920" y="317">Calendar feed</text><text class="ntext" x="920" y="338">/api/calendar, private token link</text><text class="ntext" x="920" y="355">Payment plans as calendar events</text>
+<rect class="node key" x="48" y="490" width="330" height="74" rx="10"/><text class="ntitle" x="64" y="517">Database functions</text><text class="ntext" x="64" y="538">Splits, balances, settle ups</text><text class="ntext" x="64" y="555">Claim a nickname spot on sign-up</text>
+<rect class="node" x="404" y="490" width="180" height="74" rx="10"/><text class="ntitle" x="420" y="517">Realtime</text><text class="ntext" x="420" y="538">Spends and payments</text><text class="ntext" x="420" y="555">refresh open screens</text>
+<rect class="node" x="610" y="490" width="250" height="74" rx="10"/><text class="ntitle" x="626" y="517">pg_cron and pg_net</text><text class="ntext" x="626" y="538">Runs reminders on a schedule</text><text class="ntext" x="626" y="555">Calls the cron endpoint</text>
+<rect class="node" x="904" y="490" width="300" height="74" rx="10"/><text class="ntitle" x="920" y="517">Auth and Storage</text><text class="ntext" x="920" y="538">Google sign-in</text><text class="ntext" x="920" y="555">Payment proofs, QR codes, receipts</text>
+<rect class="pill" x="118" y="220" width="60" height="20" rx="5"/><text class="elabel" x="148" y="234" text-anchor="middle">actions</text>
+<rect class="pill" x="183" y="417" width="60" height="20" rx="5"/><text class="elabel" x="213" y="431" text-anchor="middle">RPC</text>
+<rect class="pill" x="394" y="188" width="76" height="20" rx="5"/><text class="elabel" x="432" y="202" text-anchor="middle">live updates</text>
+<rect class="pill" x="695" y="417" width="80" height="20" rx="5"/><text class="elabel" x="735" y="431" text-anchor="middle">on schedule</text>
+<rect class="pill" x="775" y="220" width="70" height="20" rx="5"/><text class="elabel" x="810" y="234" text-anchor="middle">web push</text>
+<rect class="pill" x="1014" y="220" width="80" height="20" rx="5"/><text class="elabel" x="1054" y="234" text-anchor="middle">subscribes</text>
+<path class="edge" d="M36,642 L70,642" marker-end="url(#arrow)"/><text class="legend" x="80" y="646">Call, update or push (responses return the same way)</text>
+<rect class="node key" x="440" y="634" width="22" height="16" rx="4"/><text class="legend" x="470" y="646">Core logic</text>
+</svg>
