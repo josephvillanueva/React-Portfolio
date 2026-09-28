@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 668" width="1240" height="668" role="img" aria-labelledby="t"><title id="t">Kain @everyone architecture</title><style>svg{--bg:#1f1f38;--zone:#262650;--zoneStroke:#3a3a78;--zoneLabel:#4db5ff;--node:#2c2c6c;--nodeStroke:#45458f;--title:#ffffff;--text:#c3c3e0;--edge:#9a9ad0;--edgeText:#e6e6f5;--accent:#4db5ff;--pill:#1f1f38;}
+text{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.bg{fill:var(--bg)}
+.zone{fill:var(--zone);stroke:var(--zoneStroke);stroke-width:1;stroke-dasharray:5 4}
+.zlabel{fill:var(--zoneLabel);font-size:12px;font-weight:700;letter-spacing:.08em}
+.zsub{fill:var(--text);font-size:12px}
+.node{fill:var(--node);stroke:var(--nodeStroke);stroke-width:1.2}
+.node.key{stroke:var(--accent);stroke-width:2}
+.ntitle{fill:var(--title);font-size:14px;font-weight:600}
+.ntext{fill:var(--text);font-size:12px}
+.edge{fill:none;stroke:var(--edge);stroke-width:1.5}
+.head{fill:var(--edge)}
+.pill{fill:var(--pill);stroke:var(--zoneStroke);stroke-width:1}
+.elabel{fill:var(--edgeText);font-size:11.5px}
+.legend{fill:var(--text);font-size:12px}
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" width="1240" height="668" rx="14"/>
+<rect class="zone" x="16" y="16" width="1208" height="174" rx="12"/><text class="zlabel" x="36" y="46">PHONE</text><text class="zsub" x="36" y="66">An installable web app (PWA). Signed in with Google.</text>
+<rect class="zone" x="16" y="226" width="1208" height="150" rx="12"/><text class="zlabel" x="36" y="256">VERCEL</text><text class="zsub" x="36" y="276">Next.js 16 App Router.</text>
+<rect class="zone" x="16" y="412" width="1208" height="212" rx="12"/><text class="zlabel" x="36" y="442">SUPABASE</text><text class="zsub" x="36" y="462">Postgres with row-level security. Every change to a shared QR goes through a database function.</text>
+<path class="edge" d="M173,170 L173,290" marker-end="url(#arrow)"/>
+<path class="edge" d="M213,364 L213,490" marker-end="url(#arrow)"/>
+<path class="edge" d="M378,527 L420,527" marker-end="url(#arrow)"/>
+<path class="edge" d="M520,490 L520,208 Q520,198 510,198 L260,198 Q250,198 250,188 L250,170" marker-end="url(#arrow)"/>
+<path class="edge" d="M1062,490 L1062,364" marker-end="url(#arrow)"/>
+<path class="edge" d="M1062,290 L1062,170" marker-end="url(#arrow)"/>
+<rect class="node" x="48" y="96" width="250" height="74" rx="10"/><text class="ntitle" x="64" y="123">Today and the ranch</text><text class="ntext" x="64" y="144">Give up, claim, take back</text><text class="ntext" x="64" y="161">Hen skins and chicken shop</text>
+<rect class="node" x="340" y="96" width="230" height="74" rx="10"/><text class="ntitle" x="356" y="123">Show QR</text><text class="ntext" x="356" y="144">QRs cached on the phone</text><text class="ntext" x="356" y="161">Mark used, points at midnight</text>
+<rect class="node" x="612" y="96" width="250" height="74" rx="10"/><text class="ntitle" x="628" y="123">Groups, polls, nudges</text><text class="ntext" x="628" y="144">Lunch out?, Kain?, Tara Labas?</text><text class="ntext" x="628" y="161">Pop-ups over any screen</text>
+<rect class="node" x="904" y="96" width="300" height="74" rx="10"/><text class="ntitle" x="920" y="123">Service worker</text><text class="ntext" x="920" y="144">Web push notifications</text><text class="ntext" x="920" y="161">Relays nudges to an in-app banner</text>
+<rect class="node key" x="48" y="290" width="330" height="74" rx="10"/><text class="ntitle" x="64" y="317">Server components and actions</text><text class="ntext" x="64" y="338">Check the session, call database</text><text class="ntext" x="64" y="355">functions, send push notifications</text>
+<rect class="node" x="640" y="290" width="220" height="74" rx="10"/><text class="ntitle" x="656" y="317">Link preview images</text><text class="ntext" x="656" y="338">Share and invite cards</text><text class="ntext" x="656" y="355">drawn with next/og</text>
+<rect class="node" x="904" y="290" width="300" height="74" rx="10"/><text class="ntitle" x="920" y="317">Reminder endpoint</text><text class="ntext" x="920" y="338">8:30 WFH, 10:50 lunch and 3pm break</text><text class="ntext" x="920" y="355">pushes, guarded by a secret</text>
+<rect class="node key" x="48" y="490" width="330" height="74" rx="10"/><text class="ntitle" x="64" y="517">Database functions</text><text class="ntext" x="64" y="538">Atomic claim: one QR, one person</text><text class="ntext" x="64" y="555">Polls, bans, points, 170+ pgTAP tests</text>
+<rect class="node" x="420" y="490" width="200" height="74" rx="10"/><text class="ntitle" x="436" y="517">Realtime</text><text class="ntext" x="436" y="538">Share and poll changes</text><text class="ntext" x="436" y="555">refresh open screens</text>
+<rect class="node" x="660" y="490" width="210" height="74" rx="10"/><text class="ntitle" x="676" y="517">Auth and Storage</text><text class="ntext" x="676" y="538">Google sign-in</text><text class="ntext" x="676" y="555">Private QR images</text>
+<rect class="node" x="904" y="490" width="300" height="74" rx="10"/><text class="ntitle" x="920" y="517">pg_cron</text><text class="ntext" x="920" y="538">9:00 WFH auto-share in SQL</text><text class="ntext" x="920" y="555">Calls the reminder endpoint</text>
+<rect class="pill" x="143" y="220" width="60" height="20" rx="5"/><text class="elabel" x="173" y="234" text-anchor="middle">actions</text>
+<rect class="pill" x="183" y="417" width="60" height="20" rx="5"/><text class="elabel" x="213" y="431" text-anchor="middle">RPC</text>
+<rect class="pill" x="340" y="188" width="70" height="20" rx="5"/><text class="elabel" x="375" y="202" text-anchor="middle">live updates</text>
+<rect class="pill" x="1022" y="417" width="80" height="20" rx="5"/><text class="elabel" x="1062" y="431" text-anchor="middle">on schedule</text>
+<rect class="pill" x="1027" y="220" width="70" height="20" rx="5"/><text class="elabel" x="1062" y="234" text-anchor="middle">web push</text>
+<path class="edge" d="M36,642 L70,642" marker-end="url(#arrow)"/><text class="legend" x="80" y="646">Call, update or push (responses return the same way)</text>
+<rect class="node key" x="440" y="634" width="22" height="16" rx="4"/><text class="legend" x="470" y="646">Core logic</text>
+</svg>

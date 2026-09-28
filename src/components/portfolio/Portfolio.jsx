@@ -8,6 +8,7 @@ import RECIPE_RANDOMIZER from "../../assets/recipe-randomizer.jpg";
 import BACKLOG_BOARD from "../../assets/backlog-board.jpg";
 import SPEND_MASTER from "../../assets/spend-master.jpg";
 import FRAUD_MASTER from "../../assets/fraud-master.jpg";
+import KAIN_EVERYONE from "../../assets/kain-everyone.jpg";
 import BAYAD from "../../assets/bayad.jpg";
 import BACKLOG_BOARD_ARCH from "../../assets/architecture/backlog-board.svg";
 import OBJECT_DETECTOR_ARCH from "../../assets/architecture/ai-object-detector.svg";
@@ -15,11 +16,12 @@ import GIPHY_CLONE_ARCH from "../../assets/architecture/giphy-clone.svg";
 import RECIPE_RANDOMIZER_ARCH from "../../assets/architecture/recipe-randomizer.svg";
 import SPEND_MASTER_ARCH from "../../assets/architecture/spend-master.svg";
 import FRAUD_MASTER_ARCH from "../../assets/architecture/fraud-master.svg";
+import KAIN_EVERYONE_ARCH from "../../assets/architecture/kain-everyone.svg";
 import BAYAD_ARCH from "../../assets/architecture/bayad.svg";
 
 const projects = [
   {
-    id: 8,
+    id: 9,
     image: BAYAD,
     title: "Bayad: Split Bills and Settle Up with Friends",
     // The code lives in a private repository, so the card has no View Code
@@ -34,6 +36,25 @@ const projects = [
       "React",
       "TypeScript",
       "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+      "Web Push (PWA)",
+    ],
+  },
+  {
+    id: 8,
+    image: KAIN_EVERYONE,
+    title: "Kain @everyone: Free Lunch QR Sharing",
+    // The code lives in a private repository, so the card links only to the app.
+    demo: "https://kain-everyone.vercel.app/",
+    architecture: {
+      src: KAIN_EVERYONE_ARCH,
+      alt: "The phone app calls Next.js server actions on Vercel, which call Postgres functions in Supabase with row-level security, including an atomic claim so only one person gets each QR. Realtime pushes share and poll changes back to open screens, and pg_cron runs the 9:00 WFH auto-share and calls a reminder endpoint that sends web push notifications through the service worker.",
+    },
+    tech: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
       "Supabase",
       "PostgreSQL",
       "Web Push (PWA)",
