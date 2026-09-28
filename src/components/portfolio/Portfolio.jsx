@@ -26,7 +26,7 @@ const projects = [
     title: "Bayad: Split Bills and Settle Up with Friends",
     // The code lives in a private repository, so the card has no View Code
     // button.
-    demo: "https://bayad-one.vercel.app/",
+    demo: "https://bayad-na.vercel.app/",
     architecture: {
       src: BAYAD_ARCH,
       alt: "The phone app calls Next.js server actions on Vercel, which call Postgres functions in Supabase with row-level security to add spends, split them and record payments. Payment proofs, QR codes and receipts go to Supabase Storage, and Realtime refreshes open screens. pg_cron calls a cron endpoint that sends Bayad mo na! web push reminders, and Google Calendar subscribes to a private calendar feed of payment plans.",
