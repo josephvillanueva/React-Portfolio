@@ -8,14 +8,36 @@ import RECIPE_RANDOMIZER from "../../assets/recipe-randomizer.jpg";
 import BACKLOG_BOARD from "../../assets/backlog-board.jpg";
 import SPEND_MASTER from "../../assets/spend-master.jpg";
 import FRAUD_MASTER from "../../assets/fraud-master.jpg";
+import BAYAD from "../../assets/bayad.jpg";
 import BACKLOG_BOARD_ARCH from "../../assets/architecture/backlog-board.svg";
 import OBJECT_DETECTOR_ARCH from "../../assets/architecture/ai-object-detector.svg";
 import GIPHY_CLONE_ARCH from "../../assets/architecture/giphy-clone.svg";
 import RECIPE_RANDOMIZER_ARCH from "../../assets/architecture/recipe-randomizer.svg";
 import SPEND_MASTER_ARCH from "../../assets/architecture/spend-master.svg";
 import FRAUD_MASTER_ARCH from "../../assets/architecture/fraud-master.svg";
+import BAYAD_ARCH from "../../assets/architecture/bayad.svg";
 
 const projects = [
+  {
+    id: 8,
+    image: BAYAD,
+    title: "Bayad: Split Bills and Settle Up with Friends",
+    // The code lives in a private repository, so the card has no View Code
+    // button. Add the Live Demo link (demo) here once the app is deployed.
+    architecture: {
+      src: BAYAD_ARCH,
+      alt: "The phone app calls Next.js server actions on Vercel, which call Postgres functions in Supabase with row-level security to add spends, split them and record payments. Payment proofs, QR codes and receipts go to Supabase Storage, and Realtime refreshes open screens. pg_cron calls a cron endpoint that sends Bayad mo na! web push reminders, and Google Calendar subscribes to a private calendar feed of payment plans.",
+    },
+    tech: [
+      "Next.js 16",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+      "Web Push (PWA)",
+    ],
+  },
   {
     id: 1,
     image: BACKLOG_BOARD,
