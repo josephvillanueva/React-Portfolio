@@ -14,8 +14,8 @@ const roles = [
     title: "Systems Analyst, UI/UX Lead",
     company: "SMITS, Inc. (San Miguel Corporation)",
     summary:
-      "Turn business needs into requirements and acceptance criteria that developers can build from, and support Product Owner initiatives through backlog refinement, prioritization, client workshops, and solution reviews. Also run internal UI/UX training, so far for 50 colleagues across business analysis, project management, systems analysis, development, and QA, and help govern the SMITS design system.",
-    tags: ["Product Owner Support", "Requirements", "Design Systems", "AI Workflows"],
+      "Turn business needs into requirements and acceptance criteria that developers can build from, and support Product Owner initiatives through backlog refinement, prioritization, client workshops, and solution reviews. Also run internal UI/UX training, so far for 50 colleagues across business analysis, project management, systems analysis, development, and QA, and help govern the SMITS design system. Part of AI governance at SMITS, evaluating AI-assisted workflows for formal and responsible use across the delivery lifecycle.",
+    tags: ["Product Owner Support", "Requirements", "Design Systems", "AI Governance"],
   },
   {
     period: "Jul 2025 - Jun 2026",
