@@ -23,13 +23,13 @@ const projects = [
   {
     id: 9,
     image: BAYAD,
-    title: "Bayad: Split Bills and Settle Up with Friends",
+    title: "Bayad: Split Bills, Track Money and Settle Up",
     // The code lives in a private repository, so the card has no View Code
     // button.
     demo: "https://bayad-na.vercel.app/",
     architecture: {
       src: BAYAD_ARCH,
-      alt: "The phone app calls Next.js server actions on Vercel, which call Postgres functions in Supabase with row-level security to add spends, split them and record payments. Payment proofs, QR codes and receipts go to Supabase Storage, and Realtime refreshes open screens. pg_cron calls a cron endpoint that sends Bayad mo na! web push reminders, and Google Calendar subscribes to a private calendar feed of payment plans.",
+      alt: "The phone app calls Next.js server actions on Vercel, which call Postgres functions in Supabase with row-level security to add spends with items, service charge and discount, split them, record payments with approvals, and track accounts, cards and recurring interest. Payment proofs, QR codes and receipts go to Supabase Storage, and Realtime refreshes open screens. pg_cron calls a cron endpoint that sends Bayad mo na! web push reminders, awards recurring interest and syncs a Bayad calendar to Google Calendar, which can also subscribe to a private calendar feed.",
     },
     tech: [
       "Next.js 16",
@@ -39,6 +39,7 @@ const projects = [
       "Supabase",
       "PostgreSQL",
       "Web Push (PWA)",
+      "Google Calendar API",
     ],
   },
   {
