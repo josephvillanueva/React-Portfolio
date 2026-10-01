@@ -57,6 +57,7 @@ import {
   TbRoute,
   TbShieldLock,
   TbSortDescending,
+  TbShieldCheck,
   TbSparkles,
   TbTargetArrow,
   TbTerminal2,
@@ -100,6 +101,7 @@ const skills = [
   { name: "LLM App Prototyping", category: "AI", Icon: TbSparkles },
   { name: "Data Masking for LLMs", category: "AI", Icon: TbMask },
   { name: "Responsible AI Use", category: "AI", Icon: TbShieldLock },
+  { name: "AI Governance", category: "AI", Icon: TbShieldCheck },
 
   { name: "JavaScript", category: "Languages", Icon: SiJavascript, color: "#f7df1e" },
   { name: "TypeScript", category: "Languages", Icon: SiTypescript, color: "#3178c6" },

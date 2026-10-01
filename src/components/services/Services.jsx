@@ -33,7 +33,7 @@ const Services = () => {
         "Building responsive web applications with React.js, Next.js, and Tailwind CSS.",
         "Sizing feasibility alongside engineers instead of guessing at it.",
         "Specifying API and integration requirements, including REST and GraphQL.",
-        "Trying out AI-assisted workflows in analysis and design work, and keeping the ones that hold up.",
+        "Contributing to AI governance: evaluating AI-assisted workflows and helping decide which ones teams can use responsibly.",
       ],
     },
   ];

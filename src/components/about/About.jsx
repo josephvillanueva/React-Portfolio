@@ -83,6 +83,14 @@ const About = () => {
               build from.
             </p>
             <p>
+              I&apos;m also part of <strong>AI governance</strong> at SMITS,
+              contributing to how the company adopts AI formally and responsibly.
+              That means evaluating AI-assisted workflows across requirements,
+              design, prototyping, development, testing, and documentation, and
+              helping decide which ones are safe and useful enough for project teams
+              to rely on.
+            </p>
+            <p>
               Next, I want a <strong>Product Owner</strong> role, where the
               analysis and the engineering background stop being side skills
               and become the job.
