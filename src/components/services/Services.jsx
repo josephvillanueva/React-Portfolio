@@ -33,7 +33,16 @@ const Services = () => {
         "Building responsive web applications with React.js, Next.js, and Tailwind CSS.",
         "Sizing feasibility alongside engineers instead of guessing at it.",
         "Specifying API and integration requirements, including REST and GraphQL.",
-        "Contributing to AI governance: evaluating AI-assisted workflows and helping decide which ones teams can use responsibly.",
+        "Building AI features with guardrails: role-scoped data, masking before anything reaches a model, and results that still work without AI.",
+      ],
+    },
+    {
+      title: "AI Enablement & Governance",
+      description: [
+        "Serving on the governing body for AI use at SMITS, helping set how the company adopts AI formally and responsibly.",
+        "Running AI hackathons that get project teams building hands-on with AI-assisted workflows.",
+        "Evaluating AI-assisted workflows across requirements, design, development, testing, and documentation, and keeping the ones that hold up.",
+        "Using Claude, ChatGPT, Gemini, and Copilot daily to turn ideas into prototypes stakeholders can react to.",
       ],
     },
   ];

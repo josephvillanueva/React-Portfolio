@@ -60,6 +60,7 @@ import {
   TbShieldCheck,
   TbSparkles,
   TbTargetArrow,
+  TbTrophy,
   TbTerminal2,
   TbUsersGroup,
 } from "react-icons/tb";
@@ -102,6 +103,7 @@ const skills = [
   { name: "Data Masking for LLMs", category: "AI", Icon: TbMask },
   { name: "Responsible AI Use", category: "AI", Icon: TbShieldLock },
   { name: "AI Governance", category: "AI", Icon: TbShieldCheck },
+  { name: "AI Hackathon Facilitation", category: "AI", Icon: TbTrophy },
 
   { name: "JavaScript", category: "Languages", Icon: SiJavascript, color: "#f7df1e" },
   { name: "TypeScript", category: "Languages", Icon: SiTypescript, color: "#3178c6" },
@@ -197,7 +199,8 @@ const Skills = () => {
         The product practices I use day to day, the AI tools I work with, and
         the technical stack I have shipped with. I use AI to turn an idea into a
         working prototype that stakeholders can react to, and I build in the
-        guardrails that make it safe to use on real work.
+        guardrails that make it safe to use on real work. At SMITS I serve on
+        the governing body for AI use and run AI hackathons for project teams.
       </p>
 
       <div className="container skills">

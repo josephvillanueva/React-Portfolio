@@ -83,12 +83,14 @@ const About = () => {
               build from.
             </p>
             <p>
-              I&apos;m also part of <strong>AI governance</strong> at SMITS,
-              contributing to how the company adopts AI formally and responsibly.
-              That means evaluating AI-assisted workflows across requirements,
-              design, prototyping, development, testing, and documentation, and
-              helping decide which ones are safe and useful enough for project teams
-              to rely on.
+              I serve on the <strong>governing body for AI use</strong> at
+              SMITS, which sets how the company adopts AI formally and
+              responsibly, and I run <strong>AI hackathons</strong> that get
+              project teams building hands-on with AI-assisted workflows. Day to
+              day I use Claude, ChatGPT, Gemini, and Copilot across
+              requirements, design, prototyping, and code, so when we decide
+              which workflows teams can rely on, I&apos;m judging from use, not
+              from a slide.
             </p>
             <p>
               Next, I want a <strong>Product Owner</strong> role, where the
