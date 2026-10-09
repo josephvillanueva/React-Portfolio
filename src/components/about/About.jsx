@@ -85,8 +85,9 @@ const About = () => {
             <p>
               I serve on the <strong>governing body for AI use</strong> at
               SMITS, which sets how the company adopts AI formally and
-              responsibly, and I run <strong>AI hackathons</strong> that get
-              project teams building hands-on with AI-assisted workflows. Day to
+              responsibly. I also run <strong>AI hackathons</strong> for
+              project teams: so far 8 teams and around 50 participants, with
+              all 8 proposals going on to become real projects for SMITS. Day to
               day I use Claude, ChatGPT, Gemini, and Copilot across
               requirements, design, prototyping, and code, so when we decide
               which workflows teams can rely on, I&apos;m judging from use, not

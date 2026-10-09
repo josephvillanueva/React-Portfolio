@@ -200,7 +200,8 @@ const Skills = () => {
         the technical stack I have shipped with. I use AI to turn an idea into a
         working prototype that stakeholders can react to, and I build in the
         guardrails that make it safe to use on real work. At SMITS I serve on
-        the governing body for AI use and run AI hackathons for project teams.
+        the governing body for AI use and run AI hackathons whose proposals
+        have become real company projects.
       </p>
 
       <div className="container skills">
