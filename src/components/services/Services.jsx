@@ -40,7 +40,7 @@ const Services = () => {
       title: "AI Enablement & Governance",
       description: [
         "Serving on the governing body for AI use at SMITS, helping set how the company adopts AI formally and responsibly.",
-        "Running AI hackathons: so far 8 teams and around 50 participants, with all 8 proposals becoming real SMITS projects.",
+        "Running AI hackathons: the first had 8 teams and around 50 participants, and all 8 proposals became real SMITS projects.",
         "Evaluating AI-assisted workflows across requirements, design, development, testing, and documentation, and keeping the ones that hold up.",
         "Using Claude, ChatGPT, Gemini, and Copilot daily to turn ideas into prototypes stakeholders can react to.",
       ],
