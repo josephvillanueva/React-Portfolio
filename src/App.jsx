@@ -5,6 +5,7 @@ import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
 import Skills from "./components/skills/Skills";
 import Services from "./components/services/Services";
+import UXCaseStudies from "./components/caseStudies/UXCaseStudies";
 import Portfolio from "./components/portfolio/Portfolio";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
@@ -21,6 +22,7 @@ const App = () => {
       <Experience />
       <Skills />
       <Services />
+      <UXCaseStudies />
       <Portfolio />
       <Testimonials />
       <Contact />
