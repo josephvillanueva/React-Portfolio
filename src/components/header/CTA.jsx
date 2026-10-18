@@ -8,8 +8,8 @@ const CTA = () => {
         {" "}
         Download CV
       </a>
-      <a href="#contact" className="btn">
-        Let&apos;s Talk
+      <a href="#case-studies" className="btn btn-primary">
+        Explore UX work
       </a>
     </div>
   );

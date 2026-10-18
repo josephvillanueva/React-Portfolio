@@ -26,6 +26,9 @@ const Footer = () => {
           <a href="#services">Services</a>
         </li>
         <li>
+          <a href="#case-studies">UX case studies</a>
+        </li>
+        <li>
           <a href="#portfolio">Portfolio</a>
         </li>
         <li>

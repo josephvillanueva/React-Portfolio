@@ -13,7 +13,7 @@ const links = [
   { href: "#experience", label: "Experience", Icon: BiBrain },
   { href: "#skills", label: "Skills", Icon: TbTools },
   { href: "#services", label: "Services", Icon: MdWorkOutline },
-  { href: "#portfolio", label: "Portfolio", Icon: MdOutlineFolderOpen },
+  { href: "#case-studies", label: "UX case studies", Icon: MdOutlineFolderOpen },
   { href: "#testimonials", label: "Character references", Icon: BsChatQuote },
   { href: "#contact", label: "Contact", Icon: RiContactsLine },
 ];

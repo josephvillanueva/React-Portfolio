@@ -1,0 +1,363 @@
+.ux_cases {
+  margin-top: 8rem;
+}
+
+.ux_cases_header {
+  max-width: 980px;
+  text-align: left;
+}
+
+.ux_cases_eyebrow {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+}
+
+.ux_cases_header h2 {
+  max-width: 16ch;
+  font-size: clamp(2.1rem, 5.2vw, 4.25rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.ux_cases_intro {
+  max-width: 750px;
+  color: var(--color-light);
+  font-size: clamp(0.96rem, 1.6vw, 1.1rem);
+}
+
+.ux_cases_guide {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.ux_cases_guide span {
+  font-size: 0.77rem;
+  letter-spacing: 0.03em;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--color-hairline);
+  border-radius: 100px;
+  background: var(--color-tint);
+  color: var(--color-light);
+}
+
+.ux_cases_list {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.ux_case {
+  border: 1px solid var(--color-hairline);
+  border-radius: 1.4rem;
+  background: var(--color-bg-variant);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.ux_case[open] {
+  border-color: var(--color-primary-variant);
+}
+
+.ux_case_summary {
+  display: grid;
+  grid-template-columns: minmax(220px, 43%) 1fr;
+  gap: 0;
+  cursor: pointer;
+  list-style: none;
+  min-width: 0;
+}
+
+.ux_case_summary::-webkit-details-marker {
+  display: none;
+}
+
+.ux_case_summary:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: -4px;
+  border-radius: 1.4rem;
+}
+
+.ux_case_image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.ux_case_image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.ux_case_summary:hover .ux_case_image img {
+  transform: scale(1.025);
+}
+
+.ux_case_number {
+  position: absolute;
+  left: 1.15rem;
+  top: 1.15rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 100px;
+  background: rgba(18, 19, 31, 0.82);
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.ux_case_teaser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(1.25rem, 3vw, 2.6rem);
+  min-width: 0;
+}
+
+.ux_case_category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+
+.ux_case_teaser h3 {
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.7rem;
+}
+
+.ux_case_subtitle {
+  max-width: 38ch;
+  color: var(--color-light);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.ux_case_expand {
+  display: inline-flex;
+  gap: 0.9rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.ux_case_chevron {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-variant);
+  font-size: 1.1rem;
+  transition: transform 200ms ease;
+}
+
+.ux_case[open] .ux_case_chevron {
+  transform: rotate(180deg);
+}
+
+.ux_case_body {
+  padding: clamp(1.25rem, 3.5vw, 3rem);
+  border-top: 1px solid var(--color-hairline);
+}
+
+.ux_case_meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.7rem;
+  padding: 1rem 0 1.6rem;
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.ux_case_meta_label {
+  display: block;
+  font-size: 0.69rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--color-light);
+}
+
+.ux_case_meta p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.ux_case_body h4 {
+  margin: 0 0 1rem;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.ux_case_body p {
+  line-height: 1.8;
+  font-size: 0.93rem;
+}
+
+.ux_case_two_columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-bottom: 2.8rem;
+}
+
+.ux_case_two_columns > div {
+  min-width: 0;
+}
+
+.ux_case_flow_block,
+.ux_case_decisions {
+  margin-bottom: 2.7rem;
+}
+
+.ux_case_flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.6rem;
+  counter-reset: item;
+}
+
+.ux_case_flow li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: var(--color-tint);
+  border: 1px solid var(--color-hairline);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.ux_case_step_number {
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.ux_case_flow_note {
+  margin-top: 0.75rem;
+  color: var(--color-light);
+  font-size: 0.76rem !important;
+}
+
+.ux_case_decision_grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.ux_case_decision {
+  background: var(--color-tint);
+  border: 1px solid var(--color-hairline);
+  border-radius: 0.9rem;
+  padding: 1.2rem;
+  min-width: 0;
+}
+
+.ux_case_decision h5 {
+  color: var(--color-white);
+  font-size: 0.93rem;
+  font-weight: 600;
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+}
+
+.ux_case_decision p {
+  font-size: 0.85rem;
+  color: var(--color-light);
+  line-height: 1.7;
+}
+
+.ux_case_conclusion {
+  margin-bottom: 2rem;
+}
+
+.ux_case_actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.ux_case_contact_link {
+  font-size: 0.86rem;
+}
+
+.ux_cases_note {
+  margin-top: 1.3rem;
+  text-align: center;
+  color: var(--color-light);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .ux_case_flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .ux_case_decision_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .ux_cases {
+    margin-top: 6rem;
+  }
+  .ux_case_summary {
+    grid-template-columns: 1fr;
+  }
+  .ux_case_image {
+    aspect-ratio: 16 / 9;
+  }
+  .ux_case_teaser {
+    padding: 1.4rem;
+  }
+  .ux_case_expand {
+    margin-top: 0.95rem;
+  }
+  .ux_case_meta {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+    padding-top: 0;
+  }
+  .ux_case_two_columns {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+  .ux_case_flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 400px) {
+  .ux_case_flow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ux_case_image img,
+  .ux_case_chevron {
+    transition: none;
+  }
+}
