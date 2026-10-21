@@ -1,12 +1,14 @@
 import React from "react";
 import "./header.css";
 import CTA from "./CTA";
+import HeroShader from "./HeroShader";
 import ME from "../../assets/me (2).png";
 import Headersocials from "./Headersocials";
 
 const Header = () => {
   return (
     <header>
+      <HeroShader />
       <div className="container header_container">
         <h4>Hello I&apos;m</h4>
         <h1>Joseph Villanueva</h1>
@@ -29,3 +31,4 @@ const Header = () => {
 };
 
 export default Header;
+
