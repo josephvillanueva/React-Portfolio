@@ -10,6 +10,7 @@ import SPEND_MASTER from "../../assets/spend-master.jpg";
 import FRAUD_MASTER from "../../assets/fraud-master.jpg";
 import KAIN_EVERYONE from "../../assets/kain-everyone.jpg";
 import BAYAD from "../../assets/bayad.jpg";
+import GALAW from "../../assets/galaw-preview.svg";
 import BACKLOG_BOARD_ARCH from "../../assets/architecture/backlog-board.svg";
 import OBJECT_DETECTOR_ARCH from "../../assets/architecture/ai-object-detector.svg";
 import GIPHY_CLONE_ARCH from "../../assets/architecture/giphy-clone.svg";
@@ -20,6 +21,26 @@ import KAIN_EVERYONE_ARCH from "../../assets/architecture/kain-everyone.svg";
 import BAYAD_ARCH from "../../assets/architecture/bayad.svg";
 
 const projects = [
+  {
+    id: 10,
+    image: GALAW,
+    title: "Galaw: Fitness, Fasting and Accountability on Your Phone",
+    // The code lives in a private repository, so the card links only to the app.
+    demo: "https://galaw-na.vercel.app/",
+    status: "Live as a local-data preview. Account sign-in, Google Calendar and reminders are still being verified.",
+    tech: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Supabase",
+      "Mobile-first PWA",
+      "Adaptive Workouts",
+      "Gym & Home Profiles",
+      "Fasting & OMAD",
+      "Badminton & CSV Import",
+      "Private Community Sharing",
+    ],
+  },
   {
     id: 9,
     image: BAYAD,

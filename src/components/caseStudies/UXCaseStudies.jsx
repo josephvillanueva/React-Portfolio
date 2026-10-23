@@ -4,6 +4,7 @@ import BAYAD from "../../assets/bayad.jpg";
 import KAIN from "../../assets/kain-everyone.jpg";
 import SPEND from "../../assets/spend-master.jpg";
 import FRAUD from "../../assets/fraud-master.jpg";
+import GALAW from "../../assets/galaw-preview.svg";
 
 // Case-study narratives describe observable product features and the decisions
 // those flows are designed to support. They intentionally do not claim
@@ -11,6 +12,51 @@ import FRAUD from "../../assets/fraud-master.jpg";
 const caseStudies = [
   {
     number: "01",
+    id: "galaw-case-study",
+    category: "Mobile wellness · Adaptive routines · In development",
+    title: "Galaw",
+    subtitle: "A phone-first routine for training, fasting and life beyond the gym.",
+    image: GALAW,
+    alt: "Approved teal and green Galaw logo, an animated teal dumbbell and an illustrative phone preview for training, gym and home profiles, fasting, OMAD and badminton",
+    status: "In development. Public release and Google integrations are being verified.",
+    format: "Development walkthrough",
+    audience: "Adults planning and recording workouts, sports and voluntary fasting on their phones",
+    scope: "Mobile interaction design · Adaptive flows · Full-stack implementation",
+    challenge:
+      "People bring their phones to different gyms, train at home and fit exercise around sports and other commitments. A useful routine has to match the available equipment and time, make logging quick and respect what each person chooses to share.",
+    goal:
+      "Connect equipment-aware workouts, first-class fasting and OMAD tracking, badminton and imported activity summaries, and group encouragement in a routine people can manage from their phones.",
+    flow: [
+      "Choose a gym or home profile",
+      "Review a manageable workout",
+      "Log sets and adjust remaining work",
+      "Track fasting or add sports and imports",
+      "Choose what to share",
+    ],
+    decisions: [
+      {
+        title: "Start with the place and the phone",
+        detail:
+          "Saved gym and home profiles use searchable equipment choices. Short setup steps and large workout controls keep the phone flow focused. Plans include warm-up, rest and transitions, and only unfinished work changes when time runs short.",
+      },
+      {
+        title: "Give fasting its own place",
+        detail:
+          "A dedicated fasting area records planned and actual timing, meals and notes, including OMAD. It is part of the main navigation. Ending early is supported without rewarding longer restriction.",
+      },
+      {
+        title: "Let accountability respect boundaries",
+        detail:
+          "People choose which check-ins to share. Personal training loads stay private, while temporary photos have limited openings and a clear explanation that web screenshots cannot be reliably blocked.",
+      },
+    ],
+    outcome:
+      "The implementation brings together phone-focused workout logging, gym and home equipment profiles, fasting and OMAD records, badminton and other activity logs, CSV import with duplicate review, and community check-ins. Public release, Google sign-in and Calendar synchronization remain under verification.",
+    next:
+      "Validate setup and one-handed logging on phones, activity-import review, fasting timer recovery, Google consent and two-way Calendar changes, reminder delivery, offline recovery and community photo permissions before public release.",
+  },
+  {
+    number: "02",
     id: "bayad-case-study",
     category: "Personal finance · Multi-person workflows",
     title: "Bayad",
@@ -55,7 +101,7 @@ const caseStudies = [
       "Test whether a first-time participant can verify a complex bill and confirm a settlement without asking the expense creator for help.",
   },
   {
-    number: "02",
+    number: "03",
     id: "kain-case-study",
     category: "Team tools · Coordination and fairness",
     title: "Kain @everyone",
@@ -100,7 +146,7 @@ const caseStudies = [
       "Observe how first-time users interpret unavailable QRs, poll status, and notifications during a busy lunch period.",
   },
   {
-    number: "03",
+    number: "04",
     id: "spend-case-study",
     category: "Enterprise UX · Decision support",
     title: "Spend Master",
@@ -145,7 +191,7 @@ const caseStudies = [
       "Give users realistic investigation tasks and check whether they can identify the next action, not just interpret a chart.",
   },
   {
-    number: "04",
+    number: "05",
     id: "fraud-case-study",
     category: "Enterprise UX · Explainable review",
     title: "Fraud Master",
@@ -220,7 +266,7 @@ const UXCaseStudies = () => (
           <summary className="ux_case_summary">
             <div className="ux_case_image">
               <img src={study.image} alt={study.alt} loading="lazy" />
-              <span className="ux_case_number">{study.number} / 04</span>
+              <span className="ux_case_number">{study.number} / {String(caseStudies.length).padStart(2, "0")}</span>
             </div>
             <div className="ux_case_teaser">
               <p className="ux_case_category">{study.category}</p>
@@ -245,13 +291,13 @@ const UXCaseStudies = () => (
               </div>
               <div>
                 <span className="ux_case_meta_label">Format</span>
-                <p>Product and interaction walkthrough</p>
+                <p>{study.format || "Product and interaction walkthrough"}</p>
               </div>
             </div>
 
             <div className="ux_case_two_columns">
               <div>
-                <h4>01 — The design challenge</h4>
+                <h4>01 / The design challenge</h4>
                 <p>{study.challenge}</p>
               </div>
               <div>
@@ -261,7 +307,7 @@ const UXCaseStudies = () => (
             </div>
 
             <div className="ux_case_flow_block">
-              <h4>02 — The main task flow</h4>
+              <h4>02 / The main task flow</h4>
               <ol className="ux_case_flow">
                 {study.flow.map((step, stepIndex) => (
                   <li key={step}>
@@ -279,7 +325,7 @@ const UXCaseStudies = () => (
             </div>
 
             <div className="ux_case_decisions">
-              <h4>03 — Decisions and trade-offs</h4>
+              <h4>03 / Decisions and trade-offs</h4>
               <div className="ux_case_decision_grid">
                 {study.decisions.map((decision) => (
                   <div className="ux_case_decision" key={decision.title}>
@@ -296,20 +342,20 @@ const UXCaseStudies = () => (
                 <p>{study.outcome}</p>
               </div>
               <div>
-                <h4>04 — What I would validate next</h4>
+                <h4>04 / What I would validate next</h4>
                 <p>{study.next}</p>
               </div>
             </div>
 
             <div className="ux_case_actions">
-              <a
+              {study.url ? <a
                 href={study.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
               >
                 {study.linkLabel} ↗
-              </a>
+              </a> : <p className="ux_case_category">{study.status}</p>}
               <a href="#contact" className="ux_case_contact_link">
                 Discuss this project →
               </a>
