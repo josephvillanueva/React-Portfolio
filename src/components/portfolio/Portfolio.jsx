@@ -11,6 +11,7 @@ import FRAUD_MASTER from "../../assets/fraud-master.jpg";
 import KAIN_EVERYONE from "../../assets/kain-everyone.jpg";
 import BAYAD from "../../assets/bayad.jpg";
 import GALAW from "../../assets/galaw-preview.svg";
+import NWG_GUIDE from "../../assets/nwg-guide-preview.svg";
 import BACKLOG_BOARD_ARCH from "../../assets/architecture/backlog-board.svg";
 import OBJECT_DETECTOR_ARCH from "../../assets/architecture/ai-object-detector.svg";
 import GIPHY_CLONE_ARCH from "../../assets/architecture/giphy-clone.svg";
@@ -21,6 +22,23 @@ import KAIN_EVERYONE_ARCH from "../../assets/architecture/kain-everyone.svg";
 import BAYAD_ARCH from "../../assets/architecture/bayad.svg";
 
 const projects = [
+  {
+    id: 11,
+    image: NWG_GUIDE,
+    title: "NWG Guide by Cartoonz: Community Guides & Tools",
+    demo: "https://nwg-guide-by-cartoonz.vercel.app/",
+    description:
+      "An independent community resource for The Wrestling Game, combining event walkthroughs, strategy guides, interactive calculators, a class-aware moveset planner, and community feedback",
+    tech: [
+      "Next.js 15",
+      "React 19",
+      "Supabase",
+      "Event Guides",
+      "AT & Finisher Calculators",
+      "Moveset Maker",
+      "Community Voting & Comments",
+    ],
+  },
   {
     id: 10,
     image: GALAW,
@@ -255,7 +273,7 @@ const Portfolio = () => {
 
       <div className="container portfolio_container">
         {projects.map((project) => {
-          const { id, image, title, github, demo, tech, architecture, status } =
+          const { id, image, title, github, demo, tech, architecture, status, description } =
             project;
           return (
             <article key={id} className="portfolio_item">
@@ -266,6 +284,7 @@ const Portfolio = () => {
               </div>
               <div className="portfolio_item_container">
                 <h3>{title}</h3>
+                {description && <p className="portfolio_description">{description}</p>}
                 <div className="portfolio_tech">
                   {tech.map((techItem, index) => (
                     <div key={index} className="portfolio_tech_background">
