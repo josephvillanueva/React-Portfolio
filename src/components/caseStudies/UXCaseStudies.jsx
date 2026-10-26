@@ -4,7 +4,7 @@ import BAYAD from "../../assets/bayad.jpg";
 import KAIN from "../../assets/kain-everyone.jpg";
 import SPEND from "../../assets/spend-master.jpg";
 import FRAUD from "../../assets/fraud-master.jpg";
-import GALAW from "../../assets/galaw-preview.svg";
+import GALAW from "../../assets/galaw-preview.webp";
 
 // Case-study narratives describe observable product features and the decisions
 // those flows are designed to support. They intentionally do not claim
@@ -17,7 +17,9 @@ const caseStudies = [
     title: "Galaw",
     subtitle: "A phone-first routine for training, fasting and life beyond the gym.",
     image: GALAW,
-    alt: "Approved teal and green Galaw logo, an animated teal dumbbell and an illustrative phone preview for training, gym and home profiles, fasting, OMAD and badminton",
+    alt: "Screenshot of Galaw's live Today dashboard with its official logo, green workout panel and dumbbell mascot, weekly activity and fasting overview",
+    url: "https://galaw-na.vercel.app/",
+    linkLabel: "Explore Galaw",
     status: "In development. Public release and Google integrations are being verified.",
     format: "Development walkthrough",
     audience: "Adults planning and recording workouts, sports and voluntary fasting on their phones",
@@ -348,14 +350,15 @@ const UXCaseStudies = () => (
             </div>
 
             <div className="ux_case_actions">
-              {study.url ? <a
+              {study.url && <a
                 href={study.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
               >
                 {study.linkLabel} ↗
-              </a> : <p className="ux_case_category">{study.status}</p>}
+              </a>}
+              {study.status && <p className="ux_case_category">{study.status}</p>}
               <a href="#contact" className="ux_case_contact_link">
                 Discuss this project →
               </a>

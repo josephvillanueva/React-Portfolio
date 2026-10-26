@@ -99,6 +99,10 @@
   transition: transform 300ms ease;
 }
 
+#galaw-case-study .ux_case_image img {
+  object-fit: contain;
+}
+
 .ux_case_summary:hover .ux_case_image img {
   transform: scale(1.025);
 }
