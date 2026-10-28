@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./experience.css";
 import { BsBuilding, BsCalendar3 } from "react-icons/bs";
 import {
@@ -72,6 +72,7 @@ const roles = [
 const Experience = () => {
   const timelineRef = useRef(null);
   const reduceMotion = useReducedMotion();
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   // The line starts filling as the timeline enters and is full by the time
   // its last entry is comfortably on screen.
@@ -110,7 +111,9 @@ const Experience = () => {
           {roles.map((role, index) => (
             <motion.li
               key={`${role.company}-${role.period}`}
-              className="timeline_item"
+              className={`timeline_item${activeIndex === index ? " timeline_item_active" : ""}`}
+              onViewportEnter={() => setActiveIndex(index)}
+              viewport={{ amount: 0.35, margin: "0px 0px -10% 0px" }}
               {...reveal}
             >
               <span className="timeline_marker" aria-hidden="true">
