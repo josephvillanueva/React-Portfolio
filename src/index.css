@@ -170,6 +170,14 @@ a:hover {
   color: var(--color-bg);
 }
 
+.btn:not(.btn-primary),
+.btn:not(.btn-primary):hover,
+.btn:not(.btn-primary):focus-visible {
+  background: #fff;
+  color: #0a6fc2;
+  border-color: var(--color-primary);
+}
+
 img {
   display: block;
   width: 100%;

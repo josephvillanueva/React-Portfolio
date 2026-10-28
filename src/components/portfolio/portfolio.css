@@ -167,10 +167,6 @@
   font: inherit;
 }
 
-.portfolio_item-cta button.btn:not(:hover) {
-  background: transparent;
-}
-
 /* Shown instead of links for a project that is no longer online. */
 .portfolio_status {
   display: inline-flex;
@@ -178,7 +174,8 @@
   padding: 0.75rem 1.2rem;
   border-radius: 0.4rem;
   border: 1px dashed var(--color-hairline);
-  color: var(--color-light);
+  background: #fff;
+  color: #475569;
   font-size: 0.9rem;
 }
 
