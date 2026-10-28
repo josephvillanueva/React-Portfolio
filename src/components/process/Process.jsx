@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { useReducedMotion } from "framer-motion";
 import "./process.css";
 
 const stages = [
@@ -8,6 +10,34 @@ const stages = [
 ];
 
 export default function Process() {
+  const [activeStage, setActiveStage] = useState(-1);
+  const reduceMotion = useReducedMotion();
+
+  // Cycle through the four stages, then leave a five-second pause.
+  useEffect(() => {
+    if (reduceMotion) {
+      setActiveStage(-1);
+      return;
+    }
+
+    let timer;
+    const showStage = (index) => {
+      setActiveStage(index);
+      timer = window.setTimeout(() => {
+        if (index < stages.length - 1) {
+          showStage(index + 1);
+        } else {
+          setActiveStage(-1);
+          timer = window.setTimeout(() => showStage(0), 5000);
+        }
+      }, 2000);
+    };
+
+    // Trigger the first fade after the initial inactive state has rendered.
+    timer = window.setTimeout(() => showStage(0), 120);
+    return () => window.clearTimeout(timer);
+  }, [reduceMotion]);
+
   return (
     <section id="process" className="portfolio-process" aria-labelledby="process-heading">
       <h5>From idea to implementation</h5>
@@ -17,7 +47,7 @@ export default function Process() {
         <p className="process-intro">A connected path across product, design, and engineering.</p>
         <ol className="process-stages">
           {stages.map((stage, index) => (
-            <li className={`process-stage${index === 1 ? " process-stage-focal" : ""}`} key={stage.title}>
+            <li className={`process-stage${index === 1 ? " process-stage-focal" : ""}${activeStage === index ? " process-stage-active" : ""}`} key={stage.title}>
               <h4><span className="process-number">0{index + 1}</span> {stage.title}</h4>
               <dl>
                 <div><dt>Focus</dt><dd>{stage.focus}</dd></div>

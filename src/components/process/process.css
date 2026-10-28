@@ -29,3 +29,40 @@
   .process-stage { position: relative; }
   .process-stage:not(:last-child)::after { content: "\2193"; display: block; color: var(--color-primary); text-align: center; margin-top: 1.5rem; }
 }
+
+/* Crossfade the primary-blue highlight and number/label colors in both directions. */
+.process-stage > h4 {
+  isolation: isolate;
+  transition: color 650ms ease-in-out, border-color 650ms ease-in-out;
+}
+.process-stage > h4::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: #0a6fc2;
+  opacity: 0;
+  transition: opacity 650ms ease-in-out;
+  pointer-events: none;
+}
+.process-stage-active > h4 {
+  color: #fff;
+  border-color: #0a6fc2;
+  animation: process-stage-glow 1s ease-in-out;
+}
+.process-stage-active > h4::before { opacity: 1; }
+.process-number { transition: color 650ms ease-in-out; }
+.process-stage-active .process-number { color: #fff; }
+
+@keyframes process-stage-glow {
+  0%, 100% { box-shadow: 0 0 0 rgba(10, 111, 194, 0); }
+  50% { box-shadow: 0 0 20px rgba(10, 111, 194, 0.4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-stage > h4, .process-stage > h4::before, .process-number {
+    transition: none;
+    animation: none;
+  }
+}
