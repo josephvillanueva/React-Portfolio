@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 724" width="1240" height="724" role="img" aria-labelledby="title desc">
+<title id="title">Galaw architecture</title>
+<desc id="desc">A Next.js phone web app saves guest and account records to IndexedDB first. Signed-in changes synchronize through authenticated APIs to Supabase Postgres with owner checks, revision conflicts and operation receipts. Supabase provides Google sign-in and private community media. A separate Google Calendar authorization connects an app-created calendar. Daily Calendar maintenance is scheduled; the reminder worker is implemented but production push is not configured. Source and public configuration checked 29 October 2026, appointment round trips and physical-phone validation remain open.</desc>
+<style>
+svg{--bg:#1f1f38;--zone:#262650;--zoneStroke:#3a3a78;--zoneLabel:#4db5ff;--node:#2c2c6c;--nodeStroke:#45458f;--title:#fff;--text:#c3c3e0;--edge:#9a9ad0;--edgeText:#e6e6f5;--accent:#4db5ff;--pill:#1f1f38}
+text{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.bg{fill:var(--bg)}.zone{fill:var(--zone);stroke:var(--zoneStroke);stroke-width:1;stroke-dasharray:5 4}
+.zlabel{fill:var(--zoneLabel);font-size:12px;font-weight:700;letter-spacing:.08em}.zsub{fill:var(--text);font-size:12px}
+.node{fill:var(--node);stroke:var(--nodeStroke);stroke-width:1.2}.node.key{stroke:var(--accent);stroke-width:2}
+.ntitle{fill:var(--title);font-size:15px;font-weight:600}.ntext{fill:var(--text);font-size:12px}
+.edge{fill:none;stroke:var(--edge);stroke-width:1.5}.head{fill:var(--edge)}.pending{stroke-dasharray:5 4}
+.pill{fill:var(--pill);stroke:var(--zoneStroke);stroke-width:1}.elabel{fill:var(--edgeText);font-size:11.5px}.legend{fill:var(--text);font-size:12px}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" width="1240" height="724" rx="14"/>
+<rect class="zone" x="16" y="16" width="914" height="174" rx="12"/>
+<text class="zlabel" x="36" y="46">PHONE / BROWSER</text><text class="zsub" x="36" y="66">Installable Next.js / React app. Guest use does not require an account.</text>
+<rect class="zone" x="950" y="16" width="274" height="174" rx="12"/>
+<text class="zlabel" x="970" y="46">GOOGLE</text><text class="zsub" x="970" y="66">Sign-in and Calendar use separate consent.</text>
+<rect class="zone" x="16" y="238" width="1208" height="174" rx="12"/>
+<text class="zlabel" x="36" y="268">VERCEL / NEXT.JS SERVER</text><text class="zsub" x="36" y="288">Session-checked routes, validated updates and server-only provider credentials.</text>
+<rect class="zone" x="16" y="460" width="1208" height="174" rx="12"/>
+<text class="zlabel" x="36" y="490">SUPABASE</text><text class="zsub" x="36" y="510">Account-owned records and database security policies. Guest records remain on the device.</text>
+
+<path class="edge" d="M378,136 L404,136" marker-end="url(#arrow)"/>
+<path class="edge" d="M580,176 L580,214 L213,214 L213,312" marker-end="url(#arrow)"/>
+<path class="edge" d="M213,398 L213,534" marker-end="url(#arrow)"/>
+<path class="edge" d="M579,398 L579,534" marker-end="url(#arrow)"/>
+<path class="edge" d="M1044,176 L1044,218 L700,218 L700,312" marker-end="url(#arrow)"/>
+<path class="edge" d="M752,354 L780,354" marker-end="url(#arrow)"/>
+<path class="edge pending" d="M992,398 L992,534" marker-end="url(#arrow)"/>
+
+<rect class="node" x="48" y="96" width="330" height="80" rx="10"/>
+<text class="ntitle" x="64" y="123">Train, fast, plan and track</text><text class="ntext" x="64" y="145">Adaptive workouts, gym spaces, sports</text><text class="ntext" x="64" y="163">PWA shell, offline reload and CSV import</text>
+<rect class="node key" x="404" y="96" width="506" height="80" rx="10"/>
+<text class="ntitle" x="420" y="123">IndexedDB first</text><text class="ntext" x="420" y="145">Separate guest/account records and explicit guest import</text><text class="ntext" x="420" y="163">Queued changes, local backups and account-change isolation</text>
+<rect class="node" x="970" y="96" width="234" height="80" rx="10"/>
+<text class="ntitle" x="986" y="123">Identity and Calendar</text><text class="ntext" x="986" y="145">Google account sign-in</text><text class="ntext" x="986" y="163">Dedicated app-created calendar</text>
+
+<rect class="node key" x="48" y="312" width="330" height="86" rx="10"/>
+<text class="ntitle" x="64" y="339">Account and state APIs</text><text class="ntext" x="64" y="361">Verify owner and operation ID</text><text class="ntext" x="64" y="379">Revision conflicts and retry-safe receipts</text>
+<rect class="node" x="404" y="312" width="348" height="86" rx="10"/>
+<text class="ntitle" x="420" y="339">Calendar adapter</text><text class="ntext" x="420" y="361">Encrypted credentials, sync and webhooks</text><text class="ntext" x="420" y="379">Recurring plans and conflict choices</text>
+<rect class="node" x="780" y="312" width="424" height="86" rx="10"/>
+<text class="ntitle" x="796" y="339">Scheduled maintenance and jobs</text><text class="ntext" x="796" y="361">Daily Calendar watch renewal is scheduled</text><text class="ntext" x="796" y="379">Reminder / cleanup worker needs production setup</text>
+
+<rect class="node" x="48" y="534" width="330" height="86" rx="10"/>
+<text class="ntitle" x="64" y="561">Postgres state and receipts</text><text class="ntext" x="64" y="583">Owner-scoped row-level security</text><text class="ntext" x="64" y="601">Atomic state synchronization function</text>
+<rect class="node" x="404" y="534" width="348" height="86" rx="10"/>
+<text class="ntitle" x="420" y="561">Auth, Calendar and private media</text><text class="ntext" x="420" y="583">Sessions, event mappings and community data</text><text class="ntext" x="420" y="601">Private photos with expiring viewing leases</text>
+<rect class="node" x="780" y="534" width="424" height="86" rx="10"/>
+<text class="ntitle" x="796" y="561">Notification queue and subscriptions</text><text class="ntext" x="796" y="583">Retry leases, quiet hours and delivery checks</text><text class="ntext" x="796" y="601">Push is not configured in the public deployment</text>
+
+<rect class="pill" x="278" y="204" width="170" height="20" rx="5"/><text class="elabel" x="363" y="218" text-anchor="middle">signed-in synchronization</text>
+<rect class="pill" x="164" y="428" width="98" height="20" rx="5"/><text class="elabel" x="213" y="442" text-anchor="middle">validated RPC</text>
+<rect class="pill" x="525" y="428" width="108" height="20" rx="5"/><text class="elabel" x="579" y="442" text-anchor="middle">private records</text>
+<rect class="pill" x="946" y="428" width="92" height="20" rx="5"/><text class="elabel" x="992" y="442" text-anchor="middle">when enabled</text>
+<text class="legend" x="36" y="662">Source architecture and public configuration checked 29 October 2026.</text>
+<text class="legend" x="36" y="684">Google sign-in / Calendar authorization were verified; appointment round trips and physical-phone checks remain open.</text>
+<path class="edge pending" d="M36,706 L70,706" marker-end="url(#arrow)"/><text class="legend" x="80" y="710">Implemented but not enabled for production push. This diagram does not certify every live flow.</text>
+</svg>

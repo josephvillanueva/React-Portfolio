@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./portfolio.css";
-import { IoClose } from "react-icons/io5";
+import { IoChevronBack, IoChevronForward, IoClose, IoPause, IoPlay } from "react-icons/io5";
+import { useReducedMotion } from "framer-motion";
+import { A11y, Autoplay, Keyboard } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import PLAYIBLE from "../../assets/portfolio1.jpg";
 import OBJECT_DETECTOR from "../../assets/ai-object-detector.jpg";
 import GIPHY_CLONE from "../../assets/giphy-clone.jpg";
@@ -12,6 +16,7 @@ import KAIN_EVERYONE from "../../assets/kain-everyone.jpg";
 import BAYAD from "../../assets/bayad.jpg";
 import GALAW from "../../assets/galaw-preview.webp";
 import NWG_GUIDE from "../../assets/nwg-guide-preview.webp";
+import DESENSITIZER from "../../assets/desensitizer-preview.svg";
 import BACKLOG_BOARD_ARCH from "../../assets/architecture/backlog-board.svg";
 import OBJECT_DETECTOR_ARCH from "../../assets/architecture/ai-object-detector.svg";
 import GIPHY_CLONE_ARCH from "../../assets/architecture/giphy-clone.svg";
@@ -20,8 +25,28 @@ import SPEND_MASTER_ARCH from "../../assets/architecture/spend-master.svg";
 import FRAUD_MASTER_ARCH from "../../assets/architecture/fraud-master.svg";
 import KAIN_EVERYONE_ARCH from "../../assets/architecture/kain-everyone.svg";
 import BAYAD_ARCH from "../../assets/architecture/bayad.svg";
+import GALAW_ARCH from "../../assets/architecture/galaw.svg";
 
 const projects = [
+  {
+    id: 12,
+    image: DESENSITIZER,
+    imageAlt: "Synthetic Desensitizer illustration with replacement tokens and readable business rules, not a document screenshot",
+    title: "Desensitizer: Local Document Privacy & AI Governance",
+    github: "https://github.com/josephvillanueva/Desensitizer",
+    description:
+      "Two Windows applications that combine local rules and model review to tokenize identifying information while preserving business rules and table context for later analysis. Encrypted projects keep mapping decisions and support token rehydration.",
+    status: "Experimental desktop tools. Human review is required, not an anonymity or compliance guarantee.",
+    tech: [
+      "C# / .NET 8",
+      "WPF",
+      "Python",
+      "Local Model Inference",
+      "Document Tokenization",
+      "Human Review",
+      "AI Governance",
+    ],
+  },
   {
     id: 11,
     image: NWG_GUIDE,
@@ -45,7 +70,11 @@ const projects = [
     title: "Galaw: Fitness, Fasting and Accountability on Your Phone",
     // The code lives in a private repository, so the card links only to the app.
     demo: "https://galaw-na.vercel.app/",
-    status: "Live as a local-data preview. Account sign-in, Google Calendar and reminders are still being verified.",
+    status: "Live with guest mode and Google sign-in. Calendar authorization is verified; appointment synchronization and phone flows remain under validation. Push reminders are not configured.",
+    architecture: {
+      src: GALAW_ARCH,
+      alt: "The phone PWA saves guest and account records to IndexedDB first. Signed-in updates pass through session-checked Next.js APIs to owner-scoped Supabase state and retry-safe receipts. Separate Google Calendar authorization uses server-encrypted credentials and a dedicated calendar, with daily watch maintenance. The reminder queue is implemented but production push is not configured. Community photos use private storage and expiring viewing leases.",
+    },
     tech: [
       "Next.js 16",
       "React 19",
@@ -265,21 +294,63 @@ const ArchitectureDialog = ({ project, onClose }) => {
 
 const Portfolio = () => {
   const [archProject, setArchProject] = useState(null);
+  const [swiper, setSwiper] = useState(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (!swiper || swiper.destroyed) return;
+    if (reducedMotion === false && !isPaused && !isHovered && !isFocused && !archProject) {
+      swiper.autoplay.start();
+    } else {
+      swiper.autoplay.stop();
+    }
+  }, [swiper, reducedMotion, isPaused, isHovered, isFocused, archProject]);
 
   return (
     <section id="portfolio">
       <h5>My Recent Work/Involvements</h5>
       <h2>Portfolio</h2>
 
-      <div className="container portfolio_container">
+      <div className="container portfolio_carousel">
+        <div className="portfolio_carousel-controls" aria-label="Project carousel controls">
+          <p aria-live={isPaused ? "polite" : "off"}>Project {activeIndex + 1} of {projects.length}</p>
+          <button type="button" className="portfolio_carousel-arrow" onClick={() => { swiper?.slidePrev(); setIsPaused(true); }} aria-label="Previous projects" title="Previous projects"><IoChevronBack aria-hidden="true" /></button>
+          {!reducedMotion && <button type="button" className="btn portfolio_carousel-toggle" onClick={() => setIsPaused(value => !value)} aria-label={isPaused ? "Play carousel" : "Pause carousel"} title={isPaused ? "Play carousel" : "Pause carousel"}>{isPaused ? <IoPlay aria-hidden="true" /> : <IoPause aria-hidden="true" />}</button>}
+          <button type="button" className="portfolio_carousel-arrow" onClick={() => { swiper?.slideNext(); setIsPaused(true); }} aria-label="Next projects" title="Next projects"><IoChevronForward aria-hidden="true" /></button>
+        </div>
+        <div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onFocusCapture={() => setIsFocused(true)}
+          onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setIsFocused(false); }}
+        >
+        <Swiper
+          className="portfolio_container"
+          modules={[A11y, Autoplay, Keyboard]}
+          onSwiper={setSwiper}
+          onSlideChange={instance => setActiveIndex(instance.realIndex)}
+          slidesPerView={1}
+          spaceBetween={24}
+          breakpoints={{ 800: { slidesPerView: 2, spaceBetween: 32 } }}
+          loop
+          speed={reducedMotion ? 0 : 600}
+          autoplay={{ enabled: false, delay: 7000, disableOnInteraction: false }}
+          keyboard={{ enabled: true, onlyInViewport: true }}
+          a11y={{ containerMessage: "Portfolio projects", containerRoleDescriptionMessage: "carousel", itemRoleDescriptionMessage: "project", wrapperLiveRegion: false }}
+        >
         {projects.map((project) => {
-          const { id, image, title, github, demo, tech, architecture, status, description } =
+          const { id, image, imageAlt, title, github, demo, tech, architecture, status, description } =
             project;
           return (
-            <article key={id} className="portfolio_item">
+            <SwiperSlide key={id} className="portfolio_slide">
+            <article className="portfolio_item">
               <div className="portfolio_item_content">
                 <div className="portfolio_item-image">
-                  <img src={image} alt={title} />
+                  <img src={image} alt={imageAlt || title} loading="lazy" />
                 </div>
               </div>
               <div className="portfolio_item_container">
@@ -326,8 +397,11 @@ const Portfolio = () => {
                 </div>
               </div>
             </article>
+            </SwiperSlide>
           );
         })}
+        </Swiper>
+        </div>
       </div>
 
       <ArchitectureDialog

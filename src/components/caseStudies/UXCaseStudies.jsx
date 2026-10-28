@@ -5,6 +5,7 @@ import KAIN from "../../assets/kain-everyone.jpg";
 import SPEND from "../../assets/spend-master.jpg";
 import FRAUD from "../../assets/fraud-master.jpg";
 import GALAW from "../../assets/galaw-preview.webp";
+import DESENSITIZER from "../../assets/desensitizer-preview.svg";
 
 // Case-study narratives describe observable product features and the decisions
 // those flows are designed to support. They intentionally do not claim
@@ -12,6 +13,53 @@ import GALAW from "../../assets/galaw-preview.webp";
 const caseStudies = [
   {
     number: "01",
+    id: "desensitizer-case-study",
+    category: "AI governance · Local-first privacy · Experimental",
+    title: "Desensitizer & AI Desensitizer",
+    subtitle: "Protect identifying details without erasing the rules people need to analyze.",
+    image: DESENSITIZER,
+    alt: "Synthetic Desensitizer product illustration showing replacement tokens and readable business rules, with no real document data",
+    url: "https://github.com/josephvillanueva/Desensitizer",
+    linkLabel: "Explore the source",
+    status: "Experimental Windows applications. Not an anonymity or compliance guarantee.",
+    format: "Source-based product and AI-governance walkthrough",
+    audience: "Analysts preparing approved business documents for later AI-assisted review",
+    scope: "Privacy workflow · Human review · Local AI orchestration · Document preservation",
+    challenge:
+      "Removing every number or business term makes a document less useful. Leaving names, company references or contact details in place can expose identifying information. The product has to distinguish those spans while retaining the conditions, quantities and table relationships that explain how the business works.",
+    goal:
+      "Make document preparation a deliberate local workflow: suggest identifying spans, let the analyst decide, preserve useful context and check the protected copy before it is released. Uploading to a cloud service remains a separate, user-controlled action.",
+    flow: [
+      "Open an encrypted project",
+      "Scan and review locally",
+      "Choose Replace, Keep or Review",
+      "Validate the protected copy",
+      "Retain the project to restore tokens",
+    ],
+    decisions: [
+      {
+        title: "Keep sensitive processing local",
+        detail:
+          "Both applications combine deterministic checks with local detector workers. The base version uses Qwen for contextual review; AI Desensitizer adds NuExtract and Gemma reviewers. More reviewers introduce latency and disagreement, so agreement is not presented as proven accuracy.",
+      },
+      {
+        title: "Preserve context, not identifying spans",
+        detail:
+          "Replacement tokens and encrypted mapping decisions support later rehydration. The document pipeline aims to retain business rules and native table context, while removing unsupported pictures and embedded content rather than claiming to analyze them.",
+      },
+      {
+        title: "Make uncertainty actionable",
+        detail:
+          "Replace, Keep and Review states leave the analyst in control. Incomplete checks and detected residue block export. Recovery guidance explains the next step, and a final local safety check does not turn the result into an anonymity certification.",
+      },
+    ],
+    outcome:
+      "The implementation demonstrates two offline Windows document-preparation tools, local model orchestration, encrypted project mappings, token restoration and fail-closed export checks. Synthetic benchmarks and regression tests inform iteration; their results are not a measured guarantee for an unseen document or proof of cloud-model parity.",
+    next:
+      "Evaluate held-out documents for missed identifiers, false positives, alias consistency and business-rule preservation. Validate end-to-end recovery, accessibility, runtime and memory on the intended work laptop, and review model-use and document-handling requirements before organizational distribution.",
+  },
+  {
+    number: "02",
     id: "galaw-case-study",
     category: "Mobile wellness · Adaptive routines · In development",
     title: "Galaw",
@@ -20,7 +68,7 @@ const caseStudies = [
     alt: "Screenshot of Galaw's live Today dashboard with its official logo, green workout panel and dumbbell mascot, weekly activity and fasting overview",
     url: "https://galaw-na.vercel.app/",
     linkLabel: "Explore Galaw",
-    status: "In development. Public release and Google integrations are being verified.",
+    status: "Live with guest mode and Google sign-in. Calendar authorization is verified; appointment synchronization and phone flows remain under validation. Push reminders are not configured.",
     format: "Development walkthrough",
     audience: "Adults planning and recording workouts, sports and voluntary fasting on their phones",
     scope: "Mobile interaction design · Adaptive flows · Full-stack implementation",
@@ -53,12 +101,12 @@ const caseStudies = [
       },
     ],
     outcome:
-      "The implementation brings together phone-focused workout logging, gym and home equipment profiles, fasting and OMAD records, badminton and other activity logs, CSV import with duplicate review, and community check-ins. Public release, Google sign-in and Calendar synchronization remain under verification.",
+      "The live implementation brings together phone-focused workout logging, gym and home equipment profiles, fasting and OMAD records, badminton and other activity logs, CSV import with duplicate review, and community check-ins. Google sign-in and separate Calendar authorization have been verified; appointment synchronization and physical-phone flows still need validation. Push reminders are not configured in production.",
     next:
       "Validate setup and one-handed logging on phones, activity-import review, fasting timer recovery, Google consent and two-way Calendar changes, reminder delivery, offline recovery and community photo permissions before public release.",
   },
   {
-    number: "02",
+    number: "03",
     id: "bayad-case-study",
     category: "Personal finance · Multi-person workflows",
     title: "Bayad",
@@ -103,7 +151,7 @@ const caseStudies = [
       "Test whether a first-time participant can verify a complex bill and confirm a settlement without asking the expense creator for help.",
   },
   {
-    number: "03",
+    number: "04",
     id: "kain-case-study",
     category: "Team tools · Coordination and fairness",
     title: "Kain @everyone",
@@ -148,7 +196,7 @@ const caseStudies = [
       "Observe how first-time users interpret unavailable QRs, poll status, and notifications during a busy lunch period.",
   },
   {
-    number: "04",
+    number: "05",
     id: "spend-case-study",
     category: "Enterprise UX · Decision support",
     title: "Spend Master",
@@ -193,7 +241,7 @@ const caseStudies = [
       "Give users realistic investigation tasks and check whether they can identify the next action, not just interpret a chart.",
   },
   {
-    number: "05",
+    number: "06",
     id: "fraud-case-study",
     category: "Enterprise UX · Explainable review",
     title: "Fraud Master",

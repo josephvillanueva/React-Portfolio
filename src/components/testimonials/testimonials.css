@@ -2,7 +2,7 @@
    instead of sitting against its lower edge. Swiper centres the arrows on the
    whole container, so discount that padding to keep them level with the card. */
 .container.testimonials_container {
-  width: 40%;
+  width: var(--container-width-lg);
   padding-bottom: 4.5rem;
   --swiper-navigation-top-offset: calc((100% - 4.5rem) / 2);
   --swiper-navigation-sides-offset: 1rem;
@@ -62,12 +62,6 @@
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   background: var(--color-primary);
-}
-
-@media screen and (max-width: 1024px) {
-  .container.testimonials_container {
-    width: 60%;
-  }
 }
 
 @media screen and (max-width: 600px) {

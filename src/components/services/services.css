@@ -14,13 +14,13 @@
   height: fit-content;
   transition: var(--transition);
   position: relative;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
 }
 
 .service_head {
   background: var(--color-primary);
   padding: 2rem;
   border-radius: 0 0 2rem 2rem;
-  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
