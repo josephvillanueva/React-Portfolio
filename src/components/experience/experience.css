@@ -57,6 +57,32 @@
   font-variant-numeric: tabular-nums;
   position: relative;
   z-index: 1;
+  isolation: isolate;
+  overflow: hidden;
+  transition: color 650ms ease-in-out, border-color 650ms ease-in-out,
+    box-shadow 650ms ease-in-out;
+}
+
+/* The blue layer crossfades over the neutral marker instead of snapping. */
+.timeline_marker::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--color-primary);
+  opacity: 0;
+  transition: opacity 650ms ease-in-out;
+}
+
+.timeline_item_active .timeline_marker {
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 18px rgba(77, 181, 255, 0.22);
+}
+
+.timeline_item_active .timeline_marker::before {
+  opacity: 1;
 }
 
 /* Short connector from the marker to the date line. */
@@ -148,5 +174,12 @@
 
   .timeline_title {
     font-size: 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline_marker,
+  .timeline_marker::before {
+    transition: none;
   }
 }
