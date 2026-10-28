@@ -113,8 +113,8 @@ const Experience = () => {
               key={`${role.company}-${role.period}`}
               className={`timeline_item${activeIndex === index ? " timeline_item_active" : ""}`}
               onViewportEnter={() => setActiveIndex(index)}
-              viewport={{ amount: 0.35, margin: "0px 0px -10% 0px" }}
               {...reveal}
+              viewport={{ once: false, amount: 0.35, margin: "0px 0px -10% 0px" }}
             >
               <span className="timeline_marker" aria-hidden="true">
                 {String(index + 1).padStart(2, "0")}
