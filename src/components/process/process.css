@@ -9,10 +9,17 @@
 .process-intro { color: var(--color-light); font-size: .9rem; margin-top: .5rem; }
 .process-stages { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin: 2.5rem 0; }
 .process-stage { min-width: 0; }
-.process-stage > h4 { position: relative; padding: .8rem .65rem; border: 1px solid var(--color-primary-variant); border-radius: 6px; background: var(--color-tint); font-size: .85rem; }
+.process-stage > h4 { position: relative; padding: .8rem .65rem; border: 1px solid var(--color-primary-variant); border-radius: 6px; background: var(--color-tint); font-size: .85rem; animation: process-step-glow 9s linear infinite; }
+.process-stage:nth-child(2) > h4 { animation-delay: 1s; }
+.process-stage:nth-child(3) > h4 { animation-delay: 2s; }
+.process-stage:nth-child(4) > h4 { animation-delay: 3s; }
+@keyframes process-step-glow {
+  0%, 11.1% { background: var(--color-primary); color: #fff; box-shadow: 0 0 1.1rem color-mix(in srgb, var(--color-primary) 45%, transparent); }
+  11.111%, 100% { background: var(--color-tint); color: var(--color-white); box-shadow: none; }
+}
 .process-stage:not(:last-child) > h4::after { content: "\2192"; position: absolute; right: -1.2rem; top: 50%; transform: translateY(-50%); color: var(--color-light); }
 .process-stage-focal > h4 { border-color: var(--color-primary); }
-.process-number { color: var(--color-light); margin-right: .25rem; }
+.process-number { color: inherit; margin-right: .25rem; }
 .process-stage dl > div { padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--color-hairline); }
 .process-stage dt { color: var(--color-light); font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; }
 .process-stage dd { font-size: .8rem; overflow-wrap: anywhere; }
@@ -28,4 +35,7 @@
   .process-stage:not(:last-child) > h4::after { content: none; }
   .process-stage { position: relative; }
   .process-stage:not(:last-child)::after { content: "\2193"; display: block; color: var(--color-primary); text-align: center; margin-top: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .process-stage > h4 { animation: none; }
 }
