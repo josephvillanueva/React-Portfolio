@@ -83,3 +83,15 @@ textarea {
 .contact_status-error {
   color: var(--color-danger);
 }
+
+.contact_option h3 {
+  font-size: var(--text-base);
+}
+
+/* Same specificity as ".contact_option p", which makes paragraphs inline. */
+.contact_option .contact_option_value {
+  display: block;
+  margin-top: 0;
+  font-size: var(--text-xs);
+  color: var(--color-white);
+}

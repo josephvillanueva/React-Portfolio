@@ -4,11 +4,12 @@ import ME from "../../assets/me-about-portrait.jpg";
 import { FaAward, FaTrophy } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
+import SectionHeader from "../sectionHeader/SectionHeader";
 
 const About = () => {
   return (
     <section id="about">
-      <h2>About Me</h2>
+      <SectionHeader eyebrow="Who I am" title="About" />
 
       <div className="container about_container">
         <div className="about_me">
@@ -21,14 +22,14 @@ const About = () => {
             <article className="about_card">
               <FiUsers className="about_icon" aria-hidden="true" />
               <div>
-                <h5>Current Role</h5>
+                <h3>Current Role</h3>
                 <small>Systems Analyst &amp; UI/UX Lead at SMITS, Inc.</small>
               </div>
             </article>
             <article className="about_card">
               <FaTrophy className="about_icon" aria-hidden="true" />
               <div>
-                <h5>Impact</h5>
+                <h3>Impact</h3>
                 <small>
                   AI hackathon: 8 teams, all 8 proposals became SMITS projects.
                   UI/UX training for 50 colleagues.
@@ -38,14 +39,14 @@ const About = () => {
             <article className="about_card">
               <FaAward className="about_icon" aria-hidden="true" />
               <div>
-                <h5>Experience</h5>
+                <h3>Experience</h3>
                 <small>7+ years in software, plus an e-commerce business since 2020</small>
               </div>
             </article>
             <article className="about_card">
               <VscFolderLibrary className="about_icon" aria-hidden="true" />
               <div>
-                <h5>Domains</h5>
+                <h3>Domains</h3>
                 <small>Enterprise, banking, retail, e-commerce, and blockchain</small>
               </div>
             </article>

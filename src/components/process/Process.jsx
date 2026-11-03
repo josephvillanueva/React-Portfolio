@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import "./process.css";
+import SectionHeader from "../sectionHeader/SectionHeader";
 
 const stages = [
   { title: "Discovery", focus: "Understand the need", work: ["Discovery workshops", "Process mapping"], output: "Business needs and shared context" },
@@ -38,9 +39,13 @@ export default function Process() {
   }, [reduceMotion]);
 
   return (
-    <div className="process" role="group" aria-labelledby="process-heading">
-      <p className="process-eyebrow">From idea to implementation</p>
-      <h3 id="process-heading" className="process-title">How I work</h3>
+    <div id="process" className="process" role="group" aria-labelledby="process-heading">
+      <SectionHeader
+        as="h3"
+        id="process-heading"
+        eyebrow="From idea to implementation"
+        title="How I work"
+      />
       <div className="container process-container">
         <h4>From business need to working product</h4>
         <p className="process-intro">A connected path across product, design, and engineering.</p>

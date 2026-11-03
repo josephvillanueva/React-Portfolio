@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import SectionHeader from "../sectionHeader/SectionHeader";
 
 const data = [
   {
@@ -37,7 +38,7 @@ const data = [
 const Testimonials = () => {
   return (
     <section id="testimonials">
-      <h2>Character Reference</h2>
+      <SectionHeader eyebrow="In their words" title="Character references" />
       <Swiper
         className="container testimonials_container"
         modules={[Pagination, Navigation, Keyboard, A11y]}

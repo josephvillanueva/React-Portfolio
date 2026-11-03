@@ -4,6 +4,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { FaSms } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+import SectionHeader from "../sectionHeader/SectionHeader";
 
 function Contact() {
   const form = useRef();
@@ -31,28 +32,31 @@ function Contact() {
 
   return (
     <section id="contact">
-      <h5>Get in Touch</h5>
-      <h2>Contact Me</h2>
+      <SectionHeader
+        eyebrow="Get in touch"
+        title="Contact"
+        lead="Open to Product Owner conversations."
+      />
       <div className="container contact_container">
         <div className="contact_options">
           <article className="contact_option">
             <MdOutlineEmail className="contact_option_icon" />
-            <h4>Email</h4>
-            <h5>josephgvillanueva24@gmail.com</h5>
+            <h3>Email</h3>
+            <p className="contact_option_value">josephgvillanueva24@gmail.com</p>
             <a href="mailto:josephgvillanueva24@gmail.com">Send an email</a>
           </article>
           <article className="contact_option">
             <RiMessengerLine className="contact_option_icon" />
-            <h4>Messenger</h4>
-            <h5>Joseph G. Villanueva</h5>
+            <h3>Messenger</h3>
+            <p className="contact_option_value">Joseph G. Villanueva</p>
             <a href="https://m.me/bracezz/" target="_blank" rel="noreferrer">
               Send a message
             </a>
           </article>
           <article className="contact_option">
             <FaSms className="contact_option_icon" />
-            <h4>Phone Number</h4>
-            <h5>+63 917 527 0524</h5>
+            <h3>Phone Number</h3>
+            <p className="contact_option_value">+63 917 527 0524</p>
             <p>Send a text!</p>
           </article>
         </div>

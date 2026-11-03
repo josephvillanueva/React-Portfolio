@@ -5,15 +5,16 @@ import { BiBrain } from "react-icons/bi";
 import { MdWorkOutline, MdOutlineFolderOpen } from "react-icons/md";
 import { RiContactsLine } from "react-icons/ri";
 import { BsChatQuote } from "react-icons/bs";
-import { TbTools } from "react-icons/tb";
+import { TbRoute, TbTools } from "react-icons/tb";
 
 const links = [
   { href: "#", label: "Home", Icon: AiOutlineHome },
   { href: "#about", label: "About", Icon: AiOutlineUser },
   { href: "#experience", label: "Experience", Icon: BiBrain },
-  { href: "#case-studies", label: "UX case studies", Icon: MdOutlineFolderOpen },
+  { href: "#case-studies", label: "Featured work", Icon: MdOutlineFolderOpen },
   { href: "#skills", label: "Skills", Icon: TbTools },
   { href: "#services", label: "Services", Icon: MdWorkOutline },
+  { href: "#process", label: "How I work", Icon: TbRoute },
   { href: "#testimonials", label: "Character references", Icon: BsChatQuote },
   { href: "#contact", label: "Contact", Icon: RiContactsLine },
 ];

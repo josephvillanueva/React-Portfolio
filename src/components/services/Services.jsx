@@ -3,6 +3,7 @@ import "./services.css";
 import { BiCheck, BiChevronDown } from "react-icons/bi";
 import Process from "../process/Process";
 import { motion, useReducedMotion } from "framer-motion";
+import SectionHeader from "../sectionHeader/SectionHeader";
 
 // Slow start, long settle. Shared by the panel and the chevron so they move
 // as one.
@@ -69,7 +70,11 @@ const Services = () => {
 
   return (
     <section id="services">
-      <h2>Services</h2>
+      <SectionHeader
+        eyebrow="What I do"
+        title="Services"
+        lead="Across product, design and delivery."
+      />
       <div className="container services_container">
         {servicesData.map((service, index) => {
           const isOpen = openServices.has(index);

@@ -1,6 +1,4 @@
 .process { margin-top: var(--space-16); text-align: center; }
-.process-eyebrow { color: var(--color-light); font-size: var(--text-sm); }
-.process-title { font-size: var(--text-title); margin-bottom: var(--space-6); }
 .process-container { text-align: left; }
 .process-container {
   min-width: 0;

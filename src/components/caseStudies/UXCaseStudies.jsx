@@ -4,6 +4,7 @@ import BAYAD from "../../assets/bayad.jpg";
 import SPEND from "../../assets/spend-master.jpg";
 import FRAUD from "../../assets/fraud-master.jpg";
 import DESENSITIZER from "../../assets/desensitizer-preview.svg";
+import SectionHeader from "../sectionHeader/SectionHeader";
 
 // Case-study narratives describe observable product features and the decisions
 // those flows are designed to support. They intentionally do not claim
@@ -212,13 +213,12 @@ const caseStudies = [
 const UXCaseStudies = () => (
   <section id="case-studies" className="ux_cases" aria-labelledby="ux_cases_title">
     <div className="container ux_cases_header">
-      <span className="ux_cases_eyebrow">FEATURED WORK / PRODUCT THINKING</span>
-      <h2 id="ux_cases_title">The thinking behind the interface.</h2>
-      <p className="ux_cases_intro">
-        A product is more than its final screen. These walkthroughs connect the
-        user problem, task flow, interaction choices, and what was implemented.
-        Where outcomes haven&apos;t been measured, I show what I&apos;d validate next.
-      </p>
+      <SectionHeader
+        id="ux_cases_title"
+        eyebrow="Product thinking"
+        title="Featured work"
+        lead="A product is more than its final screen. These walkthroughs connect the user problem, task flow, interaction choices, and what was implemented. Where outcomes haven't been measured, I show what I'd validate next."
+      />
       <div className="ux_cases_guide" aria-label="How to read these case studies">
         <span>01 / Problem</span>
         <span>02 / User flow</span>

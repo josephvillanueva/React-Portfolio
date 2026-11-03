@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import SectionHeader from "../sectionHeader/SectionHeader";
 import "./experience.css";
 import { BsBuilding, BsCalendar3 } from "react-icons/bs";
 import {
@@ -96,7 +97,7 @@ const Experience = () => {
 
   return (
     <section id="experience">
-      <h2>My Experience</h2>
+      <SectionHeader eyebrow="Career so far" title="Experience" />
 
       <div className="container timeline" ref={timelineRef}>
         <div className="timeline_track" aria-hidden="true">

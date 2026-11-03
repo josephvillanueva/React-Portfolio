@@ -26,6 +26,7 @@ import FRAUD_MASTER_ARCH from "../../assets/architecture/fraud-master.svg";
 import KAIN_EVERYONE_ARCH from "../../assets/architecture/kain-everyone.svg";
 import BAYAD_ARCH from "../../assets/architecture/bayad.svg";
 import GALAW_ARCH from "../../assets/architecture/galaw.svg";
+import SectionHeader from "../sectionHeader/SectionHeader";
 
 const projects = [
   {
@@ -312,8 +313,11 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <h5>My Recent Work/Involvements</h5>
-      <h2>Portfolio</h2>
+      <SectionHeader
+        eyebrow="More builds"
+        title="Portfolio"
+        lead="Demos, tools and experiments, with architecture diagrams and code where available."
+      />
 
       <div className="container portfolio_carousel">
         <div className="portfolio_carousel-controls" aria-label="Project carousel controls">

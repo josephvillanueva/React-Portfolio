@@ -64,6 +64,13 @@
   background: var(--color-primary);
 }
 
+/* Swiper sets the bullet gap with higher specificity than a margin rule, so use
+   its variables. Wider gaps keep each bullet a usable touch target. */
+.testimonials_container {
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bullet-horizontal-gap: 12px;
+}
+
 @media screen and (max-width: 600px) {
   .container.testimonials_container {
     width: var(--container-width-sm);

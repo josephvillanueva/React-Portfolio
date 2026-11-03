@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import SectionHeader from "../sectionHeader/SectionHeader";
 import "./skills.css";
 import {
   AnimatePresence,
@@ -196,7 +197,7 @@ const Skills = () => {
 
   return (
     <section id="skills">
-      <h2>Skills &amp; Tools</h2>
+      <SectionHeader eyebrow="What I work with" title="Skills &amp; tools" />
       <p className="skills_intro">
         The product practices I use day to day, the AI tools I work with, and
         the technical stack I have shipped with. I use AI to turn an idea into a
