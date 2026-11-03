@@ -5,6 +5,12 @@ import HeroShader from "./HeroShader";
 import ME from "../../assets/me (2).png";
 import Headersocials from "./Headersocials";
 
+// Hero copy: edit these two strings. Headline is the outcome (about 7 words);
+// the supporting line gives role, employer and proof (about 14 to 20 words).
+const HERO_HEADLINE = "Turning business needs into software people use";
+const HERO_SUPPORT =
+  "Systems Analyst and UI/UX Lead at SMITS, Inc., writing requirements, user flows and delivery-ready scopes, and shipping React and Next.js.";
+
 const Header = () => {
   return (
     <header>
@@ -12,9 +18,8 @@ const Header = () => {
       <div className="container header_container">
         <h4>Hello I&apos;m</h4>
         <h1>Joseph Villanueva</h1>
-        <h4 className="text-light">
-          Systems Analyst | Business Analysis &amp; Product Ownership | UI/UX Strategy
-        </h4>
+        <p className="hero_headline">{HERO_HEADLINE}</p>
+        <p className="hero_support">{HERO_SUPPORT}</p>
         <CTA />
         <Headersocials />
 

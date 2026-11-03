@@ -1,6 +1,7 @@
 import React from "react";
 import "./services.css";
 import { BiCheck, BiChevronDown } from "react-icons/bi";
+import Process from "../process/Process";
 import { motion, useReducedMotion } from "framer-motion";
 
 // Slow start, long settle. Shared by the panel and the chevron so they move
@@ -120,6 +121,7 @@ const Services = () => {
           );
         })}
       </div>
+      <Process />
     </section>
   );
 };

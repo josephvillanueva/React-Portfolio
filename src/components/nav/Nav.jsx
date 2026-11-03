@@ -11,9 +11,9 @@ const links = [
   { href: "#", label: "Home", Icon: AiOutlineHome },
   { href: "#about", label: "About", Icon: AiOutlineUser },
   { href: "#experience", label: "Experience", Icon: BiBrain },
+  { href: "#case-studies", label: "UX case studies", Icon: MdOutlineFolderOpen },
   { href: "#skills", label: "Skills", Icon: TbTools },
   { href: "#services", label: "Services", Icon: MdWorkOutline },
-  { href: "#case-studies", label: "UX case studies", Icon: MdOutlineFolderOpen },
   { href: "#testimonials", label: "Character references", Icon: BsChatQuote },
   { href: "#contact", label: "Contact", Icon: RiContactsLine },
 ];

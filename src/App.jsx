@@ -6,7 +6,6 @@ import Experience from "./components/experience/Experience";
 import Skills from "./components/skills/Skills";
 import Services from "./components/services/Services";
 import UXCaseStudies from "./components/caseStudies/UXCaseStudies";
-import Process from "./components/process/Process";
 import Portfolio from "./components/portfolio/Portfolio";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
@@ -21,11 +20,10 @@ const App = () => {
       <Nav />
       <About />
       <Experience />
+      <UXCaseStudies />
+      <Portfolio />
       <Skills />
       <Services />
-      <UXCaseStudies />
-      <Process />
-      <Portfolio />
       <Testimonials />
       <Contact />
       <Footer />

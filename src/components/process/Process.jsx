@@ -9,16 +9,16 @@ const stages = [
 
 export default function Process() {
   return (
-    <section id="process" className="portfolio-process" aria-labelledby="process-heading">
-      <h5>From idea to implementation</h5>
-      <h2 id="process-heading">How I work</h2>
+    <div className="process" role="group" aria-labelledby="process-heading">
+      <p className="process-eyebrow">From idea to implementation</p>
+      <h3 id="process-heading" className="process-title">How I work</h3>
       <div className="container process-container">
-        <h3>From business need to working product</h3>
+        <h4>From business need to working product</h4>
         <p className="process-intro">A connected path across product, design, and engineering.</p>
         <ol className="process-stages">
           {stages.map((stage, index) => (
             <li className={`process-stage${index === 1 ? " process-stage-focal" : ""}`} key={stage.title}>
-              <h4><span className="process-number">0{index + 1}</span> {stage.title}</h4>
+              <h5><span className="process-number">0{index + 1}</span> {stage.title}</h5>
               <dl>
                 <div><dt>Focus</dt><dd>{stage.focus}</dd></div>
                 <div><dt>Work</dt><dd>{stage.work.map((item) => <span key={item}>{item}</span>)}</dd></div>
@@ -30,6 +30,6 @@ export default function Process() {
         <p className="process-note">Requirements connect the business need to design and delivery.</p>
         <p className="process-feedback">Feedback can refine the work at every stage.</p>
       </div>
-    </section>
+    </div>
   );
 }

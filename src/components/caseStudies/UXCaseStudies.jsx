@@ -15,6 +15,10 @@ const caseStudies = [
     category: "AI governance · Local-first privacy · Experimental",
     title: "Desensitizer & AI Desensitizer",
     subtitle: "Protect identifying details without erasing the rules people need to analyze.",
+    problemLine:
+      "Removing every term makes a document less useful, but leaving names or contacts in place can expose identifying details.",
+    solutionLine:
+      "A local workflow suggests identifying spans, lets the analyst decide, and checks the protected copy before release.",
     image: DESENSITIZER,
     alt: "Synthetic Desensitizer product illustration showing replacement tokens and readable business rules, with no real document data",
     url: "https://github.com/josephvillanueva/Desensitizer",
@@ -62,6 +66,10 @@ const caseStudies = [
     category: "Personal finance · Multi-person workflows",
     title: "Bayad",
     subtitle: "Making shared expenses understandable from purchase to payment.",
+    problemLine:
+      "Item-level shares, discounts, service charges and reimbursements all change what each person owes, so splitting is rarely simple division.",
+    solutionLine:
+      "Itemized splitting with separate payment recording and approval shows each person's share and what has actually been paid.",
     image: BAYAD,
     alt: "Bayad expense-sharing application preview",
     url: "https://bayad-na.vercel.app/",
@@ -107,6 +115,10 @@ const caseStudies = [
     category: "Enterprise UX · Decision support",
     title: "Spend Master",
     subtitle: "Helping people move from procurement data to a useful question.",
+    problemLine:
+      "A dashboard can show many numbers without helping someone decide where to investigate, and roles need different detail.",
+    solutionLine:
+      "An overview leads into a guided analysis with role-scoped data and local findings that work without AI.",
     image: SPEND,
     alt: "Spend Master procurement analytics dashboard preview",
     url: "https://spend-master-demo.netlify.app/",
@@ -152,6 +164,10 @@ const caseStudies = [
     category: "Enterprise UX · Explainable review",
     title: "Fraud Master",
     subtitle: "Making a risk signal actionable without hiding the reasoning.",
+    problemLine:
+      "A risk score alone invites overconfidence; reviewers need a clear reason for each flag and a human decision.",
+    solutionLine:
+      "Rules route cases to Investigate, Review or Straight-through, with case-level explanations beside each triage.",
     image: FRAUD,
     alt: "Fraud Master credit memo risk review interface preview",
     url: "https://fraud-master-demo.netlify.app/",
@@ -222,12 +238,22 @@ const UXCaseStudies = () => (
           <summary className="ux_case_summary">
             <div className="ux_case_image">
               <img src={study.image} alt={study.alt} loading="lazy" />
-              <span className="ux_case_number">{study.number} / {String(caseStudies.length).padStart(2, "0")}</span>
             </div>
             <div className="ux_case_teaser">
+              <span className="ux_case_number">{study.number} / {String(caseStudies.length).padStart(2, "0")}</span>
               <p className="ux_case_category">{study.category}</p>
               <h3>{study.title}</h3>
               <p className="ux_case_subtitle">{study.subtitle}</p>
+              <dl className="ux_case_snapshot">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>{study.problemLine}</dd>
+                </div>
+                <div>
+                  <dt>Solution</dt>
+                  <dd>{study.solutionLine}</dd>
+                </div>
+              </dl>
               <span className="ux_case_expand">
                 <span className="ux_case_read">Read the case study</span>
                 <span className="ux_case_chevron" aria-hidden="true">↓</span>
@@ -267,10 +293,10 @@ const UXCaseStudies = () => (
               <ol className="ux_case_flow">
                 {study.flow.map((step, stepIndex) => (
                   <li key={step}>
-                    <span className="ux_case_step_number">
-                      {String(stepIndex + 1).padStart(2, "0")}
+                    <span className="ux_case_step_number" aria-hidden="true">
+                      {stepIndex + 1}
                     </span>
-                    <span>{step}</span>
+                    <span className="ux_case_step_label">{step}</span>
                   </li>
                 ))}
               </ol>
@@ -282,13 +308,25 @@ const UXCaseStudies = () => (
 
             <div className="ux_case_decisions">
               <h4>03 / Decisions and trade-offs</h4>
-              <div className="ux_case_decision_grid">
-                {study.decisions.map((decision) => (
-                  <div className="ux_case_decision" key={decision.title}>
-                    <h5>{decision.title}</h5>
-                    <p>{decision.detail}</p>
-                  </div>
-                ))}
+              <div className="ux_case_decision_layout">
+                <figure className="ux_case_figure">
+                  <img
+                    src={study.image}
+                    alt=""
+                    width="1280"
+                    height="800"
+                    loading="lazy"
+                  />
+                  <figcaption>{study.title} product preview</figcaption>
+                </figure>
+                <div className="ux_case_decision_grid">
+                  {study.decisions.map((decision) => (
+                    <div className="ux_case_decision" key={decision.title}>
+                      <h5>{decision.title}</h5>
+                      <p>{decision.detail}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 

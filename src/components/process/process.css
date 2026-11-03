@@ -1,3 +1,7 @@
+.process { margin-top: var(--space-16); text-align: center; }
+.process-eyebrow { color: var(--color-light); font-size: var(--text-sm); }
+.process-title { font-size: var(--text-title); margin-bottom: var(--space-6); }
+.process-container { text-align: left; }
 .process-container {
   min-width: 0;
   padding: clamp(1.25rem, 4vw, 2.5rem);
@@ -5,20 +9,20 @@
   border-radius: var(--radius-sm);
   background: var(--color-bg-variant);
 }
-.process-container > h3 { font-size: var(--text-title); }
+.process-container > h4 { font-size: var(--text-title); }
 .process-intro { color: var(--color-light); font-size: var(--text-sm); margin-top: .5rem; }
 .process-stages { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin: 2.5rem 0; }
 .process-stage { min-width: 0; }
-.process-stage > h4 { position: relative; padding: .8rem .65rem; border: 1px solid var(--color-primary-variant); border-radius: var(--radius-sm); background: var(--color-tint); font-size: var(--text-sm); animation: process-step-glow 9s linear infinite; }
-.process-stage:nth-child(2) > h4 { animation-delay: 1s; }
-.process-stage:nth-child(3) > h4 { animation-delay: 2s; }
-.process-stage:nth-child(4) > h4 { animation-delay: 3s; }
+.process-stage > h5 { position: relative; padding: .8rem .65rem; border: 1px solid var(--color-primary-variant); border-radius: var(--radius-sm); background: var(--color-tint); font-size: var(--text-sm); animation: process-step-glow 9s linear infinite; }
+.process-stage:nth-child(2) > h5 { animation-delay: 1s; }
+.process-stage:nth-child(3) > h5 { animation-delay: 2s; }
+.process-stage:nth-child(4) > h5 { animation-delay: 3s; }
 @keyframes process-step-glow {
   0%, 11.1% { background: var(--color-primary); color: #fff; box-shadow: 0 0 1.1rem color-mix(in srgb, var(--color-primary) 45%, transparent); }
   11.111%, 100% { background: var(--color-tint); color: var(--color-white); box-shadow: none; }
 }
-.process-stage:not(:last-child) > h4::after { content: "\2192"; position: absolute; right: -1.2rem; top: 50%; transform: translateY(-50%); color: var(--color-light); }
-.process-stage-focal > h4 { border-color: var(--color-primary); }
+.process-stage:not(:last-child) > h5::after { content: "\2192"; position: absolute; right: -1.2rem; top: 50%; transform: translateY(-50%); color: var(--color-light); }
+.process-stage-focal > h5 { border-color: var(--color-primary); }
 .process-number { color: inherit; margin-right: .25rem; }
 .process-stage dl > div { padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--color-hairline); }
 .process-stage dt { color: var(--color-light); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; }
@@ -28,14 +32,14 @@
 .process-feedback { margin-top: 1rem; font-size: var(--text-xs); color: var(--color-light); }
 @media (max-width: 1100px) {
   .process-stages { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
-  .process-stage:nth-child(2) > h4::after { content: none; }
+  .process-stage:nth-child(2) > h5::after { content: none; }
 }
 @media (max-width: 600px) {
   .process-stages { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
-  .process-stage:not(:last-child) > h4::after { content: none; }
+  .process-stage:not(:last-child) > h5::after { content: none; }
   .process-stage { position: relative; }
   .process-stage:not(:last-child)::after { content: "\2193"; display: block; color: var(--color-primary); text-align: center; margin-top: 1.5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .process-stage > h4 { animation: none; }
+  .process-stage > h5 { animation: none; }
 }
