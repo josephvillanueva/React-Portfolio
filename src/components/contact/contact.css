@@ -73,3 +73,13 @@ textarea {
     width: var(--container-width-sm);
   }
 }
+
+.contact_status {
+  min-height: 1.5em;
+  font-size: var(--text-sm);
+  color: var(--color-light);
+}
+
+.contact_status-error {
+  color: var(--color-danger);
+}

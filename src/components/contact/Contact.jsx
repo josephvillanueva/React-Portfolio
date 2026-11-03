@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
@@ -7,20 +7,28 @@ import emailjs from "@emailjs/browser";
 
 function Contact() {
   const form = useRef();
+  // idle | sending | sent | error. The form only clears on success, so a failed
+  // send never throws away what the visitor typed.
+  const [status, setStatus] = useState("idle");
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setStatus("sending");
 
     emailjs
       .sendForm("service_gala3gf", "template_26339xl", form.current, {
         publicKey: "Ks9sFr6A4mNkGbrP_",
       })
+      .then(() => {
+        form.current.reset();
+        setStatus("sent");
+      })
       .catch((error) => {
         console.error("Failed to send message:", error);
+        setStatus("error");
       });
-
-    e.target.reset();
   };
+
   return (
     <section id="contact">
       <h5>Get in Touch</h5>
@@ -53,19 +61,41 @@ function Contact() {
             type="text"
             name="name"
             placeholder="Your Full Name"
+            aria-label="Your full name"
+            autoComplete="name"
             required
           />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            aria-label="Your email"
+            autoComplete="email"
+            required
+          />
           <textarea
             name="message"
             cols="30"
             rows="10"
             placeholder="Your Message"
+            aria-label="Your message"
             required
           ></textarea>
-          <button type="submit" value="Send" className="btn btn-primary">
-            Send Message
+          <button
+            type="submit"
+            className="btn btn-primary"
+            disabled={status === "sending"}
+          >
+            {status === "sending" ? "Sending…" : "Send Message"}
           </button>
+          <p
+            className={`contact_status contact_status-${status}`}
+            role="status"
+          >
+            {status === "sent" && "Thanks, your message was sent."}
+            {status === "error" &&
+              "Something went wrong. Your message is still here; try again or email me directly."}
+          </p>
         </form>
       </div>
     </section>
