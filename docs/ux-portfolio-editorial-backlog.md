@@ -9,7 +9,7 @@
 
 Move the portfolio beyond screenshots, technology lists, and demos. Show the problem being solved, who uses the experience, the key task flow, interaction and product trade-offs, what was implemented, and what remains to validate.
 
-The site now features four deeper, explicitly evidence-aware project walkthroughs: Bayad, Kain @everyone, Spend Master, and Fraud Master. Other builds remain in the existing gallery.
+The site features four deeper, explicitly evidence-aware project walkthroughs: Desensitizer, Bayad, Spend Master, and Fraud Master. Galaw, Kain @everyone and the other builds remain in the portfolio gallery, which also keeps the architecture diagrams and code links for every project.
 
 ## Evidence to gather before publishing stronger claims
 

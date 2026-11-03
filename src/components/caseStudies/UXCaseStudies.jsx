@@ -1,10 +1,8 @@
 import React from "react";
 import "./uxCaseStudies.css";
 import BAYAD from "../../assets/bayad.jpg";
-import KAIN from "../../assets/kain-everyone.jpg";
 import SPEND from "../../assets/spend-master.jpg";
 import FRAUD from "../../assets/fraud-master.jpg";
-import GALAW from "../../assets/galaw-preview.webp";
 import DESENSITIZER from "../../assets/desensitizer-preview.svg";
 
 // Case-study narratives describe observable product features and the decisions
@@ -60,53 +58,6 @@ const caseStudies = [
   },
   {
     number: "02",
-    id: "galaw-case-study",
-    category: "Mobile wellness · Adaptive routines · In development",
-    title: "Galaw",
-    subtitle: "A phone-first routine for training, fasting and life beyond the gym.",
-    image: GALAW,
-    alt: "Screenshot of Galaw's live Today dashboard with its official logo, green workout panel and dumbbell mascot, weekly activity and fasting overview",
-    url: "https://galaw-na.vercel.app/",
-    linkLabel: "Explore Galaw",
-    status: "Live with guest mode and Google sign-in. Calendar authorization is verified; appointment synchronization and phone flows remain under validation. Push reminders are not configured.",
-    format: "Development walkthrough",
-    audience: "Adults planning and recording workouts, sports and voluntary fasting on their phones",
-    scope: "Mobile interaction design · Adaptive flows · Full-stack implementation",
-    challenge:
-      "People bring their phones to different gyms, train at home and fit exercise around sports and other commitments. A useful routine has to match the available equipment and time, make logging quick and respect what each person chooses to share.",
-    goal:
-      "Connect equipment-aware workouts, first-class fasting and OMAD tracking, badminton and imported activity summaries, and group encouragement in a routine people can manage from their phones.",
-    flow: [
-      "Choose a gym or home profile",
-      "Review a manageable workout",
-      "Log sets and adjust remaining work",
-      "Track fasting or add sports and imports",
-      "Choose what to share",
-    ],
-    decisions: [
-      {
-        title: "Start with the place and the phone",
-        detail:
-          "Saved gym and home profiles use searchable equipment choices. Short setup steps and large workout controls keep the phone flow focused. Plans include warm-up, rest and transitions, and only unfinished work changes when time runs short.",
-      },
-      {
-        title: "Give fasting its own place",
-        detail:
-          "A dedicated fasting area records planned and actual timing, meals and notes, including OMAD. It is part of the main navigation. Ending early is supported without rewarding longer restriction.",
-      },
-      {
-        title: "Let accountability respect boundaries",
-        detail:
-          "People choose which check-ins to share. Personal training loads stay private, while temporary photos have limited openings and a clear explanation that web screenshots cannot be reliably blocked.",
-      },
-    ],
-    outcome:
-      "The live implementation brings together phone-focused workout logging, gym and home equipment profiles, fasting and OMAD records, badminton and other activity logs, CSV import with duplicate review, and community check-ins. Google sign-in and separate Calendar authorization have been verified; appointment synchronization and physical-phone flows still need validation. Push reminders are not configured in production.",
-    next:
-      "Validate setup and one-handed logging on phones, activity-import review, fasting timer recovery, Google consent and two-way Calendar changes, reminder delivery, offline recovery and community photo permissions before public release.",
-  },
-  {
-    number: "03",
     id: "bayad-case-study",
     category: "Personal finance · Multi-person workflows",
     title: "Bayad",
@@ -151,52 +102,7 @@ const caseStudies = [
       "Test whether a first-time participant can verify a complex bill and confirm a settlement without asking the expense creator for help.",
   },
   {
-    number: "04",
-    id: "kain-case-study",
-    category: "Team tools · Coordination and fairness",
-    title: "Kain @everyone",
-    subtitle: "Turning small team rituals into a clearer, shared experience.",
-    image: KAIN,
-    alt: "Kain at everyone lunch and QR-sharing application preview",
-    url: "https://kain-everyone.vercel.app/",
-    linkLabel: "Explore Kain @everyone",
-    audience: "Workplace teams coordinating lunches and shared QR claims",
-    scope: "Interaction flows · State design · Product engineering",
-    challenge:
-      "A shared lunch plan or one-time QR claim becomes confusing when several people act at once. The interface needs to communicate who has acted and which options are still available.",
-    goal:
-      "Give team members a quick way to participate while keeping claims, polls, and shared activity reliable.",
-    flow: [
-      "Share a QR or start a poll",
-      "Notify teammates",
-      "Claim or vote",
-      "Sync shared state",
-      "Review activity",
-    ],
-    decisions: [
-      {
-        title: "Make one-time actions authoritative",
-        detail:
-          "An atomic QR claim at the database layer prevents two people from successfully claiming the same item, even when they tap simultaneously.",
-      },
-      {
-        title: "Design around changing group state",
-        detail:
-          "Realtime updates and an in-app notification inbox reflect new shares and poll changes without requiring a manual refresh.",
-      },
-      {
-        title: "Treat private activity as private",
-        detail:
-          "Claim history is scoped to the participant, with a defined retention window rather than an indefinitely public activity feed.",
-      },
-    ],
-    outcome:
-      "The product connects QR sharing, lunch polls, notifications, private history, and lightweight team games in one experience.",
-    next:
-      "Observe how first-time users interpret unavailable QRs, poll status, and notifications during a busy lunch period.",
-  },
-  {
-    number: "05",
+    number: "03",
     id: "spend-case-study",
     category: "Enterprise UX · Decision support",
     title: "Spend Master",
@@ -241,7 +147,7 @@ const caseStudies = [
       "Give users realistic investigation tasks and check whether they can identify the next action, not just interpret a chart.",
   },
   {
-    number: "06",
+    number: "04",
     id: "fraud-case-study",
     category: "Enterprise UX · Explainable review",
     title: "Fraud Master",
