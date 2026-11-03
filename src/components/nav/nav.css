@@ -10,7 +10,7 @@ nav{
     bottom: 2rem;
     display: flex;
     gap: 0.8rem;
-    border-radius: 3rem;
+    border-radius: var(--radius-xl);
     backdrop-filter: blur(15px);
 }
 
@@ -20,7 +20,7 @@ nav a {
     border-radius: 50%;
     display: flex;
     color: var(--color-light);
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
 }
 
 nav a:hover{
@@ -43,6 +43,6 @@ nav a.active{
 
     nav a {
         padding: 0.55rem;
-        font-size: 1rem;
+        font-size: var(--text-base);
     }
 }

@@ -2,14 +2,14 @@
   min-width: 0;
   padding: clamp(1.25rem, 4vw, 2.5rem);
   border: 1px solid var(--color-primary-variant);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   background: var(--color-bg-variant);
 }
-.process-container > h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
-.process-intro { color: var(--color-light); font-size: .9rem; margin-top: .5rem; }
+.process-container > h3 { font-size: var(--text-title); }
+.process-intro { color: var(--color-light); font-size: var(--text-sm); margin-top: .5rem; }
 .process-stages { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin: 2.5rem 0; }
 .process-stage { min-width: 0; }
-.process-stage > h4 { position: relative; padding: .8rem .65rem; border: 1px solid var(--color-primary-variant); border-radius: 6px; background: var(--color-tint); font-size: .85rem; animation: process-step-glow 9s linear infinite; }
+.process-stage > h4 { position: relative; padding: .8rem .65rem; border: 1px solid var(--color-primary-variant); border-radius: var(--radius-sm); background: var(--color-tint); font-size: var(--text-sm); animation: process-step-glow 9s linear infinite; }
 .process-stage:nth-child(2) > h4 { animation-delay: 1s; }
 .process-stage:nth-child(3) > h4 { animation-delay: 2s; }
 .process-stage:nth-child(4) > h4 { animation-delay: 3s; }
@@ -21,11 +21,11 @@
 .process-stage-focal > h4 { border-color: var(--color-primary); }
 .process-number { color: inherit; margin-right: .25rem; }
 .process-stage dl > div { padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--color-hairline); }
-.process-stage dt { color: var(--color-light); font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; }
-.process-stage dd { font-size: .8rem; overflow-wrap: anywhere; }
+.process-stage dt { color: var(--color-light); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; }
+.process-stage dd { font-size: var(--text-xs); overflow-wrap: anywhere; }
 .process-stage dd span { display: block; }
-.process-note { border-left: 2px solid var(--color-primary); padding-left: .8rem; font-size: .8rem; color: var(--color-light); }
-.process-feedback { margin-top: 1rem; font-size: .75rem; color: var(--color-light); }
+.process-note { border-left: 2px solid var(--color-primary); padding-left: .8rem; font-size: var(--text-xs); color: var(--color-light); }
+.process-feedback { margin-top: 1rem; font-size: var(--text-xs); color: var(--color-light); }
 @media (max-width: 1100px) {
   .process-stages { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
   .process-stage:nth-child(2) > h4::after { content: none; }

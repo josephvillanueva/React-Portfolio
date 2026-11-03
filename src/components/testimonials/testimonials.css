@@ -29,7 +29,7 @@
   background: var(--color-bg-variant);
   text-align: center;
   padding: 3rem 5rem;
-  border-radius: 2rem;
+  border-radius: var(--radius-xl);
 }
 
 /* Two classes so this beats Swiper's own .swiper-slide rule, whose stylesheet
@@ -48,12 +48,12 @@
 }
 
 .client_name {
-  font-size: 1.5rem;
+  font-size: var(--text-xl);
 }
 
 .client_review {
   color: var(--color-light);
-  font-size: 1rem;
+  font-size: var(--text-base);
   font-weight: 300;
   display: block;
   width: 80%;
@@ -97,5 +97,5 @@
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  font-size: 1.5rem; /* Adjust the size of the arrow icon */
+  font-size: var(--text-xl); /* Adjust the size of the arrow icon */
 }

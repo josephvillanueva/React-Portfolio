@@ -10,7 +10,7 @@
 .ux_cases_eyebrow {
   display: inline-block;
   color: var(--color-primary);
-  font-size: 0.73rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.15em;
   margin-bottom: 0.75rem;
@@ -18,7 +18,7 @@
 
 .ux_cases_header h2 {
   max-width: 16ch;
-  font-size: clamp(2.1rem, 5.2vw, 4.25rem);
+  font-size: var(--text-hero);
   font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 1.15;
@@ -28,7 +28,7 @@
 .ux_cases_intro {
   max-width: 750px;
   color: var(--color-light);
-  font-size: clamp(0.96rem, 1.6vw, 1.1rem);
+  font-size: var(--text-lead);
 }
 
 .ux_cases_guide {
@@ -39,11 +39,11 @@
 }
 
 .ux_cases_guide span {
-  font-size: 0.77rem;
+  font-size: var(--text-xs);
   letter-spacing: 0.03em;
   padding: 0.45rem 0.7rem;
   border: 1px solid var(--color-hairline);
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   background: var(--color-tint);
   color: var(--color-light);
 }
@@ -55,7 +55,7 @@
 
 .ux_case {
   border: 1px solid var(--color-hairline);
-  border-radius: 1.4rem;
+  border-radius: var(--radius-lg);
   background: var(--color-bg-variant);
   overflow: hidden;
   min-width: 0;
@@ -81,7 +81,7 @@
 .ux_case_summary:focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: -4px;
-  border-radius: 1.4rem;
+  border-radius: var(--radius-lg);
 }
 
 .ux_case_image {
@@ -124,10 +124,10 @@
   left: 1.15rem;
   top: 1.15rem;
   padding: 0.35rem 0.6rem;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   background: rgba(18, 19, 31, 0.82);
   color: #fff;
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   letter-spacing: 0.1em;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .ux_case_category {
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--color-primary);
@@ -149,7 +149,7 @@
 }
 
 .ux_case_teaser h3 {
-  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  font-size: var(--text-section);
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0.7rem;
@@ -158,7 +158,7 @@
 .ux_case_subtitle {
   max-width: 38ch;
   color: var(--color-light);
-  font-size: 0.93rem;
+  font-size: var(--text-base);
   line-height: 1.65;
 }
 
@@ -167,7 +167,7 @@
   gap: 0.9rem;
   align-items: center;
   margin-top: 1.5rem;
-  font-size: 0.82rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   color: var(--color-primary);
 }
@@ -179,7 +179,7 @@
   height: 2rem;
   border-radius: 50%;
   border: 1px solid var(--color-primary-variant);
-  font-size: 1.1rem;
+  font-size: var(--text-lg);
   transition: transform 200ms ease;
 }
 
@@ -203,7 +203,7 @@
 
 .ux_case_meta_label {
   display: block;
-  font-size: 0.69rem;
+  font-size: var(--text-xs);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -211,20 +211,20 @@
 }
 
 .ux_case_meta p {
-  font-size: 0.88rem;
+  font-size: var(--text-sm);
   line-height: 1.55;
 }
 
 .ux_case_body h4 {
   margin: 0 0 1rem;
   color: var(--color-primary);
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   font-weight: 600;
 }
 
 .ux_case_body p {
   line-height: 1.8;
-  font-size: 0.93rem;
+  font-size: var(--text-base);
 }
 
 .ux_case_two_columns {
@@ -257,22 +257,22 @@
   gap: 0.9rem;
   background: var(--color-tint);
   border: 1px solid var(--color-hairline);
-  border-radius: 0.8rem;
+  border-radius: var(--radius-sm);
   padding: 1rem;
-  font-size: 0.82rem;
+  font-size: var(--text-xs);
   line-height: 1.5;
 }
 
 .ux_case_step_number {
   color: var(--color-primary);
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   font-weight: 600;
 }
 
 .ux_case_flow_note {
   margin-top: 0.75rem;
   color: var(--color-light);
-  font-size: 0.76rem !important;
+  font-size: var(--text-xs) !important;
 }
 
 .ux_case_decision_grid {
@@ -284,21 +284,21 @@
 .ux_case_decision {
   background: var(--color-tint);
   border: 1px solid var(--color-hairline);
-  border-radius: 0.9rem;
+  border-radius: var(--radius-md);
   padding: 1.2rem;
   min-width: 0;
 }
 
 .ux_case_decision h5 {
   color: var(--color-white);
-  font-size: 0.93rem;
+  font-size: var(--text-base);
   font-weight: 600;
   line-height: 1.55;
   margin-bottom: 0.75rem;
 }
 
 .ux_case_decision p {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--color-light);
   line-height: 1.7;
 }
@@ -315,14 +315,14 @@
 }
 
 .ux_case_contact_link {
-  font-size: 0.86rem;
+  font-size: var(--text-sm);
 }
 
 .ux_cases_note {
   margin-top: 1.3rem;
   text-align: center;
   color: var(--color-light);
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   line-height: 1.7;
 }
 

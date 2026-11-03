@@ -27,7 +27,7 @@
   height: 2.75rem;
   padding: 0;
   border-radius: 50%;
-  font-size: 1.15rem;
+  font-size: var(--text-lg);
 }
 
 .portfolio_carousel-arrow {
@@ -37,7 +37,7 @@
   height: 2.75rem;
   background: transparent;
   color: var(--color-primary);
-  font-size: 2rem;
+  font-size: var(--text-2xl);
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -74,7 +74,7 @@
 
 .portfolio_item {
   background: var(--color-bg-variant);
-  border-radius: 2rem;
+  border-radius: var(--radius-xl);
   padding: 1rem;
   transition: var(--transition);
   border: 1px solid transparent;
@@ -94,7 +94,7 @@
 /* A landscape ratio suits the screenshots, which are all wider than tall,
    so far less of each one is cropped than with a fixed 310px height. */
 .portfolio_item-image {
-  border-radius: 1.5rem;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -102,7 +102,7 @@
 }
 
 .portfolio_item-image img {
-  border-radius: 1.5rem;
+  border-radius: var(--radius-lg);
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -124,9 +124,9 @@
 .portfolio_tech_item {
   background-color: var(--color-bg);
   text-align: center;
-  border-radius: 1rem;
+  border-radius: var(--radius-md);
   padding: 0.4rem 0.7rem;
-  font-size: 80%;
+  font-size: var(--text-xs);
   border-color: var(--color-primary-variant);
   border-style: solid;
   border-width: 2px;
@@ -148,7 +148,7 @@
   color: var(--color-light);
   line-height: 1.55;
   margin: 0 0 1.2rem;
-  font-size: 0.95rem;
+  font-size: var(--text-base);
 }
 
 .portfolio_item-cta {
@@ -172,11 +172,11 @@
   display: inline-flex;
   align-items: center;
   padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
+  border-radius: var(--radius-sm);
   border: 1px dashed var(--color-hairline);
   background: #fff;
   color: #475569;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 /* Architecture diagram */
@@ -189,7 +189,7 @@
   max-height: calc(100dvh - 2rem);
   padding: 0;
   border: 1px solid var(--color-primary-variant);
-  border-radius: 1.25rem;
+  border-radius: var(--radius-md);
   background: var(--color-bg);
   color: var(--color-white);
   overflow: hidden;
@@ -215,7 +215,7 @@
 
 .architecture_dialog-head h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--text-base);
 }
 
 .architecture_dialog-close {
@@ -227,7 +227,7 @@
   border-radius: 50%;
   background: transparent;
   color: var(--color-white);
-  font-size: 1.4rem;
+  font-size: var(--text-xl);
   cursor: pointer;
   transition: var(--transition);
 }
@@ -257,7 +257,7 @@
 .architecture_dialog-hint {
   display: none;
   padding: 0 1.5rem;
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   color: var(--color-light);
 }
 
@@ -275,6 +275,6 @@
 @media screen and (max-width: 600px) {
   .portfolio_carousel-controls .btn {
     padding: 0.65rem 0.8rem;
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
   }
 }

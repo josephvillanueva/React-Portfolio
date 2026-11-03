@@ -52,7 +52,7 @@ header {
   bottom: 5rem;
   transform: rotate(90deg);
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 @media screen and (max-width: 1024px) {
