@@ -69,10 +69,10 @@ const CATEGORIES = [
   "All",
   "Product & Delivery",
   "AI",
-  "Languages",
-  "Frontend",
-  "Backend & Cloud",
   "Tools",
+  "Frontend",
+  "Languages",
+  "Backend & Cloud",
 ];
 
 // Brand colours are kept where they read well; white logos use the text

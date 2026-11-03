@@ -12,7 +12,7 @@ header {
 
 .hero_headline {
   margin: var(--space-4) auto 0;
-  max-width: 22ch;
+  max-width: 34ch;
   font-size: var(--text-title);
   font-weight: 500;
   line-height: 1.2;

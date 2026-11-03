@@ -20,6 +20,15 @@ const Services = () => {
       ],
     },
     {
+      title: "AI Enablement & Governance",
+      description: [
+        "Serving on the governing body for AI use at SMITS, helping set how the company adopts AI formally and responsibly.",
+        "Running AI hackathons: the first had 8 teams and around 50 participants, and all 8 proposals became real SMITS projects.",
+        "Evaluating AI-assisted workflows across requirements, design, development, testing, and documentation, and keeping the ones that hold up.",
+        "Using Claude, ChatGPT, Gemini, and Copilot daily to turn ideas into prototypes stakeholders can react to.",
+      ],
+    },
+    {
       title: "UX & Design Systems",
       description: [
         "Mapping process and user flows, then turning them into wireframes and prototypes.",
@@ -35,15 +44,6 @@ const Services = () => {
         "Sizing feasibility alongside engineers instead of guessing at it.",
         "Specifying API and integration requirements, including REST and GraphQL.",
         "Building AI features with guardrails: role-scoped data, masking before anything reaches a model, and results that still work without AI.",
-      ],
-    },
-    {
-      title: "AI Enablement & Governance",
-      description: [
-        "Serving on the governing body for AI use at SMITS, helping set how the company adopts AI formally and responsibly.",
-        "Running AI hackathons: the first had 8 teams and around 50 participants, and all 8 proposals became real SMITS projects.",
-        "Evaluating AI-assisted workflows across requirements, design, development, testing, and documentation, and keeping the ones that hold up.",
-        "Using Claude, ChatGPT, Gemini, and Copilot daily to turn ideas into prototypes stakeholders can react to.",
       ],
     },
   ];

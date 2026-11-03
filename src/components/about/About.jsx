@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 import ME from "../../assets/me-about-portrait.jpg";
-import { FaAward } from "react-icons/fa";
+import { FaAward, FaTrophy } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 
@@ -19,17 +19,27 @@ const About = () => {
         <div className="about_content">
           <div className="about_cards">
             <article className="about_card">
-              <FaAward className="about_icon" aria-hidden="true" />
-              <div>
-                <h5>Experience</h5>
-                <small>7+ years in software, plus an e-commerce business since 2020</small>
-              </div>
-            </article>
-            <article className="about_card">
               <FiUsers className="about_icon" aria-hidden="true" />
               <div>
                 <h5>Current Role</h5>
                 <small>Systems Analyst &amp; UI/UX Lead at SMITS, Inc.</small>
+              </div>
+            </article>
+            <article className="about_card">
+              <FaTrophy className="about_icon" aria-hidden="true" />
+              <div>
+                <h5>Impact</h5>
+                <small>
+                  AI hackathon: 8 teams, all 8 proposals became SMITS projects.
+                  UI/UX training for 50 colleagues.
+                </small>
+              </div>
+            </article>
+            <article className="about_card">
+              <FaAward className="about_icon" aria-hidden="true" />
+              <div>
+                <h5>Experience</h5>
+                <small>7+ years in software, plus an e-commerce business since 2020</small>
               </div>
             </article>
             <article className="about_card">
@@ -55,8 +65,27 @@ const About = () => {
               team can build in the same conversation.
             </p>
             <p>
-              I came to product through engineering, and that&apos;s the part I
-              lean on most. I&apos;ve shipped <strong>React.js</strong> and{" "}
+              I serve on the <strong>governing body for AI use</strong> at
+              SMITS, which sets how the company adopts AI formally and
+              responsibly. I also ran an <strong>AI hackathon</strong> for
+              project teams: 8 teams and around 50 participants, with all 8
+              proposals going on to become real projects for SMITS, and more
+              hackathons are planned. Day to
+              day I use Claude, ChatGPT, Gemini, and Copilot across
+              requirements, design, prototyping, and code, so when we decide
+              which workflows teams can rely on, I&apos;m judging from use, not
+              from a slide.
+            </p>
+            <p>
+              I also run internal UI/UX training, so far for 50 colleagues
+              across business analysis, project management, systems analysis,
+              development, and QA, and help govern the SMITS design system,
+              writing the standards and component guidance that project teams
+              build from.
+            </p>
+            <p>
+              I came to product through engineering, and that&apos;s what makes me
+              credible with delivery teams. I&apos;ve shipped <strong>React.js</strong> and{" "}
               <strong>Next.js</strong> apps and cloud tooling myself, so when a
               developer says something will take two sprints I can usually tell
               why, and I write acceptance criteria that catch the edge case
@@ -74,25 +103,6 @@ const About = () => {
               <strong>Anteriore</strong> I developed{" "}
               <strong>Playible.io</strong> and led its technical transition to
               NEAR Protocol and GraphQL.
-            </p>
-            <p>
-              I also run internal UI/UX training, so far for 50 colleagues
-              across business analysis, project management, systems analysis,
-              development, and QA, and help govern the SMITS design system,
-              writing the standards and component guidance that project teams
-              build from.
-            </p>
-            <p>
-              I serve on the <strong>governing body for AI use</strong> at
-              SMITS, which sets how the company adopts AI formally and
-              responsibly. I also ran an <strong>AI hackathon</strong> for
-              project teams: 8 teams and around 50 participants, with all 8
-              proposals going on to become real projects for SMITS, and more
-              hackathons are planned. Day to
-              day I use Claude, ChatGPT, Gemini, and Copilot across
-              requirements, design, prototyping, and code, so when we decide
-              which workflows teams can rely on, I&apos;m judging from use, not
-              from a slide.
             </p>
             <p>
               Next, I want a <strong>Product Owner</strong> role, where the
