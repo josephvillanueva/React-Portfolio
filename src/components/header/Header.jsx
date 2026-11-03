@@ -7,9 +7,9 @@ import Headersocials from "./Headersocials";
 
 // Hero copy: edit these two strings. Headline is the outcome (about 7 words);
 // the supporting line gives role, employer and proof (about 14 to 20 words).
-const HERO_HEADLINE = "Turning business needs into software people use";
+const HERO_HEADLINE = "Product ownership that connects the business and the team";
 const HERO_SUPPORT =
-  "Systems Analyst and UI/UX Lead at SMITS, Inc., writing requirements, user flows and delivery-ready scopes, and shipping React and Next.js.";
+  "Systems Analyst and UI/UX Lead at SMITS, Inc., supporting Product Owner initiatives through backlog refinement, prioritization, client workshops and solution reviews.";
 
 const Header = () => {
   return (
