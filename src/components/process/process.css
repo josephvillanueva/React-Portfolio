@@ -13,17 +13,10 @@
 .process-intro { color: var(--color-light); font-size: var(--text-sm); margin-top: .5rem; }
 .process-stages { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin: 2.5rem 0; }
 .process-stage { min-width: 0; }
-.process-stage > h5 { position: relative; padding: .8rem .65rem; border: 1px solid var(--color-primary-variant); border-radius: var(--radius-sm); background: var(--color-tint); font-size: var(--text-sm); animation: process-step-glow 9s linear infinite; }
-.process-stage:nth-child(2) > h5 { animation-delay: 1s; }
-.process-stage:nth-child(3) > h5 { animation-delay: 2s; }
-.process-stage:nth-child(4) > h5 { animation-delay: 3s; }
-@keyframes process-step-glow {
-  0%, 11.1% { background: var(--color-primary); color: #fff; box-shadow: 0 0 1.1rem color-mix(in srgb, var(--color-primary) 45%, transparent); }
-  11.111%, 100% { background: var(--color-tint); color: var(--color-white); box-shadow: none; }
-}
+.process-stage > h5 { position: relative; padding: .8rem .65rem; border: 1px solid var(--color-primary-variant); border-radius: var(--radius-sm); background: var(--color-tint); font-size: var(--text-sm); }
 .process-stage:not(:last-child) > h5::after { content: "\2192"; position: absolute; right: -1.2rem; top: 50%; transform: translateY(-50%); color: var(--color-light); }
 .process-stage-focal > h5 { border-color: var(--color-primary); }
-.process-number { color: inherit; margin-right: .25rem; }
+.process-number { color: var(--color-light); margin-right: .25rem; }
 .process-stage dl > div { padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--color-hairline); }
 .process-stage dt { color: var(--color-light); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; }
 .process-stage dd { font-size: var(--text-xs); overflow-wrap: anywhere; }
@@ -40,6 +33,40 @@
   .process-stage { position: relative; }
   .process-stage:not(:last-child)::after { content: "\2193"; display: block; color: var(--color-primary); text-align: center; margin-top: 1.5rem; }
 }
+
+/* Crossfade the primary-blue highlight and number/label colors in both directions. */
+.process-stage > h5 {
+  isolation: isolate;
+  transition: color 650ms ease-in-out, border-color 650ms ease-in-out;
+}
+.process-stage > h5::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: #0a6fc2;
+  opacity: 0;
+  transition: opacity 650ms ease-in-out;
+  pointer-events: none;
+}
+.process-stage-active > h5 {
+  color: #fff;
+  border-color: #0a6fc2;
+  animation: process-stage-glow 1s ease-in-out;
+}
+.process-stage-active > h5::before { opacity: 1; }
+.process-number { transition: color 650ms ease-in-out; }
+.process-stage-active .process-number { color: #fff; }
+
+@keyframes process-stage-glow {
+  0%, 100% { box-shadow: 0 0 0 rgba(10, 111, 194, 0); }
+  50% { box-shadow: 0 0 20px rgba(10, 111, 194, 0.4); }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .process-stage > h5 { animation: none; }
+  .process-stage > h5, .process-stage > h5::before, .process-number {
+    transition: none;
+    animation: none;
+  }
 }
